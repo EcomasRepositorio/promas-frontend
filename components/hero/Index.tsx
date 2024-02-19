@@ -15,7 +15,7 @@ const Hero = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex lg:flex-row flex-col items-center justify-center lg:ml-24 lg:px-60 px-10 mt-40 w-full z-[20]"
+      className="flex lg:flex-row flex-col items-center justify-center lg:ml-24 px-10 mt-40 w-full z-[20]"
     >
       <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
         <motion.div
@@ -59,7 +59,7 @@ const Hero = () => {
 
       <motion.div
         variants={slideInFromRight(0.1)}
-        className="w-full h-full flex justify-center items-center"
+        className="w-full h-full flex justify-center items-center lg:mr-36 mt-10 lg:mt-0"
       >
         <Image
           src="/logo_promas_3.png"

@@ -10,7 +10,6 @@ import StudentDelete from './StudentDelete';
 import ModalTable from '../share/modalTable';
 import SearchDNI from '@/components/certificate/SearchDNI';
 
-
 const SearchName:React.FC<SearchStudentDNIProps> = ({ onSearchDNI }) => {
 
   const [isActive, setIsActive] = useState(false);
@@ -27,7 +26,6 @@ const SearchName:React.FC<SearchStudentDNIProps> = ({ onSearchDNI }) => {
   const toggleIsActive = () => {
     setIsActive(!isActive);
   };
-
   /* const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     console.log(event.target.value, 'onChange ejecutado');
     console.log('Nuevo valor de queryValue:', event.target.value);
@@ -37,7 +35,7 @@ const SearchName:React.FC<SearchStudentDNIProps> = ({ onSearchDNI }) => {
     }; */
     const token = useRouteData("parameter");
   const validToken = typeof token === "string" ? token: '';
-  
+
   const searchDNI = async () => {
     if (queryValue.trim()) {
       setLoading(true);
