@@ -24,12 +24,12 @@ const Certificate: React.FC = () => {
   };
 
   return (
-    <section id='/certificate' className='p-2'>
-    <div className="max-w-screen-lg mx-auto mb-12 border border-transparent mt-32 bg-violet-600/50 rounded-3xl shadow-2xl shadow-slate-100 text-center lg:mb-20 p-2">
+    <section id='/certificate' className='p-4'>
+    <div className="max-w-screen-lg mx-auto mb-12 border border-transparent mt-40 bg-violet-600/50 rounded-3xl shadow-2xl shadow-slate-100 text-center lg:mb-20 p-2">
       <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
       <div className='flex justify-center mb-4 lg:gap-10 mt-12'>
             {/* <img src={'/certificate/logo_unp.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain"/> */}
-            <Image src={'/logo_promas_3.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain" width={70} height={70} alt='logo_promas'/>
+            <Image src={'/logo_promas_3.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain" width={800} height={700} alt='logo_promas'/>
             {/* <img src={'/certificate/logo_cip_tacna.png'}className="lg:w-44 lg:h-44 w-32 h-32 object-contain "/> */}
           </div>
       </div>
@@ -46,21 +46,21 @@ const Certificate: React.FC = () => {
           <div className='lg:flex flex-wrap justify-center items-center text-center lg:ml-40 lg:mr-40'>
             <button
             onClick={() => handleButton('documentNumber')}
-            className={`buttonGlobal lg:mb-20 mb-4 font-bold rounded-lg text-md px-7 py-3 text-center inline-block
+            className={`lg:mb-20 mb-4 font-bold border rounded-lg text-md px-7 py-3 text-gray-300 text-center inline-block hover:text-violet-700 hover:bg-gray-200
               ${searchType === 'documentNumber' && ''}`}>
-              <BsPersonVcard className='text-xl inline-block align-text-top mr-1' />Buscar por DNI
+              <BsPersonVcard className='text-xl inline-block align-text-top mr-2 hover:text-violet-700' />Buscar por DNI
             </button>
             <button
             onClick={() => handleButton('name')}
-            className={`buttonGlobal lg:mb-20 mb-4 ml-6 mr-6 font-bold rounded-lg text-md px-3 py-3 text-center
+            className={`lg:mb-20 mb-4 ml-6 mr-6 border font-bold rounded-lg text-md px-3 py-3 text-gray-300 text-center hover:text-violet-700 hover:bg-gray-200
               ${searchType === 'name' && ''}`}>
-              <BsPersonSquare className='text-lg inline-block align-text-top mr-1' />Buscar por nombre
+              <BsPersonSquare className='text-lg inline-block align-text-top mr-2' />Buscar por nombre
             </button>
             <button
             onClick={() => handleButton('code')}
-            className={`buttonGlobal lg:mb-20 mb-5 font-bold rounded-lg text-md px-4 py-3 text-center inline-block
+            className={`lg:mb-20 mb-5 font-bold border rounded-lg text-gray-300 text-md px-4 py-3 text-center inline-block hover:text-violet-700 hover:bg-gray-200
             ${searchType === 'code' && ''}`}>
-              <BsQrCodeScan className='text-lg inline-block align-text-top mr-1' /> Buscar por código
+              <BsQrCodeScan className='text-lg inline-block align-text-top mr-2' /> Buscar por código
             </button>
           </div>
 

@@ -30,7 +30,7 @@ function Navbar() {
               <Link href="/">
                 <Image
                   src="/logo_promas.png"
-                  width={120}
+                  width={150}
                   height={80}
                   alt="promas-logo"
                   className=''
