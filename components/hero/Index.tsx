@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -10,7 +10,38 @@ import {
 //import { SparklesIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 
+const images = [
+  { src: "/IMAGEN.png", variants: slideInFromRight(0.1) },
+  { src: "/logo_promas_3.png", variants: slideInFromRight(0.1) },
+  { src: "/logo_promas_2.png", variants: slideInFromRight(0.1) }
+];
+
+const texts = [
+  "Tu puerta abierta al conocimiento en vivo, desde donde estes...",
+  "Texto 2",
+  "Texto 3"
+];
+
+const tittle = [
+  "DIPLOMADOS, CURSOS PROMAS",
+  "Texto 2",
+  "Texto 3"
+];
+
 const Hero = () => {
+
+  const [index, setIndex] = useState(0);
+  const [tittle1, setTittle1] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <motion.div
       initial="hidden"
@@ -29,6 +60,10 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
+          key={index}
+          initial="initial"
+          animate="visible"
+          exit="hidden"
           variants={slideInFromLeft(0.5)}
           className="flex flex-col gap-6 mt-6 lg:text-6xl text-5xl font-bold text-white max-w-[800px] w-auto h-auto"
         >
@@ -42,13 +77,22 @@ const Hero = () => {
           </span>
         </motion.div>
 
-        <motion.p
-          variants={slideInFromLeft(0.8)}
-          className="lg:text-2xl text-gray-200 my-5 max-w-[600px]"
-        >
-          <span>Tu puerta abierta al conocimiento en vivo,</span>
-          <span> desde donde estes...</span>
-        </motion.p>
+        <AnimatePresence>
+          {texts.map((text, i) => (
+            i === index && (
+              <motion.p
+                key={i}
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={slideInFromLeft(0.8)}
+                className="lg:text-2xl text-gray-200 my-5 max-w-[600px]"
+              >
+                {text}
+              </motion.p>
+            )
+          ))}
+        </AnimatePresence>
         <motion.a
           variants={slideInFromLeft(1)}
           className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
@@ -58,16 +102,21 @@ const Hero = () => {
       </div>
 
       <motion.div
+        key={index}
+        initial="hidden"
+        animate="visible"
         variants={slideInFromRight(0.1)}
         className="w-full h-full flex justify-center items-center lg:mr-36 mt-10 lg:mt-0"
       >
         <Image
-          src="/logo_promas_3.png"
-          alt="work icons"
-          height={550}
-          width={550}
+          key={index}
+          src={images[index].src}
+          alt="icons"
+          height={1850}
+          width={1800}
         />
       </motion.div>
+
     </motion.div>
   );
 };
