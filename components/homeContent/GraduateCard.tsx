@@ -33,7 +33,7 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
         <h4 className="font-semibold lg:text-[28px] text-[26px] text-white">
           {title}
         </h4>
-        <h5 className="mt-[16px] font-semibold lg:text-[17px] text-[14px] text-white">
+        <h5 className="mt-[16px] lg:mb-6 font-semibold lg:text-[17px] text-[14px] text-white">
           {subtitle}
         </h5>
       </div>
