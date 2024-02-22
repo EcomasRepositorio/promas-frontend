@@ -5,9 +5,9 @@ import { VscBook } from "react-icons/vsc";
 
 const Footer = () => {
   return (
-    <div>
+    <div className=''>
     <footer
-      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left mt-20">
+      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="border-b-2 border-violet-500 p-4 dark:border-neutral-500">
         <div className="container mx-auto px-10">
           <div className="flex items-center justify-center lg:justify-between">
@@ -88,12 +88,12 @@ const Footer = () => {
             <div className="">
               <h6
                 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
-                 <Image 
-                 src="/logo_promas.png"
+                 <Image
+                 src="/logoPromas.png"
                  alt="logo_promas"
                  width={200}
                  height={200}/>
-  
+
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer
@@ -112,18 +112,19 @@ const Footer = () => {
               </h6>
               <p className="mb-4">
                 <a href="#!" className="text-gray-100 dark:text-neutral-200"
-                  >Angular</a>
+                  >Inicio</a>
               </p>
               <p className="mb-4">
                 <a href="#!" className="text-gray-100 dark:text-neutral-200"
-                  >React </a>
+                  >Certificado </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200">Vue</a>
+                <a href="#!" className="text-gray-100 dark:text-neutral-200">
+                  Diplomados</a>
               </p>
               <p>
                 <a href="#!" className="text-gray-100 dark:text-neutral-200"
-                  >Laravel</a>
+                  >Nosotros</a>
               </p>
             </div>
             <div className="">
@@ -210,7 +211,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="p-6 text-center dark:bg-neutral-700">
+      <div className="p-6 text-center">
         <span>© 2023 Copyright:</span>
         <a
           className="font-semibold text-neutral-100 dark:text-neutral-400"

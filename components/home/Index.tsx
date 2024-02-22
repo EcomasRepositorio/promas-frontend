@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   slideInFromLeft,
   slideInFromRight,
@@ -51,7 +51,6 @@ const Home = () => {
       setIndex((prevIndex) => prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
     }, 8000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -59,10 +58,9 @@ const Home = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse lg:flex-row items-center justify-center lg:px-20 lg:mb-0 mb-20 px-10 lg:mt-20 mt-28 w-full z-[20]"
+      className="flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between lg:mb-0 mb-20 w-full"
     >
-      <div className="w-full lg:w-1/2 lg:ml-40">
-      <AnimatePresence>
+      <div className="">
         {icons.map((icon, i) => (
           i === index && (
         <motion.div
@@ -73,7 +71,7 @@ const Home = () => {
           variants={slideInFromTop}
           className="py-1 lg:text-left text-center px-1 opacity-[0.9]"
         >
-          <h1 className="Welcome-text text-gray-100 lg:text-2xl text-2xl text-center inline-flex lg:gap-6 gap-3">
+          <h1 className="text-gray-100 lg:text-2xl text-2xl text-center inline-flex lg:gap-6 gap-3">
             <Link href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img1}
             </Link>
@@ -93,17 +91,16 @@ const Home = () => {
         </motion.div>
         )
         ))}
-      </AnimatePresence>
 
         {tittles.map((tittle, i) => (
           i === index && (
         <motion.div
-          key={index}
+          key={i}
           initial="hidden"
           animate="visible"
           exit="hidden"
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 lg:text-7xl text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-500 max-w-[800px] w-auto h-auto"
+          className="mt-6 lg:text-7xl text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-500"
         >
           {tittle}
         </motion.div>
@@ -113,12 +110,12 @@ const Home = () => {
           {texts.map((text, i) => (
             i === index && (
               <motion.p
-                key={index}
+                key={i}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
                 variants={slideInFromLeft(0.8)}
-                className="lg:text-3xl text-gray-200 mb-10 max-w-[600px]"
+                className="lg:text-3xl text-gray-200 mb-10"
               >
                 {text}
               </motion.p>
@@ -132,7 +129,7 @@ const Home = () => {
           animate="visible"
           exit="hidden"
           variants={slideInFromLeft(2)}
-          className="py-2 lg:text-2xl px-10 font-mono text-center button-primary text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="py-2 lg:text-2xl px-10 font-mono text-center button-primary text-white cursor-pointer rounded-lg"
         >
           {button}
         </motion.a>
@@ -144,14 +141,14 @@ const Home = () => {
         initial="hidden"
         animate="visible"
         variants={slideInFromRight(1)}
-        className="w-full h-full flex justify-center items-center lg:mr-36 mt-10 lg:mt-0"
+        className="w-full h-full flex justify-center items-center text-center mt-10 lg:mt-0"
       >
         <Image
           key={index}
           src={images[index].src}
           alt="icons"
           height={800}
-          width={900}
+          width={800}
         />
       </motion.div>
     </motion.div>

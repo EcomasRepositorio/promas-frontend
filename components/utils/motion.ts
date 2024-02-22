@@ -92,4 +92,11 @@ export function slideInFromLeft(delay: number) {
         ease: 'easeOut',
       },
     },
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.2, // Duración de la animación de salida
+        ease: 'easeInOut', // Función de facilidad de la animación de salida
+      },
+    },
   });

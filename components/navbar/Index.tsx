@@ -9,7 +9,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 fixed top-0 left-0 right-0 z-10">
+      <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0">
       <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5'>
         {/* <div className='hidden md:flex items-center gap-2 text-2xl ml-5'>
           <FaFacebookF className='text-blue-600 transition-transform transform hover:scale-125 border border-transparent rounded p-1 bg-gray-300/50'/>
