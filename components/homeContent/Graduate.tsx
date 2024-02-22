@@ -5,8 +5,8 @@ import React, {  } from 'react';
 import styles from '@/styles/index';
 import { insights } from '@/components/utils/constants/index';
 import { staggerContainer } from '../utils/motion';
-import InsightCard  from './InsightCard';
-import { TitleText, TypingText } from './CustomText'
+import GraduateCard  from './GraduateCard';
+import { TitleText, TypingText } from '../share/CustomText'
 
 const variants = staggerContainer("0.1s", "0.1s");
 
@@ -17,13 +17,13 @@ const Graduate: React.FC = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex flex-col`}
+      className={`${styles.innerWidth} mx-auto flex flex-col max-w-screen-xl`}
     >
-      <TypingText title="| Insight" textStyles="text-center" />
-      <TitleText title={<>Insight about metaverse</>} textStyles="text-center" />
-      <div className="mt-[50px] flex flex-col gap-[30px]">
+      <TypingText title="| PROMAS" textStyles="text-center" />
+      <TitleText title={<>Nuestros Diplomados</>} textStyles="text-center" />
+      <div className="mt-8 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
         {insights.map((item, index: number) => (
-          <InsightCard key={`insight-${index}`} {...item} index={index + 1} />
+          <GraduateCard key={`insight-${index}`} {...item} index={index + 1} />
         ))}
       </div>
     </motion.div>

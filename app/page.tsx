@@ -1,13 +1,13 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import Hero from "@/components/hero/Index";
-import Graduate from "@/components/homeContent/Index";
+import Home from "@/components/home/Index";
+import Graduate from "@/components/homeContent/Graduate";
 
-export default function Home() {
+export default function Main() {
   return (
     <main className="">
      <div className="">
-      <Hero />
+      <Home />
       <Graduate />
      </div>
     </main>

@@ -25,7 +25,7 @@ const Certificate: React.FC = () => {
 
   return (
     <section id='/certificate' className='p-4'>
-    <div className="max-w-screen-lg mx-auto mb-12 border border-transparent mt-40 bg-violet-600/50 rounded-3xl shadow-2xl shadow-slate-100 text-center lg:mb-20 p-2">
+    <div className="max-w-screen-lg mx-auto mb-12 border border-transparent mt-40 bg-violet-500/50 rounded-3xl shadow-xl shadow-violet-500 text-center lg:mb-20 p-2">
       <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
       <div className='flex justify-center mb-4 lg:gap-10 mt-12'>
             {/* <img src={'/certificate/logo_unp.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain"/> */}
