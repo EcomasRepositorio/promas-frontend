@@ -60,9 +60,7 @@
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;
   }
-  
-  
-  
+
   html {
     scroll-behavior: smooth;
   }

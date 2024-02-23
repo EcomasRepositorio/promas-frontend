@@ -11,17 +11,16 @@ import { TitleText, TypingText } from '../share/CustomText'
 const variants = staggerContainer("0.1s", "0.1s");
 
 const Graduate: React.FC = () => (
-  <section className={`${styles.paddings} relative z-10`}>
+  <section className={`${styles.paddings} relative z-10 max-w-screen-xl mx-auto`}>
     <motion.div
       variants={variants}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth} mx-auto flex flex-col max-w-screen-xl`}
+      //className={`${styles.innerWidth} mx-auto flex flex-col max-w-screen-xl`}
     >
-      <TypingText title="| PROMAS" textStyles="text-center" />
-      <TitleText title={<>Nuestros Diplomados</>} textStyles="text-center" />
-      <div className="mt-8 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
+      <TypingText title="Nuestros Diplomados" textStyles="text-center" />
+      <div className="mt-20 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
         {insights.map((item, index: number) => (
           <GraduateCard key={`insight-${index}`} {...item} index={index + 1} />
         ))}

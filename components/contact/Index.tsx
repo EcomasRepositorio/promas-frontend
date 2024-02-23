@@ -1,26 +1,43 @@
+"use client"
+import { motion } from 'framer-motion';
+import { staggerContainer } from '../utils/motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { FormEvent, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
+import { TitleText, TypingText } from '../share/CustomText'
 //import ContactImg from '../public/assets/contact.jpg';
 
+const variants = staggerContainer("0.1s", "0.1s");
 const Contact = () => {
 
-  const rowsValue: string = '5'; // Valor de ejemplo como string
+const [isSubmit, setIsSubmit] = useState(false);
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    form.submit();
+    setIsSubmit(true);
+  };
+
+  const rowsValue: string = '5';
   const rowsNumber: number = parseInt(rowsValue);
   return (
     <div id='contact' className='w-full lg:h-screen text-white'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
-        <p className='text-xl tracking-widest uppercase text-[#5651e5]'>
-          Contact
-        </p>
-        <h2 className='py-4'>Get In Touch</h2>
-        <div className='grid lg:grid-cols-5 gap-8'>
+        <motion.div
+          variants={variants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.25 }}>
+            <TypingText title="CONTACTANOS" textStyles="text-center" />
+        </motion.div>
+        <div className='grid lg:grid-cols-5 gap-8 mt-10'>
           {/* left */}
-          <div className='col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4'>
+          <div className='col-span-3 lg:col-span-2 w-full h-full bg-gray-400 shadow-xl rounded-xl p-4'>
             <div className='lg:p-4 h-full '>
               <div>
                 <Image
@@ -76,30 +93,35 @@ const Contact = () => {
           </div>
 
           {/* right */}
-          <div className='col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4'>
+          <div className='col-span-3 w-full h-auto bg-gray-400 shadow-xl rounded-xl lg:p-4'>
             <div className='p-4'>
+
+              {!isSubmit ? (
               <form
-                action='https://getform.io/f/08ebcd37-f5b5-45be-8c13-714f011ce060'
+                action='https://formsubmit.co/ronevanz01@gmail.com'
                 method='POST'
-                encType='multipart/form-data'
+                onSubmit={handleSubmit}
+                //encType='multipart/form-data'
               >
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>Nombres</label>
                     <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300 text-gray-800'
+                      className='form-control border-2 rounded-lg p-3 flex border-gray-300 text-gray-800'
                       type='text'
                       name='name'
+                      required
                     />
                   </div>
                   <div className='flex flex-col'>
                     <label className='uppercase text-sm py-2'>
-                      Numero celular
+                      N° celular
                     </label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300 text-gray-800'
                       type='text'
                       name='phone'
+                      required
                     />
                   </div>
                 </div>
@@ -109,14 +131,16 @@ const Contact = () => {
                     className='border-2 rounded-lg p-3 flex border-gray-300 text-gray-800'
                     type='email'
                     name='email'
+                    required
                   />
                 </div>
                 <div className='flex flex-col py-2'>
-                  <label className='uppercase text-sm py-2'>Titulo</label>
+                  <label className='uppercase text-sm py-2'>Asunto</label>
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300 text-gray-800'
                     type='text'
-                    name='subject'
+                    name='asunto'
+                    required
                   />
                 </div>
                 <div className='flex flex-col py-2'>
@@ -125,12 +149,21 @@ const Contact = () => {
                     className='border-2 rounded-lg p-3 border-gray-300 text-gray-800'
                     rows={rowsNumber}
                     name='message'
+                    required
                   ></textarea>
                 </div>
-                <button className='w-full p-4 text-gray-100 mt-4'>
+                <button type='submit' className='w-full p-4 text-gray-100 border rounded-xl mt-4'>
                   Enivar mensaje
                 </button>
+                  <input type="hidden" name="_next" value="http://localhost:3000" />
+                  <input type="hidden" name="_captcha" value="false" />
               </form>
+              ) : (
+                <div className="text-center">
+                  <p className='text-2xl font-bold mb-4'>!GRACIAS!</p>
+                  <p className="text-2xl font-bold text-green-500 mb-4">Datos enviados con éxito</p>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -143,7 +176,6 @@ const Contact = () => {
                   size={30}
                 />
               </div>
-
           </Link>
         </div>
       </div>
