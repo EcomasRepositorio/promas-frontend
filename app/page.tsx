@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Home from "@/components/home/Index";
 import Graduate from "@/components/homeContent/Graduate";
 import Counter from "@/components/counter/Index";
+import Contact from "@/components/contact/Index";
 
 export default function Main() {
   return (
@@ -11,6 +12,7 @@ export default function Main() {
       <Home />
       <Graduate />
       <Counter />
+      <Contact />
      </div>
     </main>
   );
