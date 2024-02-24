@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     width: 100%;
-    height: 650px;
+    height: 400px;
     overflow: hidden;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@
 .item{
     position: absolute;
     width: 200px;
-    text-align: justify;
+    text-align: center;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -20,29 +20,41 @@
 .item.center {
     z-index: 2; /* Asegurar que el elemento activo esté en el frente */
     opacity: 1;
+    height: auto;
 }
-  .item.left {
-    left: calc(50% - 320px); /* Alinear a la izquierda del elemento central */
-    z-index: 1; /* Colocar detrás del elemento central */
-    transform: scale(var(--scale, 0.9)); /* Reducir un poco el tamaño */
-  }
-  .item.right {
-    left: calc(50% + 120px); /* Alinear a la derecha del elemento central */
-    z-index: 1; /* Colocar detrás del elemento central */
-    transform: scale(var(--scale, 0.9)); /* Reducir un poco el tamaño */
-  }
+.item.left,
+.item.right {
+    left: calc(50% - 75px); /* Alinear los elementos izquierdo y derecho en dispositivos móviles */
+    transform: scale(0.8); /* Reducir más el tamaño en pantallas pequeñas */
+}
 #next, #prev{
-    position: absolute;
-    top: 40%;
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    font-size: xxx-large;
-    font-family: monospace;
-    font-weight: bold;
-    left: 50px;
+    display: none;
 }
 #next{
     left: unset;
     right: 50px;
+}
+
+@media (min-width: 360px) {
+
+  #next,
+  #prev {
+      display: block;
+      position: absolute;
+      top: 40%;
+      color: #fff;
+      background-color: transparent;
+      border: none;
+      font-size: xxx-large;
+      font-family: monospace;
+      font-weight: bold;
+  }
+
+  #prev {
+      left: 10px;
+  }
+
+  #next {
+      right: 10px;
+  }
 }

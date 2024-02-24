@@ -5,6 +5,7 @@ import Graduate from "@/components/homeContent/Graduate";
 import Counter from "@/components/counter/Index";
 import Contact from "@/components/contact/Index";
 import Comment from "@/components/comments/Index";
+import Course from "@/components/course/Index";
 
 export default function Main() {
   return (
@@ -13,6 +14,7 @@ export default function Main() {
       <Home />
       <Graduate />
       <Counter />
+      <Course />
       <Comment />
       <Contact />
      </div>
