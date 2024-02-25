@@ -83,8 +83,8 @@ const Comment = () => {
                     item.style.filter = 'none';
                     item.style.opacity = '1';
                     item.style.display = 'block';
-                    item.style.width = '300px';
-                    item.style.height = '400px';
+                    item.style.width = '320px';
+                    item.style.height = '420px';
                     item.style.setProperty('--scale', '1');
                 } else if (i === activeRef.current - 1 || i === activeRef.current + 1 || i === activeRef.current - 2 || i === activeRef.current + 2) {
                     item.style.transform = `translateX(${120 * (i - activeRef.current)}px) scale(1) perspective(16px) perspective(1px)`;
@@ -92,8 +92,8 @@ const Comment = () => {
                     item.style.filter = 'blur(5px)';
                     item.style.opacity = '0.6';
                     item.style.display = 'block';
-                    item.style.width = '300px';
-                    item.style.height = '300px';
+                    item.style.width = '320px';
+                    item.style.height = '400px';
                     item.style.setProperty('--scale', '0.9');
                 } else {
                     item.style.display = 'none';
@@ -102,11 +102,11 @@ const Comment = () => {
         }
     }
   return (
-    <>
-      <div className='text-white text-center mt-8'>
-        <h1 className='font-extrabold text-5xl'>Testimonios</h1>
+    <section className='bg-pink-600/50'>
+      <div className='text-white text-center'>
+        <h1 className='font-extrabold text-5xl py-10'>Testimonios</h1>
       </div>
-    <section className="slider mt-20 max-w-screen-xl mx-auto">
+    <div className="slider max-w-screen-xl mx-auto">
       <div className="item">
         <div className='flex justify-center '>
           <MdPersonPin className='text-5xl mb-2'/>
@@ -172,8 +172,8 @@ const Comment = () => {
       </div>
       <button id="next"> <AiOutlineRight /> </button>
       <button id="prev"> <AiOutlineLeft /> </button>
+    </div>
     </section>
-    </>
   )
 }
 

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -55,12 +54,13 @@ const Home = () => {
   }, []);
 
   return (
+    <div className="bg-[#030014]">
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between lg:mb-0 mb-20 w-full"
+      className="flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between w-full"
     >
-      <div className="">
+      <div className="mb-10 lg:mb-0 ml-4 lg:ml-0">
         {icons.map((icon, i) => (
           i === index && (
         <motion.div
@@ -152,6 +152,7 @@ const Home = () => {
         />
       </motion.div>
     </motion.div>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className=''>
     <footer
-      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left lg:mt-10 mt-0">
+      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
       <div className="border-b-2 border-violet-500 p-4 dark:border-neutral-500">
         <div className="container mx-auto px-10">
           <div className="flex items-center justify-center lg:justify-between">

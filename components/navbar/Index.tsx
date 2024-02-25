@@ -8,7 +8,7 @@ import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from "react
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div>
+    <div className='bg-black'>
       <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0">
       <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5'>
         {/* <div className='hidden md:flex items-center gap-2 text-2xl ml-5'>
@@ -76,7 +76,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
-                  <Link href="/graduates" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/graduate" onClick={() => setNavbar(!navbar)}>
                     Diplomados
                   </Link>
                 </li>

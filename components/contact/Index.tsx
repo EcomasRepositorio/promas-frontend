@@ -26,7 +26,7 @@ const [isSubmit, setIsSubmit] = useState(false);
   const rowsValue: string = '5';
   const rowsNumber: number = parseInt(rowsValue);
   return (
-    <div id='contact' className='w-full lg:h-screen text-white'>
+    <div id='contact' className='w-full lg:h-screen text-white bg-[#030014]'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
         <motion.div
           variants={variants}
@@ -95,7 +95,6 @@ const [isSubmit, setIsSubmit] = useState(false);
           {/* right */}
           <div className='col-span-3 w-full h-auto bg-gray-400 shadow-xl rounded-xl lg:p-4'>
             <div className='p-4'>
-
               {!isSubmit ? (
               <form
                 action='https://formsubmit.co/ronevanz01@gmail.com'
@@ -167,7 +166,7 @@ const [isSubmit, setIsSubmit] = useState(false);
             </div>
           </div>
         </div>
-        <div className='flex justify-center py-12 '>
+        <div className='flex justify-center py-6'>
           <Link href='/'>
 
               <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
