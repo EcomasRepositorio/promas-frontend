@@ -4,34 +4,42 @@ import { motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { coursesAlimentary } from "@/components/utils/courses/course";
 import { BiChevronDown, BiChevronUp, BiChevronRight} from "react-icons/bi";
+import { FaRegFilePdf, FaWhatsapp } from "react-icons/fa6";
+import { PiCertificate } from "react-icons/pi";
+import Modal  from "@/components/share/Modal";
 import Image from "next/image";
 
-
 const GraduateAlimentary = () => {
-    const [isAccordionOpen1, setIsAccordionOpen1] = useState(false);
-    const [isAccordionOpen2, setIsAccordionOpen2] = useState(false);
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [coursesAnimated, setCoursesAnimated] = useState<string[]>([]);
+const [isAccordionOpen1, setIsAccordionOpen1] = useState(false);
+const [isAccordionOpen2, setIsAccordionOpen2] = useState(false);
+const [openWindow, setOpenWindow] = useState<Window | null>(null);
+const [showModal, setShowModal] = useState(false);
+const [imageUrl, setImageUrl] = useState('');
 
-   /*  const toggleAccordion2 = () => {
-        setIsExpanded(!isExpanded);
-    }; */
-
-    /* useEffect(() => {
-        if (isAccordionOpen1) {
-          setCoursesAnimated(coursesAlimentary);
-        } else {
-          setCoursesAnimated([]);
-        }
-      }, [isAccordionOpen1]); */
+  const handleImageClick = (image: string) => {
+    setImageUrl(image);
+    setShowModal(true);
+  };
 
   const toggleAccordion1 = () => {
     setIsAccordionOpen1(!isAccordionOpen1);
     setIsAccordionOpen2(false); // Cierra el otro elemento si está abierto
   };
+
+  const handleClick = () => {
+    const newWindow = window.open('/DOWLOAD_PDF/ESTUDIO_IMPACTO_AMBIENTAL.pdf');
+    setOpenWindow(newWindow);
+
+    // Descargar el archivo PDF
+    const link = document.createElement('a');
+    link.href = '/DOWLOAD_PDF/ESTUDIO_IMPACTO_AMBIENTAL.pdf';
+    link.download = 'ESTUDIO_IMPACTO_AMBIENTAL.pdf';
+    link.click();
+  };
+
   return (
-    <div>
-       <div className="md:px-20 flex flex-col sm:flex-row justify-center">
+    <div id="Alimentary" className="">
+       <div className="md:px-20 flex flex-col sm:flex-row justify-center lg:mt-8">
           <div className="sm:w-96 mb-4 sm:mb-0">
             <Image
               className="bg-cover h-96 w-96 sm:h-auto rounded-3xl"
@@ -41,61 +49,95 @@ const GraduateAlimentary = () => {
               height={200}
             />
           </div>
-
-          <div className="sm:w-1/2 md:px-20 sm:px-5">
-            <div
-              className="text-black font-bold font-poppins lg:text-4xl text-4xl my-2 mb-6"
-              style={{
-                background: `linear-gradient(to right, #002e79, #006eb0)`,
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              GESTIÓN DE LA CALIDAD E INOCUIDAD ALIMENTARIA
+          <div className="sm:w-1/2 md:px-20 sm:px-5 lg:mt-8">
+            <div className="text-pink-600 font-extrabold font-poppins lg:text-3xl text-2xl my-2 mb-2">
+              ESTUDIO DE IMPACTO AMBIENTAL
             </div>
-            <div className="grid grid-cols-2 text-gray-700 font-montserrat text-sm">
+            <div className="mb-4">
+              <p className="text-sm font-semibold text-gray-600">
+                Diplomado dirigido a
+                profesionales del medio ambiente, gestores de proyectos, consultores
+                ambientales, autoridades reguladoras, estudiantes y académicos, profesionales de derecho ambiental, planificadores urbanos, ONGs, empresarios
+                y público en general.
+              </p>
+            </div>
+            <div className="grid lg:grid-cols-2 grid-cols-1 text-pink-500 text-sm mb-4">
               <div className="flex items-center mb-2">
               <BiChevronRight />
-                <p className="font-semibold ml-1">Inicio 25 de febrero</p>
+                <p className="font-bold ml-1">Inicio 25 de febrero</p>
               </div>
 
               <div className="flex items-center mb-2">
               <BiChevronRight />
-                <p className="font-semibold ml-1">Modalidad Online via Zoom</p>
+                <p className="font-bold ml-1">Modalidad Online via Zoom</p>
               </div>
 
               <div className="flex items-center mb-2">
               <BiChevronRight />
-                <p className="font-semibold ml-1">4 meses</p>
+                <p className="font-bold ml-1">4 meses</p>
               </div>
 
               <div className="flex items-center mb-2">
               <BiChevronRight />
-                <p className="font-semibold ml-1">420 horas académicas (<span className="credits">26 créditos</span>)</p>
+                <p className="font-bold ml-1">420 horas académicas (<span className="credits">26 créditos</span>)</p>
               </div>
             </div>
-
-
-
-            <div className="flex flex-col items-start">
-              <Link
-                className="border flex items-center justify-center h mb-4 text-gray-700 font-bold rounded-xl p-2 lg:w-6/12 w-full"
-                href="https://api.whatsapp.com/send?phone=51900102090"
-                target="_blank">
-                  <h1 className="transition-transform transform hover:scale-110">Mas información</h1>
-              </Link>
-              <button
-                onClick={toggleAccordion1}
-                className="p-2 px-8 border flex items-center justify-between mb-4 text-gray-700 font-bold rounded-xl w-full relative hover:scale-110 duration-700">
-                <h1 className="transition-transform transform hover:scale-110">Lista de Módulos</h1>
-                {isAccordionOpen1 ? (
-                    <BiChevronUp className="text-5xl hover:scale-150 duration-300 absolute top-1/2 right-4 transform -translate-y-1/2" />
-                ) : (
-                    <BiChevronDown className="text-5xl hover:scale-150 duration-300 absolute top-1/2 right-4 transform -translate-y-1/2" />
-                )}
-              </button>
-            </div>
+            <div className="">
+              <div className="grid lg:grid-cols-3 md:grid-cols-1 grid-cols-1 gap-2">
+                <div className="w-full">
+                  <Link
+                    className="border-2 border-violet-600 flex items-center justify-center text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                    href="https://api.whatsapp.com/send?phone=51900102090"
+                    target="_blank">
+                      <div className="items-center text-xs uppercase inline-flex">
+                        <FaWhatsapp className="text-green-500 text-lg"/>
+                        <h1 className="ml-1">Mas información</h1>
+                      </div>
+                  </Link>
+                </div>
+                <div className="w-full">
+                  <button
+                    onClick={handleClick}
+                    className="border-2 border-violet-600 w-full flex items-center justify-center mb- text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                    rel="noopener noreferrer">
+                      <div className="items-center text-xs uppercase inline-flex">
+                        <FaRegFilePdf className="text-red-500 text-lg"/>
+                        <h1 className="ml-1">Plan de estudios</h1>
+                      </div>
+                  </button>
+                </div>
+                <div>
+                  <button
+                    className="border-2 border-violet-600 w-full flex items-center justify-center mb-4 text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
+                    onClick={() => handleImageClick('/IMAGEN.png')}>
+                      <div className="items-center text-xs uppercase inline-flex">
+                        <PiCertificate className="text-lg"/>
+                        <h1 className="ml-1">Certificación</h1>
+                      </div>
+                  </button>
+                  {showModal && (
+                    <Modal open={showModal} onClose={() => setShowModal(false)}>
+                      <Image src={imageUrl} width={400} height={420} alt="certificate_promas" />
+                    </Modal>
+                  )}
+                  </div>
+                </div>
+              </div>
+              <div className="z-0">
+                <button
+                  onClick={toggleAccordion1}
+                  className="p-1 px-4 border flex items-center justify-between mb-4 text-gray-100 bg-violet-700 font-bold rounded-xl w-full hover:scale-105 duration-300"
+                  style={{ zIndex: 0 }}>
+                  <h1 className="hover:scale-110 duration-300 uppercase text-">Lista de Módulos</h1>
+                  <div>
+                  {isAccordionOpen1 ? (
+                      <BiChevronUp className="z-0 text-5xl hover:scale-150 duration-300"/>
+                  ) : (
+                      <BiChevronDown className="z-0 text-5xl hover:scale-150 duration-300" />
+                  )}
+                  </div>
+                </button>
+              </div>
             {isAccordionOpen1 && (
               <motion.div
                 className="bg-white rounded-lg"

@@ -6,15 +6,8 @@ const Graduate = () => {
     <section id="/graduate">
       <div className=" p-5 flex flex-col ">
         <div
-          className="text text-center text-4xl  lg:text-6xl xl:text-6xl mb-4 font-bold font-poppins "
-          style={{
-            background: `linear-gradient(to right, #002e79, #006eb0)`,
-            WebkitBackgroundClip: "text",
-            backgroundClip: "text",
-            color: "transparent",
-          }}
-        >
-          DIPLOMADOS EN INGENIERIA CIVIL
+          className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-4 font-extrabold">
+            DIPLOMADOS EN INGENIERIA CIVIL
         </div>
         <GraduateAlimentary/>
       </div>
