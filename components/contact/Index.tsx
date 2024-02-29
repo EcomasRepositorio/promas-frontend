@@ -27,7 +27,7 @@ const [isSubmit, setIsSubmit] = useState(false);
   const rowsNumber: number = parseInt(rowsValue);
   return (
     <div id='contact' className='w-full lg:h-screen text-white bg-[#030014]'>
-      <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
+      <div className='max-w-[1240px] m-auto px-2 py-10 w-full'>
         <motion.div
           variants={variants}
           initial="hidden"
@@ -43,7 +43,7 @@ const [isSubmit, setIsSubmit] = useState(false);
                 <Image
                   className='rounded-xl hover:scale-105 ease-in duration-300'
                   src="/IMAGEN.png"
-                  width={200}
+                  width={300}
                   height={200}
                   alt='promas'
                 />

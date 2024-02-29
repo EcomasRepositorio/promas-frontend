@@ -18,10 +18,10 @@ const Graduate: React.FC = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      //className={`${styles.innerWidth} mx-auto flex flex-col max-w-screen-xl`}
+      className={`${styles.innerWidth}`}
     >
-      <TypingText title="Nuestros Diplomados" textStyles="text-center" />
-      <div className="mt-10 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
+      <TypingText title="Nuestros Diplomados" textStyles="text-center pt-10" />
+      <div className="mt-20 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
         {insights.map((item, index: number) => (
           <GraduateCard key={`insight-${index}`} {...item} index={index + 1} />
         ))}

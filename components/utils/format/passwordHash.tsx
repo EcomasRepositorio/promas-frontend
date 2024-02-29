@@ -42,24 +42,28 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ label, name }) => {
 export default PasswordInput;
  */
 
-import React from 'react';
+import React, { ChangeEvent, KeyboardEvent } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
 import { UseFormRegister } from 'react-hook-form';
 
 interface PasswordInputProps {
-  label: string;
   name: string;
   register: UseFormRegister<any>; // Ajusta el tipo según tu formulario principal
+  placeholder?: string;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void; // Agrega onChange a las propiedades
+  onKeyDown: (event: KeyboardEvent<HTMLInputElement>) => void;
 }
 
-const PasswordInput: React.FC<PasswordInputProps> = ({ label, name, register }) => {
+const PasswordInput: React.FC<PasswordInputProps> = ({ name, register, placeholder, onChange, onKeyDown }) => {
   return (
     <div className="relative">
-      <label>{label}:</label>
       <input
         type="password"
+        placeholder={placeholder}
         {...register(name)} // Usa el register de RHF para manejar el campo
-        className="border rounded-lg p-2 w-full"
+        onChange={onChange} // Usa onChange aquí
+        onKeyDown={onKeyDown} // Usa onKeyDown aquí
+        className="w-80 bg-[#FFFFFF30] py-2 px-12 rounded-full focus:bg-[#00000050] focus:outline-none focus:ring-1 focus:ring-pink-600 focus:drop-shadow-lg"
       />
     </div>
   );

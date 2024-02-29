@@ -102,8 +102,9 @@ const Comment = () => {
         }
     }
   return (
-    <section className='bg-pink-600/50'>
-      <div className='text-white text-center'>
+    <section className='relative'>
+      <div className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80 bg-gray-800" style={{ backgroundImage: "url('/fondo_certificate.jpg')" }}></div>
+      <div className='relative z-10 text-white text-center'>
         <h1 className='font-extrabold text-5xl py-10'>Testimonios</h1>
       </div>
     <div className="slider max-w-screen-xl mx-auto">

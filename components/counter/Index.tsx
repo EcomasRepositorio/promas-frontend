@@ -20,8 +20,9 @@ const Counter = () => {
   }, [inView, end])
 
   return (
-    <section className='bg-pink-600/50'>
-      <div className='p-10 max-w-screen-xl mx-auto'>
+    <section className='relative'>
+      <div className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80 bg-gray-800" style={{ backgroundImage: "url('/fondo_certificate.jpg')" }}></div>
+      <div className='relative z-10 p-10 max-w-screen-xl mx-auto'>
         <h1 className='text-5xl font-extrabold text-white text-center mt-10 '>
           ¿Por que Promas?
         </h1>
@@ -30,7 +31,7 @@ const Counter = () => {
           diplomados, apostando por una formación con pensamiento estratégico e innovador
         </h3>
         <div className='grid lg:grid-cols-4 bord text-center gap-6 mb-20'>
-          <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5`}>
+          <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5 hover:scale-110 duration-300`}>
             <Image
               src="/estudiantes.png"
               alt="alumnos"
@@ -47,7 +48,7 @@ const Counter = () => {
                   </div>}
               </div>
           </div>
-          <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5`}>
+          <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5 hover:scale-110 duration-300`}>
             <Image
               src="/certificados.png"
               alt="alumnos"
@@ -64,7 +65,7 @@ const Counter = () => {
                   </div>}
               </div>
           </div>
-          <div ref={ref} className={`flex justify-center items-center flex-col rounded-xl border-2 border-violet-600 p-4 mt-5`}>
+          <div ref={ref} className={`flex justify-center items-center flex-col rounded-xl border-2 border-violet-600 p-4 mt-5 hover:scale-110 duration-300`}>
             <Image
               src="/metologia.png"
               alt="alumnos"
@@ -81,7 +82,7 @@ const Counter = () => {
                 </div>}
               </div>
           </div>
-          <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5`}>
+          <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5 hover:scale-110 duration-300`}>
             <Image
               src="/enseñanza.png"
               alt="alumnos"

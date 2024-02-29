@@ -6,7 +6,7 @@ const About = () => {
   <div className="relative pt-12 lg:pt-72 pb-28 lg:pb-80">
     <div
       className="absolute top-0 w-full h-full bg-center bg-cover"
-      style={{ backgroundImage: 'url("/about.webp")' }}
+      style={{ backgroundImage: 'url("/fondo_certificate.jpg")' }}
     >
       <span
         id="blackOverlay"

@@ -15,7 +15,7 @@ export const insights = [
       imgUrl: '/logo_promas_3.png',
       title: 'Diplomados en Ingenieria Civil',
       subtitle:
-      'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+      'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit.',
     },
     {
       imgUrl: '/logo_promas_3.png',
