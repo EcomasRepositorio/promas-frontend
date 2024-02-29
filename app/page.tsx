@@ -11,7 +11,9 @@ export default function Main() {
   return (
     <main className="">
      <div className="">
+      <div className="">
       <Home />
+      </div>
       <Graduate />
       <Counter />
       <Course />

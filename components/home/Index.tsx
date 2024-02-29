@@ -54,11 +54,13 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-[#030014]">
+    <div className="bg-[#030014] relative">
+      <div className="hidden lg:block w-[300px] h-[300px] bg-pink-500 rounded-[100%] absolute z-1 top-[75%] left-[30%] translate-x-[-60%] translate-y-[-60%] blur-[150px]"></div>
+      <div className=" w-[300px] h-[400px] bg-violet-600 rounded-[100%] absolute z-1 top-[30%] left-[70%] translate-x-[-60%] translate-y-[-60%] blur-[150px]"></div>
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between w-full"
+      className="relative z-10 flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between w-full"
     >
       <div className="mb-10 lg:mb-0 ml-4 lg:ml-0">
         {icons.map((icon, i) => (
@@ -157,14 +159,3 @@ const Home = () => {
 };
 
 export default Home;
-
-
-
- {/* <span>
-            Diplomados
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              {" "}
-              PROMAS{" "}
-            </span>
-            Cursos
-          </span> */}

@@ -39,7 +39,7 @@ const [imageUrl, setImageUrl] = useState('');
 
   return (
     <div id="Alimentary" className="">
-       <div className="md:px-20 flex flex-col sm:flex-row justify-center lg:mt-8">
+       <div className="md:px-20 flex flex-col sm:flex-row justify-center ">
           <div className="sm:w-96 mb-4 sm:mb-0">
             <Image
               className="bg-cover h-96 w-96 sm:h-auto rounded-3xl"
@@ -143,7 +143,7 @@ const [imageUrl, setImageUrl] = useState('');
                 className="bg-white rounded-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.1} }}>
-                <div className="text-center text-sm font-sans font-semibold">
+                <div className="text-sm font-sans font-semibold">
                   <ul className="">
                   {coursesAlimentary.map((item, index) => (
                     <motion.li
@@ -152,8 +152,11 @@ const [imageUrl, setImageUrl] = useState('');
                       animate={{ opacity: 1, transition: { duration: 1, delay: index * 0.2 } }}
                       className="lg:p-2 p-2 mb-3 border rounded-md bg-slate-50 hover:bg-violet-600 hover:text-gray-100 border-violet-500 hover:scale-110 duration-300 cursor-pointer"
                       style={{ display: 'block', width: '100%' }}
-                      onClick={() => window.open(`https://wa.me/51900102090/?text=`, '_blank')}>
-                        {item}
+                      onClick={() => window.open(`https://wa.me/51991303509/?text=${encodeURIComponent(item.text)}`, '_blank')}>
+                      <div className="flex items-center">
+                        <FaWhatsapp className="mr-2 text-green-600 text-lg"/>
+                        {item.name}
+                      </div>
                     </motion.li>
                   ))}
                 </ul>
