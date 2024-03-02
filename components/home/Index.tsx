@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const images = [
   { src: "/IMAGEN.png", variants: slideInFromRight(1) },
-  { src: "/IMAGEN.png", variants: slideInFromRight(1) },
+  { src: "/IMAGEN_2.png", variants: slideInFromRight(1) },
   { src: "/IMAGEN.png", variants: slideInFromRight(1) }
 ];
 

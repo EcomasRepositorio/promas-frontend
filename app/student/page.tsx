@@ -283,10 +283,10 @@ const Student = () => {
   };
 
   return (
-    <section className="p-2 mt-28">
+    <section className="p-2">
       {/* <div className="text-center text-gray-500 lg:p-6 text-2xl font-semibold mb-10 mt-8"> */}
 
-      <div className="text-center text-gray-300 lg:p-6 p-0 mt-8 mb-10 lg:text-2xl text-xl font-semibold">
+      <div className="text-center text-gray-600 lg:p-6 p-0 mt-8 mb-10 lg:text-2xl text-xl font-extrabold">
         <a className="border shadow-2xl p-4 rounded-xl">
           ADMINISTRAR ESTUDIANTES
         </a>

@@ -26,7 +26,7 @@ const Certificate: React.FC = () => {
   return (
   <section id='/certificate'  className='relative pt-20 pb-20 p-2 items-center justify-center'>
     <div className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80 bg-gray-800" style={{ backgroundImage: "url('/fondo_certificate.jpg')" }}></div>
-    <div className="max-w-screen-lg mx-auto border border-transparent  bg-gray-800/30 rounded-3xl shadow-2xl shadow-gray-100 text-center lg:mb-20 p-4 relative">
+    <div className="max-w-screen-lg mx-auto border border-transparent  bg-gray-800/75 rounded-3xl shadow-2xl shadow-gray-100 text-center lg:mb-20 p-4 relative">
       <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
       <div className='flex justify-center mb-4 lg:gap-10 mt-12'>
             {/* <img src={'/certificate/logo_unp.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain"/> */}
@@ -35,10 +35,10 @@ const Certificate: React.FC = () => {
           </div>
       </div>
         <div className="">
-          <h2 className="mb-4 mt-20 text-4xl font-extrabold text-white">
+          <h2 className="mb-4 mt-20 text-4xl font-extrabold text-white uppercase">
             Certificados
           </h2>
-          <p className="font-semibold text-white sm:text-xl">
+          <p className="font-semibold text-white sm:text-xl px-36">
             En este módulo podrá realizar la búsqueda de certificados de los diferentes eventos ofrecidos por PROMAS.
           </p>
           <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-white">
