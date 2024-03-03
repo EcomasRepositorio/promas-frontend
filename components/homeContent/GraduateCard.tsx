@@ -16,9 +16,9 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
   <motion.div
     variants={fadeIn('up', 'spring', index * 0.5, 1)}
     initial="animate"
-    className="flex md:flex-col flex-col gap-4 px-2 py-2 mb-20 rounded-3xl shadow-xl shadow-violet-600 bg-violet-500/20 hover:cursor-pointer"
-    whileHover={{ scale: 1.1, backgroundColor: 'purple' }} // Escala al 150% en el hover
-    whileTap={{ scale: 0 }}
+    className="flex md:flex-col flex-col gap-4 px-2 py-2 mb-20 mx-auto rounded-3xl shadow-xl shadow-violet-600 bg-violet-500/50 hover:cursor-pointer"
+    whileHover={{ scale: 1.1, backgroundColor: 'purple' }}
+    whileTap={{ scale: 1 }}
   >
     <div className="flex justify-center">
     <Image
@@ -29,7 +29,7 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
       className="md:w-[270px] w-auto h-[250px] object-cover"
     />
     </div>
-    <div className="w-full flex items-center justify-center text-center">
+    <div className="w-full flex items-center justify-center text-center ">
       <div className="flex-1 flex flex-col max-w-[650px]">
         <h4 className="font-semibold lg:text-[28px] text-[26px] text-white">
           {title}

@@ -18,14 +18,20 @@ const images = [
 
 const texts = [
   "Tu puerta abierta al conocimiento en vivo, desde donde estes...",
-  "Descubre la excelencia con Promas",
+  "Con nuestros Cursos y Diplomados de especialización",
   "Unete a nosotros para alcanzar nuevas alturas"
 ];
 
+/* const tittles = [
+  "DIPLOMADOS, CURSOS PROMÁS",
+  "¡CONSTRUYENDO UN MUNDO MEJOR!",
+  "DIPLOMADOS, CURSOS PROMÁS"
+]; */
 const tittles = [
-  "DIPLOMADOS, CURSOS PROMAS",
-  "DIPLOMADOS, CURSOS PROMAS",
-  "DIPLOMADOS, CURSOS PROMAS"
+  { tittle1: "DIPLOMADOS, CURSOS PROMÁS", color1: "from-purple-700 to-pink-500" },
+  { tittle2: "¡CONSTRUYENDO", color2: "text-violet-600"},
+  { tittle3: "UN MUNDO MEJOR!", color3:"to-pink-600"},
+  { tittle4: "DIPLOMADOS, CURSOS PROMÁS", color4: "from-green-700 to-blue-500" }
 ];
 
 const icons = [
@@ -55,8 +61,8 @@ const Home = () => {
 
   return (
     <div className="bg-[#030014] relative">
-      <div className="hidden lg:block w-[300px] h-[300px] bg-pink-500 rounded-[100%] absolute z-1 top-[75%] left-[30%] translate-x-[-60%] translate-y-[-60%] blur-[150px]"></div>
-      <div className=" w-[300px] h-[400px] bg-violet-600 rounded-[100%] absolute z-1 top-[30%] left-[70%] translate-x-[-60%] translate-y-[-60%] blur-[150px]"></div>
+      {/* <div className="hidden lg:block w-[300px] h-[300px] bg-pink-500 rounded-[100%] absolute z-1 top-[75%] left-[30%] translate-x-[-60%] translate-y-[-60%] blur-[150px]"></div>
+      <div className=" w-[300px] h-[400px] bg-violet-600 rounded-[100%] absolute z-1 top-[30%] left-[70%] translate-x-[-60%] translate-y-[-60%] blur-[150px]"></div> */}
     <motion.div
       initial="hidden"
       animate="visible"
@@ -96,16 +102,60 @@ const Home = () => {
 
         {tittles.map((tittle, i) => (
           i === index && (
-        <motion.div
-          key={i}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          variants={slideInFromLeft(0.5)}
-          className="mt-6 lg:text-7xl text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-pink-500"
-        >
-          {tittle}
-        </motion.div>
+          <>
+            <motion.div
+              key={`${i}-1`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={slideInFromLeft(0.5)}
+              className="lg:leading-[3.8em] leading-[2.3em]">
+              <h1>
+                <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color1}`}>
+                  {tittle.tittle1}
+                </p>
+              </h1>
+            </motion.div>
+            <motion.div
+              key={`${i}-2`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={slideInFromLeft(0.5)}
+              className="lg:leading-[3.8em] leading-[2.3em]">
+              <h1>
+                <p className={`mt-6 lg:text-[65px] text-[36px] font-extrabold text-transparent bg-clip-text ${tittle.color2}`}>
+                  {tittle.tittle2}
+                </p>
+              </h1>
+            </motion.div>
+            <motion.div
+              key={`${i}-3`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={slideInFromLeft(0.5)}
+              className="lg:leading-[3.8em] leading-[2.3em]">
+              <h1>
+                <p className={`lg:text-[60px] text-[32px] font-extrabold text-transparent bg-clip-text text-pink-600 ${tittle.color3}`}>
+                  {tittle.tittle3}
+                </p>
+              </h1>
+            </motion.div>
+            <motion.div
+              key={`${i}-4`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={slideInFromLeft(0.5)}
+              className="lg:leading-[3.8em] leading-[2.3em]">
+              <h1>
+                <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color4}`}>
+                  {tittle.tittle4}
+                </p>
+              </h1>
+            </motion.div>
+          </>
         )
         ))}
 
@@ -143,7 +193,7 @@ const Home = () => {
         initial="hidden"
         animate="visible"
         variants={slideInFromRight(1)}
-        className="w-full h-full flex justify-center items-center text-center mt-10 lg:mt-0"
+        className="w-full h-full flex justify-center items-center text-center mt-10 lg:mt-4"
       >
         <Image
           key={index}

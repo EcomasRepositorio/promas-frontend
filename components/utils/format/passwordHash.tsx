@@ -48,9 +48,9 @@ import { UseFormRegister } from 'react-hook-form';
 
 interface PasswordInputProps {
   name: string;
-  register: UseFormRegister<any>; // Ajusta el tipo según tu formulario principal
+  register: UseFormRegister<any>;
   placeholder?: string;
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void; // Agrega onChange a las propiedades
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
   onKeyDown: (event: KeyboardEvent<HTMLInputElement>) => void;
 }
 
@@ -60,13 +60,38 @@ const PasswordInput: React.FC<PasswordInputProps> = ({ name, register, placehold
       <input
         type="password"
         placeholder={placeholder}
-        {...register(name)} // Usa el register de RHF para manejar el campo
-        onChange={onChange} // Usa onChange aquí
-        onKeyDown={onKeyDown} // Usa onKeyDown aquí
+        {...register(name)}
+        onChange={onChange}
+        onKeyDown={onKeyDown}
         className="w-80 bg-[#FFFFFF30] py-2 px-12 rounded-full focus:bg-[#00000050] focus:outline-none focus:ring-1 focus:ring-pink-600 focus:drop-shadow-lg"
       />
     </div>
   );
 };
 
-export default PasswordInput;
+interface PasswordInputRegisterProps {
+  label: string;
+  name: string;
+  register: UseFormRegister<any>; // Ajusta el tipo según tu formulario principal
+}
+
+const PasswordInputRegister: React.FC<PasswordInputRegisterProps> = ({ label, name, register }) => {
+  return (
+    <div className="relative">
+      <label>{label}:</label>
+      <input
+        type="password"
+        {...register(name)} // Usa el register de RHF para manejar el campo
+        className="border rounded-lg p-2 w-full"
+      />
+    </div>
+  );
+};
+const exports = {
+  PasswordInput,
+  PasswordInputRegister
+};
+
+export default exports;
+
+

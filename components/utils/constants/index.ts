@@ -1,47 +1,47 @@
 export const insights = [
     {
-      imgUrl: '/logo_promas_3.png',
-      title: 'Diplomados en Ingenieria Vial',
+      imgUrl: '/IMAGEN_2.png',
+      title: 'Diplomados en Ingeniería Ambiental',
       subtitle:
           'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
     },
     {
-      imgUrl: '/logo_promas_3.png',
-      title: 'Diplomados en Ingenieria Agricola',
+      imgUrl: '/IMAGEN_2.png',
+      title: 'Diplomados en Ingeniería Agrónoma',
       subtitle:
           'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
     },
     {
-      imgUrl: '/logo_promas_3.png',
-      title: 'Diplomados en Ingenieria Civil',
+      imgUrl: '/IMAGEN_2.png',
+      title: 'Diplomados en Ingeniería Alimentaria',
       subtitle:
       'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit.',
     },
     {
-      imgUrl: '/logo_promas_3.png',
-      title: 'Diplomados en Ingenieria Ambiental',
+      imgUrl: '/IMAGEN_2.png',
+      title: 'Diplomados en Ingeniería Civil',
       subtitle:
           'Quam  quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
     },
     {
-      imgUrl: '/logo_promas_3.png',
-      title: 'Diplomados en Ingenieria de Industrias Alimentarias',
+      imgUrl: '/IMAGEN_2.png',
+      title: 'Diplomado en Ingenieria Vial',
       subtitle:
           'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
     },
     {
-      imgUrl: '/logo_promas_3.png',
-      title: 'Diplomados en Sistema de Riego Tecnificado',
+      imgUrl: '/IMAGEN_2.png',
+      title: 'Diplomado en Ssoma',
       subtitle:
           'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
-    },
+    }
   ];
 
 
   export const images = [
     { src: "/IMAGEN.png" },
     { src: "/IMAGEN.png" },
-    { src: "/IMAGEN.png" }
+    { src: "/IMAGEN.png" } 
   ];
 
   export const texts = [

@@ -12,14 +12,14 @@ const Course = () => {
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
               alt="promas"
-              src="/IMAGEN.png"
-              width={200}
-              height={200}
+              src="/course/fertiirrigacion.png"
+              width={800}
+              height={600}
               className="w-full h-full" />
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24">
-            <h1 className="text-3xl font-semibold">The Kings Man</h1>
+            <h1 className="text-3xl font-semibold">Fertirrigación</h1>
             <p className="my-2">9.0 Rating</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -41,9 +41,9 @@ const Course = () => {
         <div className="absolute backface-hidden border-2 w-full h-full">
           <Image
             alt="promas"
-            src="/IMAGEN.png"
-            width={200}
-            height={200}
+            src="/course/monitoreo_calidad_agua.png"
+            width={800}
+            height={600}
             className="w-full h-full" />
         </div>
         <div
@@ -52,7 +52,7 @@ const Course = () => {
           <div
             className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
           >
-            <h1 className="text-3xl font-semibold">The Kings Man</h1>
+            <h1 className="text-3xl font-semibold">Monitoreo de la calidad de agua</h1>
             <p className="my-2">9.0 Rating</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -69,6 +69,7 @@ const Course = () => {
         </div>
       </div>
     </div>
+
     <div
       className="lg:w-[400px] w-[300px] h-[420px] lg:mt-20 bg-transparent cursor-pointer group perspective"
     >
@@ -78,9 +79,9 @@ const Course = () => {
         <div className="absolute backface-hidden border-2 w-full h-full">
           <Image
             alt="promas"
-            src="/IMAGEN.png"
-            width={200}
-            height={200}
+            src="/course/costos_presupuestos.png"
+            width={800}
+            height={600}
             className="w-full h-full" />
         </div>
         <div
@@ -89,7 +90,7 @@ const Course = () => {
           <div
             className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
           >
-            <h1 className="text-3xl font-semibold">The Kings Man</h1>
+            <h1 className="text-3xl font-semibold">Costos y Presupuestos con S10</h1>
             <p className="my-2">9.0 Rating</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -106,8 +107,9 @@ const Course = () => {
         </div>
       </div>
     </div>
+
     <div
-      className="lg:w-[400px] w-[300px] h-[420px] lg:mb-20 bg-transparent cursor-pointer group perspective"
+      className="lg:w-[400px] w-[300px] h-[420px] mb-20 bg-transparent cursor-pointer group perspective"
     >
       <div
         className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
@@ -115,9 +117,9 @@ const Course = () => {
         <div className="absolute backface-hidden border-2 w-full h-full">
           <Image
             alt="promas"
-            src="/IMAGEN.png"
-            width={200}
-            height={200}
+            src="/course/residuos_solidos.png"
+            width={800}
+            height={600}
             className="w-full h-full" />
         </div>
         <div
@@ -126,7 +128,7 @@ const Course = () => {
           <div
             className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
           >
-            <h1 className="text-3xl font-semibold">The Kings Man</h1>
+            <h1 className="text-3xl font-semibold">Formulación de proyectos de inversión pública de residuos sólidos</h1>
             <p className="my-2">9.0 Rating</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -143,8 +145,9 @@ const Course = () => {
         </div>
       </div>
     </div>
+
     <div
-      className="lg:w-[400px] w-[300px] h-[420px] lg:mb-20 md:mb-20 bg-transparent cursor-pointer group perspective"
+      className="lg:w-[400px] w-[300px] h-[420px] mb-20 bg-transparent cursor-pointer group perspective"
     >
       <div
         className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000"
@@ -152,9 +155,9 @@ const Course = () => {
         <div className="absolute backface-hidden border-2 w-full h-full">
           <Image
             alt="promas"
-            src="/IMAGEN.png"
-            width={200}
-            height={200}
+            src="/course/esquema_FSSC.png"
+            width={800}
+            height={600}
             className="w-full h-full" />
         </div>
         <div
@@ -163,7 +166,7 @@ const Course = () => {
           <div
             className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
           >
-            <h1 className="text-3xl font-semibold">The Kings Man</h1>
+            <h1 className="text-3xl font-semibold">Esquema FSSC 22000</h1>
             <p className="my-2">9.0 Rating</p>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -189,19 +192,16 @@ const Course = () => {
         <div className="absolute backface-hidden border-2 w-full h-full">
           <Image
             alt="promas"
-            src="/IMAGEN.png"
-            width={200}
-            height={200}
+            src="/course/impacto_ambiental.png"
+            width={800}
+            height={600}
             className="w-full h-full" />
         </div>
         <div
-          className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden"
-        >
+          className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-pink-600/80 overflow-hidden">
           <div
-            className="text-center flex flex-col items-center justify-center h-full text-gray-800 px-2 pb-24"
-          >
-            <h1 className="text-3xl font-semibold">The Kings Man</h1>
-            <p className="my-2">9.0 Rating</p>
+            className="text-center flex flex-col items-center justify-center h-full text-gray-100 px-2 pb-24">
+            <h1 className="text-2xl text-white font-semibold">Identificación y evaluación de Impacto Ambiental</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
               itaque assumenda saepe animi maxime libero non quasi, odit natus
@@ -209,9 +209,8 @@ const Course = () => {
               amet velit accusamus.
             </p>
             <button
-              className="bg-teal-500 px-6 py-2 font-semibold text-white rounded-full absolute bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125"
-            >
-              Watch Now
+              className="hover:bg-violet-700 border-violet-700 border px-6 py-1 text-sm font-semibold text-white rounded-full absolute bottom-20 delay-500 duration-1000 group-hover:bottom-20 scale-0 group-hover:scale-125">
+                Más información
             </button>
           </div>
         </div>

@@ -5,8 +5,7 @@ import axios from 'axios';
 import { MdOutlineMailLock } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import { useForm } from 'react-hook-form';
-import PasswordInput from '@/components/utils/format/passwordHash';
-
+import PasswordInputs from '@/components/utils/format/passwordHash';
 type ResErrors = {
   message: string;
   errorContent: string;
@@ -26,6 +25,7 @@ const dataForm = {
   token:'',
 };
 
+const { PasswordInput } = PasswordInputs;
 const Login: React.FC = () => {
   const { register } = useForm();
   const [resErrors, setResErrors] = useState<ResErrors | null>(null);
