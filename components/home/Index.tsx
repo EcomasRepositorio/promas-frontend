@@ -18,8 +18,8 @@ const images = [
 
 const texts = [
   "Tu puerta abierta al conocimiento en vivo, desde donde estes...",
-  "Con nuestros Cursos y Diplomados de especialización",
-  "Unete a nosotros para alcanzar nuevas alturas"
+  "Con nuestros Cursos y Diplomados de especialización...",
+  "Unete a nosotros para alcanzar nuevas metas..m"
 ];
 
 /* const tittles = [
@@ -29,8 +29,7 @@ const texts = [
 ]; */
 const tittles = [
   { tittle1: "DIPLOMADOS, CURSOS PROMÁS", color1: "from-purple-700 to-pink-500" },
-  { tittle2: "¡CONSTRUYENDO", color2: "text-violet-600"},
-  { tittle3: "UN MUNDO MEJOR!", color3:"to-pink-600"},
+  { tittle2: "¡CONSTRUYENDO", color2: "text-[#680080]", tittle3: "UN MUNDO MEJOR!", color3:"text-[#b20079]"},
   { tittle4: "DIPLOMADOS, CURSOS PROMÁS", color4: "from-green-700 to-blue-500" }
 ];
 
@@ -108,7 +107,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color1}`}>
@@ -121,7 +120,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[65px] text-[36px] font-extrabold text-transparent bg-clip-text ${tittle.color2}`}>
@@ -134,10 +133,10 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
-                <p className={`lg:text-[60px] text-[32px] font-extrabold text-transparent bg-clip-text text-pink-600 ${tittle.color3}`}>
+                <p className={`lg:text-[60px] text-[32px] font-extrabold text-transparent bg-clip-text ${tittle.color3}`}>
                   {tittle.tittle3}
                 </p>
               </h1>
@@ -147,7 +146,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color4}`}>
@@ -159,20 +158,20 @@ const Home = () => {
         )
         ))}
 
-          {texts.map((text, i) => (
-            i === index && (
-              <motion.p
-                key={i}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={slideInFromLeft(0.8)}
-                className="lg:text-3xl text-gray-200 mb-10"
-              >
-                {text}
-              </motion.p>
-            )
-          ))}
+        {texts.map((text, i) => (
+          i === index && (
+            <motion.p
+              key={i}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={slideInFromLeft(1.5)}
+              className="lg:text-3xl text-gray-200 mb-10"
+            >
+              {text}
+            </motion.p>
+          )
+        ))}
 
         {buttons.map((button, i) => ( i === index && (
         <motion.a

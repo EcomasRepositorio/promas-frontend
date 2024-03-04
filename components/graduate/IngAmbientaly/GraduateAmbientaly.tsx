@@ -173,7 +173,7 @@ const [imageUrl, setImageUrl] = useState('');
                       style={{ display: 'block', width: '100%' }}
                       onClick={() => window.open(`https://wa.me/51984040264/?text=${encodeURIComponent(item.text)}`, '_blank')}>
                       <div className="flex items-center">
-                        <FaWhatsapp className="mr-2 text-green-600 text-lg"/>
+                        <FaWhatsapp className="mr-2 text-green-600 text-lg flex-shrink-0"/>
                         {item.name}
                       </div>
                     </motion.li>
