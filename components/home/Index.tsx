@@ -18,8 +18,8 @@ const images = [
 
 const texts = [
   "Tu puerta abierta al conocimiento en vivo, desde donde estes...",
-  "Con nuestros Cursos y Diplomados de especialización",
-  "Unete a nosotros para alcanzar nuevas alturas"
+  "Con nuestros Cursos y Diplomados de especialización...",
+  "Unete a nosotros para alcanzar nuevas metas..m"
 ];
 
 /* const tittles = [
@@ -29,8 +29,7 @@ const texts = [
 ]; */
 const tittles = [
   { tittle1: "DIPLOMADOS, CURSOS PROMÁS", color1: "from-purple-700 to-pink-500" },
-  { tittle2: "¡CONSTRUYENDO", color2: "text-[#680080]", tittle3: "UN MUNDO MEJOR!", color3:"text-[#b20079]"},
-
+  { tittle2: "¡CONSTRUYENDO", color2: "text-customPurple", tittle3: "UN MUNDO MEJOR!", color3: "text-customPink"},
   { tittle4: "DIPLOMADOS, CURSOS PROMÁS", color4: "from-green-700 to-blue-500" }
 ];
 
@@ -80,19 +79,19 @@ const Home = () => {
           className="py-1 lg:text-left text-center px-1 opacity-[0.9]"
         >
           <h1 className="text-gray-100 lg:text-2xl text-2xl text-center inline-flex lg:gap-6 gap-3">
-            <Link href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img1}
             </Link>
-            <Link href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+1}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img2}
             </Link>
-            <Link href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+2}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img3}
             </Link>
-            <Link href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+3}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img4}
             </Link>
-            <Link href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+4}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img5}
             </Link>
           </h1>
@@ -102,7 +101,7 @@ const Home = () => {
 
         {tittles.map((tittle, i) => (
           i === index && (
-          <>
+          <React.Fragment key={`tittles-${i}`}>
             <motion.div
               key={`${i}-1`}
               initial="hidden"
@@ -148,31 +147,31 @@ const Home = () => {
               animate="visible"
               exit="hidden"
               variants={slideInFromLeft(1)}
-              className="lg:leading-[3.8em] leading-[2.3em] mb-8">
+              className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color4}`}>
                   {tittle.tittle4}
                 </p>
               </h1>
             </motion.div>
-          </>
+          </React.Fragment>
         )
         ))}
 
-          {texts.map((text, i) => (
-            i === index && (
-              <motion.p
-                key={i}
-                initial="hidden"
-                animate="visible"
-                exit="hidden"
-                variants={slideInFromLeft(1.2)}
-                className="lg:text-3xl text-gray-200 mb-10"
-              >
-                {text}
-              </motion.p>
-            )
-          ))}
+        {texts.map((text, i) => (
+          i === index && (
+            <motion.p
+              key={i}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={slideInFromLeft(1.5)}
+              className="lg:text-3xl text-gray-200 mb-10"
+            >
+              {text}
+            </motion.p>
+          )
+        ))}
 
         {buttons.map((button, i) => ( i === index && (
         <motion.a

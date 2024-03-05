@@ -16,8 +16,7 @@ const Graduate = () => {
       <div className="relative pt-12 lg:pt-40 pb-28 lg:pb-40">
     <div
       className="absolute top-0 w-full h-full bg-center bg-cover"
-      style={{ backgroundImage: 'url("/fondo_certificate.jpg")' }}
-    >
+      style={{ backgroundImage: 'url("/fondo_certificate.jpg")' }}>
       <span
         id="blackOverlay"
         className="w-full h-full absolute opacity-60 bg-gray-800"
