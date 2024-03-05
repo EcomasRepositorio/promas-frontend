@@ -35,7 +35,7 @@ export function slideInFromLeft(delay: number) {
       opacity: 1,
       transition: {
         delay: 0.5,
-        duration: 0.5,
+        duration: 1,
       },
     },
   };

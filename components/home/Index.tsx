@@ -29,8 +29,8 @@ const texts = [
 ]; */
 const tittles = [
   { tittle1: "DIPLOMADOS, CURSOS PROMÁS", color1: "from-purple-700 to-pink-500" },
-  { tittle2: "¡CONSTRUYENDO", color2: "text-violet-600"},
-  { tittle3: "UN MUNDO MEJOR!", color3:"to-pink-600"},
+  { tittle2: "¡CONSTRUYENDO", color2: "text-[#680080]", tittle3: "UN MUNDO MEJOR!", color3:"text-[#b20079]"},
+
   { tittle4: "DIPLOMADOS, CURSOS PROMÁS", color4: "from-green-700 to-blue-500" }
 ];
 
@@ -108,7 +108,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color1}`}>
@@ -121,7 +121,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[65px] text-[36px] font-extrabold text-transparent bg-clip-text ${tittle.color2}`}>
@@ -134,10 +134,10 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
-                <p className={`lg:text-[60px] text-[32px] font-extrabold text-transparent bg-clip-text text-pink-600 ${tittle.color3}`}>
+                <p className={`lg:text-[60px] text-[32px] font-extrabold text-transparent bg-clip-text ${tittle.color3}`}>
                   {tittle.tittle3}
                 </p>
               </h1>
@@ -147,8 +147,8 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              variants={slideInFromLeft(0.5)}
-              className="lg:leading-[3.8em] leading-[2.3em]">
+              variants={slideInFromLeft(1)}
+              className="lg:leading-[3.8em] leading-[2.3em] mb-8">
               <h1>
                 <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color4}`}>
                   {tittle.tittle4}
@@ -166,7 +166,7 @@ const Home = () => {
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                variants={slideInFromLeft(0.8)}
+                variants={slideInFromLeft(1.2)}
                 className="lg:text-3xl text-gray-200 mb-10"
               >
                 {text}
