@@ -8,6 +8,7 @@ import {
 } from "@/components/utils/motion";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Link from "next/link";
 
 const images = [
@@ -22,11 +23,6 @@ const texts = [
   "Unete a nosotros para alcanzar nuevas metas..m"
 ];
 
-/* const tittles = [
-  "DIPLOMADOS, CURSOS PROMÁS",
-  "¡CONSTRUYENDO UN MUNDO MEJOR!",
-  "DIPLOMADOS, CURSOS PROMÁS"
-]; */
 const tittles = [
   { tittle1: "DIPLOMADOS, CURSOS PROMÁS", color1: "from-purple-700 to-pink-500" },
   { tittle2: "¡CONSTRUYENDO", color2: "text-customPurple", tittle3: "UN MUNDO MEJOR!", color3: "text-customPink"},
@@ -54,9 +50,21 @@ const Home = () => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 8000);
+    }, 15000);
     return () => clearInterval(interval);
   }, []);
+
+  const nextSlide = () => {
+    setIndex((prevIndex) =>
+      prevIndex === tittles.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? tittles.length - 1 : prevIndex - 1
+    );
+  };
 
   return (
     <div className="bg-[#030014] relative">
@@ -65,9 +73,9 @@ const Home = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="relative z-10 flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between w-full"
-    >
-      <div className="mb-10 lg:mb-0 ml-4 lg:ml-0">
+      className="relative z-10 flex flex-col-reverse md:flex-row max-w-screen-xl mx-auto items-center justify-between w-full">
+
+      <div className="mb-10 lg:mb-0 p-2 md:mt-20">
         {icons.map((icon, i) => (
           i === index && (
         <motion.div
@@ -123,7 +131,7 @@ const Home = () => {
               variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
-                <p className={`mt-6 lg:text-[65px] text-[36px] font-extrabold text-transparent bg-clip-text ${tittle.color2}`}>
+                <p className={`mt-6 lg:text-[60px] text-[32px] font-extrabold bg-clip-text text-customPurple ${tittle.color2}`}>
                   {tittle.tittle2}
                 </p>
               </h1>
@@ -136,7 +144,7 @@ const Home = () => {
               variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
-                <p className={`lg:text-[60px] text-[32px] font-extrabold text-transparent bg-clip-text ${tittle.color3}`}>
+                <p className={`lg:text-[55px] text-[35px] font-extrabold bg-clip-text ${tittle.color3}`}>
                   {tittle.tittle3}
                 </p>
               </h1>
@@ -192,7 +200,7 @@ const Home = () => {
         initial="hidden"
         animate="visible"
         variants={slideInFromRight(1)}
-        className="w-full h-full flex justify-center items-center text-center mt-10 lg:mt-4"
+        className="w-full h-full flex justify-center items-center text-center mt-32"
       >
         <Image
           key={index}
@@ -203,6 +211,18 @@ const Home = () => {
         />
       </motion.div>
     </motion.div>
+    <div className="flex justify-center">
+    <button
+      onClick={prevSlide}
+      className="py-2 px-4 mr-2 font-mono text-center button-primary text-white cursor-pointer rounded-lg">
+      <BiChevronLeft className="text-xl" />
+    </button>
+    <button
+      onClick={nextSlide}
+      className="py-2 px-4 font-mono text-center button-primary text-white cursor-pointer rounded-lg">
+      <BiChevronRight className="text-xl"/>
+    </button>
+      </div>
     </div>
   );
 };

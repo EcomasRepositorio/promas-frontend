@@ -2,25 +2,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-
-import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaUserCog } from "react-icons/fa";
 
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div className='bg-black'>
-      <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0">
+      <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0 fixed z-50">
       <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5'>
-        {/* <div className='hidden md:flex items-center gap-2 text-2xl ml-5'>
-          <FaFacebookF className='text-blue-600 transition-transform transform hover:scale-125 border border-transparent rounded p-1 bg-gray-300/50'/>
-          <FaInstagram className='text-orange-400 transition-transform transform hover:scale-125 border border-transparent rounded p-1 bg-gray-300/50'/>
-          <FaTiktok className='text-black transition-transform transform hover:scale-125 border border-transparent rounded p-1 bg-gray-300/50'/>
-          <FaWhatsapp className='text-green-500 transition-transform transform hover:scale-125 border border-transparent rounded p-1 bg-gray-300/50'/>
-          <FaYoutube className='text-red-500 transition-transform transform hover:scale-125 border border-transparent rounded p-1 bg-gray-300/50'/>
-        </div> */}
-        <div className='flex font-semibold w-full border-b border-violet-500 justify-end py-1'>
-          <a href='/' className='hover:underline mr-4 text-gray-300 hover:text-white'>Verificar certificado</a>
-          <a href='/' className='hover:underline mr-3 text-gray-300 hover:text-white'>Aula Virtual</a>
+        <div className='text-right font-semibold w-full border-b border-violet-500 py-1'>
+          <Link href='/certificate' className='hover:underline mr-4 text-gray-300 hover:text-white'>Verificar certificado</Link>
+          <Link href='/' className='hover:underline mr-3 text-gray-300 hover:text-white'>Aula Virtual</Link>
         </div>
       </div>
         <div className="justify-between px-2 lg:px-0 mx-auto lg:max-w-7xl md:items-center md:flex">
@@ -90,10 +82,10 @@ function Navbar() {
                     ¡Inscribete!
                   </Link>
                 </li>
-                <li className="text-white hover:text-green-700 py-6 pl-35 lg:pl-20 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600  md:hover:text-green-600 md:hover:bg-transparent">
-                  <button className="bg-green-700 hover:bg-white py-1 px-6 rounded-xl text-base uppercase font-bold">
-                    LOGIN
-                  </button>
+                <li className="pl-40 flex items-center ">
+                  <Link href="/login" className="bg-pink-600 py-1 px-4 rounded-xl hover:bg-gray-100">
+                    <FaUserCog className='text-white text-xl hover:text-pink-600'/>
+                  </Link>
                 </li>
               </ul>
             </div>
