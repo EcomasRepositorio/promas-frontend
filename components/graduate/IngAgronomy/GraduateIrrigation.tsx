@@ -101,7 +101,7 @@ const [imageUrl, setImageUrl] = useState('');
                 <div className="w-full">
                   <Link
                     className="border-2 border-violet-600 flex items-center justify-center text-gray-600 font-bold rounded-xl p-2 hover:scale-105 duration-300"
-                    href="https://api.whatsapp.com/send?phone=51900102090"
+                    href='https://wa.me/+51957033871?text=Hola,%20deseo%20más%20información%20sobre%20el%20diplomado%20de%20Riego%20y%20Fertirriego'
                     target="_blank">
                       <div className="items-center text-xs uppercase inline-flex">
                         <FaWhatsapp className="text-green-500 text-lg"/>

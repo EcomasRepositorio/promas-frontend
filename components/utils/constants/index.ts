@@ -3,19 +3,19 @@ export const insights = [
       imgUrl: '/IMAGEN_2.png',
       title: 'Diplomados en Ingeniería Ambiental',
       subtitle:
-          'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+          'Adquirirás los conocimientos necesarios para poder poner en marcha proyectos de ingeniería que cuidan el medio ambiente y su desarrollo',
     },
     {
       imgUrl: '/IMAGEN_2.png',
       title: 'Diplomados en Ingeniería Agrónoma',
       subtitle:
-          'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+          'El conjunto de estos diplomados serán de gran ayuda si te quieres dedicar profesionalmente al área de la agronomía para desarrollar mejores conocimientos',
     },
     {
       imgUrl: '/IMAGEN_2.png',
       title: 'Diplomados en Ingeniería Alimentaria',
       subtitle:
-      'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit.',
+      'Tiene como propósito la formación de profesionales en desempeñarse en el exigente campo de manejo, administración y control de alimentos',
     },
     {
       imgUrl: '/IMAGEN_2.png',
@@ -25,13 +25,13 @@ export const insights = [
     },
     {
       imgUrl: '/IMAGEN_2.png',
-      title: 'Diplomado en Ingenieria Vial',
+      title: 'Diplomado en Ingeniería Vial',
       subtitle:
           'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
     },
     {
       imgUrl: '/IMAGEN_2.png',
-      title: 'Diplomado en Ssoma',
+      title: 'Diplomado en SSOMA',
       subtitle:
           'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
     }
