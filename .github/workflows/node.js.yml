@@ -29,7 +29,7 @@ jobs:
     - uses: actions/cache@v2
       with:
         path: .next
-        key: ${{ runner.os }}-next-${{ hashFiles('**/.next/build-manifest.json') }}
+        key: ${{ runner.os }}-next-${{ hashFiles('.next/build-manifest.json') }}
         restore-keys: |
           ${{ runner.os }}-next-
     - run: npm run build

@@ -1,4 +1,4 @@
-module.exports = {
+/* module.exports = {
     apps: [{
       name: 'promas-frontend',
       script: 'npm',
@@ -7,4 +7,4 @@ module.exports = {
       autorestart: true,
       watch: true
     }]
-  };
+  }; */
