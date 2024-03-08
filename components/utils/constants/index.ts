@@ -21,19 +21,19 @@ export const insights = [
       imgUrl: '/IMAGEN_2.png',
       title: 'Diplomados en Ingeniería Civil',
       subtitle:
-          'Quam  quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+          'Su objetivo específico es asegurar la formación de investigadores con un alto nivel, que permita el desarrollo de investigación original',
     },
     {
       imgUrl: '/IMAGEN_2.png',
       title: 'Diplomado en Ingeniería Vial',
       subtitle:
-          'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+          'Nuestro programa está diseñado para todos, ya seas un profesional que busca especializarse o si eres experto y necesitas actualizar tus conocimientos',
     },
     {
       imgUrl: '/IMAGEN_2.png',
       title: 'Diplomado en SSOMA',
       subtitle:
-          'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+          'El diplomado busca capacitar prioritariamente a los profesionales involucrados en el SSOMA de tal forma que puedan responder a los desafíos que presenta su implementación',
     }
   ];
 

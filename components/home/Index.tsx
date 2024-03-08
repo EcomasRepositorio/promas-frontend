@@ -14,32 +14,32 @@ import Link from "next/link";
 const images = [
   { src: "/IMAGEN.png", variants: slideInFromRight(1) },
   { src: "/IMAGEN_2.png", variants: slideInFromRight(1) },
-  { src: "/IMAGEN.png", variants: slideInFromRight(1) }
+ /*  { src: "/IMAGEN.png", variants: slideInFromRight(1) } */
 ];
 
 const texts = [
   "Tu puerta abierta al conocimiento en vivo, desde donde estes...",
   "Con nuestros Cursos y Diplomados de especialización...",
-  "Unete a nosotros para alcanzar nuevas metas..m"
+  /* "Unete a nosotros para alcanzar nuevas metas..m" */
 ];
 
 const tittles = [
   { tittle1: "DIPLOMADOS, CURSOS PROMÁS", color1: "from-purple-700 to-pink-500" },
   { tittle2: "¡CONSTRUYENDO", color2: "text-customPurple", tittle3: "UN MUNDO MEJOR!", color3: "text-customPink"},
-  { tittle4: "HOLA PROMÁS pm2", color4: "from-green-700 to-blue-500" }
+  /* { tittle4: "DIPLOMADOS, CURSOS PROMÁS", color4: "from-green-700 to-blue-500" } */
 ];
 
 const icons = [
   {img1: <FaFacebookF />, img2: <FaInstagram />, img3: <FaTiktok />, img4: <FaWhatsapp />, img5: <FaYoutube />},
   {img1: <FaFacebookF />, img2: <FaInstagram />, img3: <FaTiktok />, img4: <FaWhatsapp />, img5: <FaYoutube />},
-  {img1: <FaFacebookF />, img2: <FaInstagram />, img3: <FaTiktok />, img4: <FaWhatsapp />, img5: <FaYoutube />},
+  /* {img1: <FaFacebookF />, img2: <FaInstagram />, img3: <FaTiktok />, img4: <FaWhatsapp />, img5: <FaYoutube />}, */
 
 ]
 
 const buttons = [
   "Contacto",
   "Informes",
-  "¡Inscribete!"
+  /* "¡Inscribete!" */
 ]
 
 const Home = () => {
@@ -118,7 +118,7 @@ const Home = () => {
               variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
-                <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color1}`}>
+                <p className={`mt-6 lg:text-[63px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color1}`}>
                   {tittle.tittle1}
                 </p>
               </h1>
@@ -149,7 +149,7 @@ const Home = () => {
                 </p>
               </h1>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               key={`${i}-4`}
               initial="hidden"
               animate="visible"
@@ -161,7 +161,7 @@ const Home = () => {
                   {tittle.tittle4}
                 </p>
               </h1>
-            </motion.div>
+            </motion.div> */}
           </React.Fragment>
         )
         ))}

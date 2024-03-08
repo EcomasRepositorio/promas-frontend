@@ -12,7 +12,8 @@ function Navbar() {
       <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5'>
         <div className='text-right font-semibold w-full border-b border-violet-500 py-1'>
           <Link href='/certificate' className='hover:underline mr-4 text-gray-300 hover:text-white'>Verificar certificado</Link>
-          <Link href='/' className='hover:underline mr-3 text-gray-300 hover:text-white'>Aula Virtual</Link>
+          <Link href="https://site2.q10.com/login?ReturnUrl=%2F&aplentId=0959465f-37c3-4032-803b-bbfc499af7a3"
+            className='hover:underline mr-3 text-gray-300 hover:text-white'>Aula Virtual</Link>
         </div>
       </div>
         <div className="justify-between px-2 lg:px-0 mx-auto lg:max-w-7xl md:items-center md:flex">
@@ -56,7 +57,7 @@ function Navbar() {
                 navbar ? 'p-12 md:p-0 block' : 'hidden'
               }`}
             >
-              <ul className="h-screen md:h-12 lg:text-sm md:text-sm items-center justify-center md:flex ">
+              <ul className="h-screen md:h-12 lg:text-sm md:text-sm text-xl items-center justify-center md:flex ">
                 <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Inicio
@@ -82,9 +83,9 @@ function Navbar() {
                     ¡Inscribete!
                   </Link>
                 </li>
-                <li className="pl-40 flex items-center ">
-                  <Link href="/login" className="bg-pink-600 py-1 px-4 rounded-xl hover:bg-gray-100">
-                    <FaUserCog className='text-white text-xl hover:text-pink-600'/>
+                <li className="lg:pl-40 flex  justify-center items-center hover:text-pink-600 md:mt-0 mt-20">
+                  <Link href="/login" className="bg-pink-600 py-1 px-4 rounded-xl text-white hover:bg-gray-100 hover:text-pink-600 hover:scale-125 duration-300">
+                    <FaUserCog className='md:text-xl text-4xl'/>
                   </Link>
                 </li>
               </ul>

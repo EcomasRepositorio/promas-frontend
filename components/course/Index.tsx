@@ -13,6 +13,11 @@ import Link from 'next/link';
 const Course = () => {
   return (
     <section className='bg-[#030014]'>
+      <div className='text-center'>
+        <h1 className='uppercase text-white font-extrabold text-5xl pt-10'>
+          Nuestros cursos
+        </h1>
+      </div>
     <div className="grid lg:grid-cols-3 md:grid-cols-2 max-w-screen-xl mx-auto justify-center items-center gap-10 text-white">
 
     <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Fertirrigación" target='_blank'>

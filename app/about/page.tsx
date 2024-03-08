@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
   return (
     <section>
-  <div className="relative pt-12 lg:pt-72 pb-28 lg:pb-80">
+  <div className="relative pt-20 lg:pt-40 pb-28 lg:pb-40">
     <div
       className="absolute top-0 w-full h-full bg-center bg-cover"
       style={{ backgroundImage: 'url("/fondo_certificate.jpg")' }}
@@ -14,7 +14,7 @@ const About = () => {
       ></span>
     </div>
     <div className="relative mx-auto max-w-screen-xl p-2 text-white">
-      <h1 className="font-extrabold text-4xl lg:text-6xl">
+      <h1 className="font-extrabold text-4xl lg:text-6xl mt-10">
         Acerca de nosotros
       </h1>
       <p>

@@ -13,7 +13,7 @@ import GraduateSsoma from '@/components/graduate/ssoma/GraduateSsoma';
 const Graduate = () => {
   return (
     <section id="/graduate">
-      <div className="relative pt-12 lg:pt-40 pb-28 lg:pb-40">
+      <div className="relative pt-20 lg:pt-40 pb-20 lg:pb-40">
     <div
       className="absolute top-0 w-full h-full bg-center bg-cover"
       style={{ backgroundImage: 'url("/fondo_certificate.jpg")' }}>
@@ -23,7 +23,7 @@ const Graduate = () => {
       ></span>
     </div>
     <div className="relative mx-auto max-w-screen-xl p-2 text-white">
-      <h1 className="font-extrabold text-4xl lg:text-6xl">
+      <h1 className="font-extrabold text-4xl lg:text-6xl mt-10">
         Nuestros diplomados
       </h1>
       <p>
