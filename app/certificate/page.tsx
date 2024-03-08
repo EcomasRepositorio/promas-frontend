@@ -35,10 +35,10 @@ const Certificate: React.FC = () => {
       </div>
         <div className="">
           <h2 className="mb-4 mt-20 text-4xl font-extrabold text-white uppercase">
-            Certificados
+            Certificadosss
           </h2>
           <p className="font-semibold text-white sm:text-xl lg:px-36">
-            En este módulo podrá realizar la búsqueda de certificados de los diferentes eventos ofrecidos por PROMAS.
+            En esteeee módulo podrá realizar la búsqueda de certificados de los diferentes eventos ofrecidos por PROMAS.
           </p>
           <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-white">
             Buscar por:

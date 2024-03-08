@@ -132,7 +132,7 @@ const Login: React.FC = () => {
                 </button>
             </form>
             <div className="text-[#FFFFFFB3] border-t border-[#FFFFFF30] pt-4 space-y-4 text-sm">
-                <p>Dont have an account? <a className="text-neon-blue font-semibold cursor-pointer">Sign up</a></p>
+                <p>Dont have an accountttt? <a className="text-neon-blue font-semibold cursor-pointer">Sign up</a></p>
                 <p>Forgot password? <a className="text-neon-blue font-semibold cursor-pointer">Reset password</a></p>
                 <p>Dont have a password yet? <a className="text-neon-blue font-semibold cursor-pointer">Set password</a></p>
             </div>
