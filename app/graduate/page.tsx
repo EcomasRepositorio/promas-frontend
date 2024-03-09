@@ -9,18 +9,18 @@ import GraduateIngBridge from '@/components/graduate/IngCivil/GraduateIngBridge'
 import GraduateWorksSupervision from '@/components/graduate/IngCivil/GraduateWorksSupervision';
 import GraduateFoodQuality from '@/components/graduate/IngAlimentary/GraduateFoodQuality';
 import GraduateSsoma from '@/components/graduate/ssoma/GraduateSsoma';
+import Whatsapp from '@/components/whatsapp/Index';
 
 const Graduate = () => {
   return (
     <section id="/graduate">
       <div className="relative pt-20 lg:pt-40 pb-20 lg:pb-40">
-    <div
-      className="absolute top-0 w-full h-full bg-center bg-cover"
-      style={{ backgroundImage: 'url("/fondo_certificate.jpg")' }}>
-      <span
-        id="blackOverlay"
-        className="w-full h-full absolute opacity-60 bg-gray-800"
-      ></span>
+      <div className="absolute top-0 w-full h-full z-0">
+      <video className="w-full h-full object-cover" autoPlay loop muted>
+        <source src="/video_ambiental.webm" type="video/webm" />
+      </video>
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
+      {/* <span id="blackOverlay" className="w-full h-full absolute opacity-60 bg-gray-800"></span> */}
     </div>
     <div className="relative mx-auto max-w-screen-xl p-2 text-white">
       <h1 className="font-extrabold text-4xl lg:text-6xl mt-10">
@@ -78,6 +78,7 @@ const Graduate = () => {
             <GraduateSsoma />
           </div>
       </div>
+      <Whatsapp />
     </section>
   )
 }

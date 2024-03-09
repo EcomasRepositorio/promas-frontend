@@ -87,19 +87,23 @@ const Home = () => {
           className="py-1 lg:text-left text-center px-1 opacity-[0.9]"
         >
           <h1 className="text-gray-100 lg:text-2xl text-2xl text-center inline-flex lg:gap-6 gap-3">
-            <Link key={`link-${i}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i}`} href='https://www.facebook.com/people/Corporaci%C3%B3n-Prom%C3%A1s/61552473052389/' target="_blank"
+              className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img1}
             </Link>
-            <Link key={`link-${i+1}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+1}`} href='https://www.instagram.com/corporacion.promas/' target="_blank"
+              className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img2}
             </Link>
-            <Link key={`link-${i+2}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+2}`} href='https://www.tiktok.com/@promas.corp' target="_blank"
+              className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img3}
             </Link>
-            <Link key={`link-${i+3}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+3}`} href='https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20los%20diplomados' target="_blank"
+              className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img4}
             </Link>
-            <Link key={`link-${i+4}`} href='' className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+4}`} href='' target="_blank" className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img5}
             </Link>
           </h1>

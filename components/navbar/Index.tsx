@@ -7,16 +7,16 @@ import { FaUserCog } from "react-icons/fa";
 function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className='bg-black'>
+    <div className=''>
       <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0 fixed z-50">
-      <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5'>
+      <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5 backdrop-blur-md'>
         <div className='text-right font-semibold w-full border-b border-violet-500 py-1'>
           <Link href='/certificate' className='hover:underline mr-4 text-gray-300 hover:text-white'>Verificar certificado</Link>
           <Link href="https://site2.q10.com/login?ReturnUrl=%2F&aplentId=0959465f-37c3-4032-803b-bbfc499af7a3"
             className='hover:underline mr-3 text-gray-300 hover:text-white'>Aula Virtual</Link>
         </div>
       </div>
-        <div className="justify-between px-2 lg:px-0 mx-auto lg:max-w-7xl md:items-center md:flex">
+        <div className="justify-between px-2 lg:px-0 mx-auto lg:max-w-7xl md:items-center md:flex backdrop-blur-md">
           <div>
             <div className="flex items-center justify-between py-3 md:py- lg:py- md:block">
               {/* LOGO */}
@@ -57,7 +57,7 @@ function Navbar() {
                 navbar ? 'p-12 md:p-0 block' : 'hidden'
               }`}
             >
-              <ul className="h-screen md:h-12 lg:text-sm md:text-sm text-xl items-center justify-center md:flex ">
+              <ul className="h-screen md:h-12 lg:text-sm md:text-sm text-xl items-center justify-center md:flex">
                 <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Inicio

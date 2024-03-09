@@ -1,3 +1,4 @@
+import Whatsapp from '@/components/whatsapp/Index'
 import React from 'react'
 
 const About = () => {
@@ -25,6 +26,7 @@ const About = () => {
       </button>
     </div>
   </div>
+  <Whatsapp />
 </section>
   )
 }
