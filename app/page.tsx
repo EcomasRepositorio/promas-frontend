@@ -6,6 +6,7 @@ import Counter from "@/components/counter/Index";
 import Contact from "@/components/contact/Index";
 import Comment from "@/components/comments/Index";
 import Course from "@/components/course/Index";
+import Whatsapp from "@/components/whatsapp/Index";
 
 export default function Main() {
   return (
@@ -19,6 +20,7 @@ export default function Main() {
       <Course />
       <Comment />
       <Contact />
+      <Whatsapp />
      </div>
     </main>
   );
