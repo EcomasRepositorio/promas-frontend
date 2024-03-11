@@ -58,27 +58,27 @@ function Navbar() {
               }`}
             >
               <ul className="h-screen md:h-12 lg:text-sm md:text-sm text-xl items-center justify-center md:flex">
-                <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
+                <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Inicio
                   </Link>
                 </li>
-                <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
+                <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/certificate" onClick={() => setNavbar(!navbar)}>
                     Certificado
                   </Link>
                 </li>
-                <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
+                <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/graduate" onClick={() => setNavbar(!navbar)}>
                     Diplomados
                   </Link>
                 </li>
-                <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
+                <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/about" onClick={() => setNavbar(!navbar)}>
                     Nosotros
                   </Link>
                 </li>
-                <li className="font-bold text-gray-300 hover:text-white lg:mb-0 md:mb-0 mb-4 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
+                <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-4 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
                   <Link href="/contact" onClick={() => setNavbar(!navbar)}>
                     ¡Inscribete!
                   </Link>
