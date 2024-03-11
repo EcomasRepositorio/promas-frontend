@@ -24,9 +24,9 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
     <Image
       src={imgUrl}
       alt="planet-01"
-      width={150}
+      width={800}
       height={200}
-      className="md:w-[270px] w-auto h-[250px] object-cover"
+      className="w-auto rounded-3xl p-2 object-cover"
     />
     </div>
     <div className="w-full flex items-center justify-center text-center ">

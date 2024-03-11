@@ -41,11 +41,11 @@ const [imageUrl, setImageUrl] = useState('');
        <div className="md:px-20 flex flex-col sm:flex-row justify-center ">
           <div className="sm:w-96 mb-4 sm:mb-0">
             <Image
-              className="bg-cover h-96 w-96 sm:h-auto rounded-3xl"
-              src="/IMAGEN.png"
+              className="bg-cover h-96 w-96 rounded-3xl"
+              src="/graduate/ingenieria_puentes.webp"
               alt="icon"
-              width={200}
-              height={200}
+              width={800}
+              height={800}
             />
           </div>
           <div className="sm:w-1/2 md:px-20 sm:px-5 lg:mt-6">
