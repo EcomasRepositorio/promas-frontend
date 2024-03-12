@@ -9,8 +9,8 @@ function Navbar() {
   return (
     <div className=''>
       <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0 fixed z-50">
-      <div className='max-w-screen-xl flex flex-wrap items-center md:justify-end justify-center mx-auto p-0.5 backdrop-blur-md'>
-        <div className='text-right font-semibold w-full border-b border-violet-500 py-1'>
+      <div className='max-w-screen-xl flex flex-wrap  items-center justify-center mx-auto p-0.5 backdrop-blur-md'>
+        <div className='md:text-right text-center font-semibold w-full border-b border-violet-500 py-1'>
           <Link href='/certificate' className='hover:underline mr-4 text-gray-300 hover:text-white'>Verificar certificado</Link>
           <Link href="https://site2.q10.com/login?ReturnUrl=%2F&aplentId=0959465f-37c3-4032-803b-bbfc499af7a3"
             className='hover:underline mr-3 text-gray-300 hover:text-white'>Aula Virtual</Link>
@@ -18,7 +18,7 @@ function Navbar() {
       </div>
         <div className="justify-between px-2 lg:px-0 mx-auto lg:max-w-7xl md:items-center md:flex backdrop-blur-md">
           <div>
-            <div className="flex items-center justify-between py-3 md:py- lg:py- md:block">
+            <div className="items-center inline-flex justify-between py-3 md:py- lg:py- md:block">
               {/* LOGO */}
               <Link href="/">
                 <Image
@@ -31,7 +31,7 @@ function Navbar() {
                 />
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
-              <div className="md:hidden">
+              <div className="md:hidden ml-44">
                 <button
                   className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
                   onClick={() => setNavbar(!navbar)}

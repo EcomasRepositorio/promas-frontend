@@ -18,15 +18,14 @@ const Graduate: React.FC = () => (
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className={`${styles.innerWidth}`}
-    >
-      <TypingText title="Nuestros Diplomados" textStyles="text-center pt-10" />
-      <div className="mt-20 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
+      className={`${styles.innerWidth}`}>
+      <TypingText title="Nuestros Diplomados" textStyles="text-center pt-24" />
+    </motion.div>
+      <div className="mt-12 grid lg:grid-cols-3 md:grid-cols-2 gap-4 lg:gap-14">
         {insights.map((item, index: number) => (
           <GraduateCard key={`insight-${index}`} {...item} index={index + 1} />
         ))}
       </div>
-    </motion.div>
   </div>
   </section>
 );

@@ -12,8 +12,8 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 import Link from "next/link";
 
 const images = [
-  { src: "/IMAGEN.png", variants: slideInFromRight(1) },
-  { src: "/IMAGEN_2.png", variants: slideInFromRight(1) },
+  { src: "/IMAGEN.png" },
+  { src: "/IMAGEN_2.png" },
  /*  { src: "/IMAGEN.png", variants: slideInFromRight(1) } */
 ];
 
@@ -153,19 +153,6 @@ const Home = () => {
                 </p>
               </h1>
             </motion.div>
-            {/* <motion.div
-              key={`${i}-4`}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={slideInFromLeft(1)}
-              className="lg:leading-[3.8em] leading-[2.3em]">
-              <h1>
-                <p className={`mt-6 lg:text-[64px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color4}`}>
-                  {tittle.tittle4}
-                </p>
-              </h1>
-            </motion.div> */}
           </React.Fragment>
         )
         ))}

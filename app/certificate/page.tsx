@@ -31,7 +31,7 @@ const Certificate: React.FC = () => {
       <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
       <div className='flex justify-center mb-4 lg:gap-10 mt-12'>
         <Image src={'/logo_promas_3.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain" width={800} height={700} alt='logo_promas'/>
-        <Image src={'/logos/logo_unp.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain" width={800} height={200} alt='logo_promas'/>
+        <Image src={'/logos/logo_unp.png'} className="lg:w-44 lg:h-44 w-32 h-32 object-contain" width={800} height={800} alt='logo_promas'/>
       </div>
       </div>
         <div className="">
