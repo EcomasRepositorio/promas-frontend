@@ -1,23 +1,23 @@
 "use client"
 import Image from 'next/image'
 import React, { useRef, useEffect, useState } from 'react'
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer'
+/* import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer' */
 
 const Counter = () => {
-  const { ref, inView } = useInView({
+  /* const { ref, inView } = useInView({
     threshold: 0,
-  })
+  }) */
 
   const [start, setStart] = useState(0);
   const [end, setEnd] = useState(0);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (inView) {
       setStart(end); // Inicia desde el valor actual
       setEnd(end + 1); // Aumenta en uno para reiniciar el contador
     }
-  }, [inView, end])
+  }, [inView, end]) */
 
   return (
     <section className='relative'>
@@ -30,7 +30,7 @@ const Counter = () => {
           Porque impulsamos el desarrollo creativo de todo profesional a través de nuestros cursos y
           diplomados, apostando por una formación con pensamiento estratégico e innovador
         </h3>
-        <div className='grid lg:grid-cols-4 bord text-center gap-6 mb-20'>
+        {/* <div className='grid lg:grid-cols-4 bord text-center gap-6 mb-20'>
           <div ref={ref} className={`flex justify-center items-center flex-col border-2 border-violet-600 rounded-xl p-4 mt-5 hover:scale-110 duration-300`}>
             <Image
               src="/estudiantes.png"
@@ -99,7 +99,7 @@ const Counter = () => {
                 </div>}
               </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

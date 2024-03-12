@@ -255,7 +255,7 @@ const Book = () => {
             Mensaje:
           </label>
           <div className='relative'>
-            <textarea id="message" rows="10" className="block mt-12 p-2.5 w-full text-gray-900 bg-gray-100 rounded-lg border-2 border-gray-300"
+            <textarea id="message" rows={10} className="block mt-12 p-2.5 w-full text-gray-900 bg-gray-100 rounded-lg border-2 border-gray-300"
               placeholder="Mensaje">
             </textarea>
           </div>

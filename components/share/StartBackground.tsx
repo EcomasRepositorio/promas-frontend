@@ -1,4 +1,4 @@
-"use client";
+/* "use client";
 
 import React, { useState, useRef, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -49,3 +49,4 @@ const StarsCanvas = () => (
 )
 
 export default StarsCanvas;
+ */
