@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { BiWorld } from "react-icons/bi";
 import { HiIdentification } from "react-icons/hi2";
@@ -11,6 +11,19 @@ import { BsFillHouseUpFill, BsBank2, BsFillEnvelopeAtFill, BsBuildingsFill, BsFi
 const Book = () => {
 
   const { register, formState: { errors }, handleSubmit } = useForm();
+
+  const [reclamoChecked, setReclamoChecked] = useState(false);
+  const [sugerenciaChecked, setSugerenciaChecked] = useState(false);
+
+  const handleReclamoChange = () => {
+    setReclamoChecked(!reclamoChecked);
+    setSugerenciaChecked(false);
+  };
+
+  const handleSugerenciaChange = () => {
+    setSugerenciaChecked(!sugerenciaChecked);
+    setReclamoChecked(false);
+  };
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -241,24 +254,40 @@ const Book = () => {
         <h2 className='bg-pink-600 p-3 text-lg font-semibold text-gray-200 rounded-xl'>Detalle de la reclamación y pedido del consumidor</h2>
 
         <div className='grid grid-cols-2 gap-4 mt-8 mb-6 p-3'>
-          <div className="flex items-center me-4">
-            <input checked id="purple-checkbox" type="checkbox" value="" className="w-6 h-6 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-            <label htmlFor="purple-checkbox" className="ms-2 font-bold text-gray-600">Reclamo</label>
-          </div>
-          <div className="flex items-center me-4">
-            <input checked id="purple-checkbox" type="checkbox" value="" className="w-6 h-6 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-            <label htmlFor="purple-checkbox" className="ms-2 font-bold text-gray-600">Sugerencia</label>
-          </div>
+        <div className="flex items-center me-4">
+          <input
+            id="purple-checkbox-reclamo"
+            type="checkbox"
+            checked={reclamoChecked}
+            onChange={handleReclamoChange}
+            className="w-6 h-6 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label htmlFor="purple-checkbox-reclamo" className="ms-2 font-bold text-gray-600">Reclamo</label>
         </div>
+        <div className="flex items-center me-4">
+          <input
+            id="purple-checkbox-sugerencia"
+            type="checkbox"
+            checked={sugerenciaChecked}
+            onChange={handleSugerenciaChange}
+            className="w-6 h-6 text-purple-600 bg-gray-100 border-gray-300 rounded focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+          />
+          <label htmlFor="purple-checkbox-sugerencia" className="ms-2 font-bold text-gray-600">Sugerencia</label>
+        </div>
+      </div>
 
-          <label className='font-bold absolute text-gray-600 text-lg duration-500 scale-75 origin-[0]'>
-            Mensaje:
-          </label>
-          <div className='relative'>
-            <textarea id="message" rows="10" className="block mt-12 p-2.5 w-full text-gray-900 bg-gray-100 rounded-lg border-2 border-gray-300"
-              placeholder="Mensaje">
-            </textarea>
-          </div>
+      <label className='font-bold absolute text-gray-600 text-lg duration-500 scale-75 origin-[0]'>
+        Mensaje:
+      </label>
+      <div className='relative'>
+        <textarea
+          id="message"
+          rows={10}
+          className="block mt-12 p-2.5 w-full text-gray-900 bg-gray-100 rounded-lg border-2 border-gray-300"
+          placeholder={reclamoChecked ? "Mensaje de reclamo" : sugerenciaChecked ? "Mensaje de sugerencia" : "Mensaje"}
+        >
+        </textarea>
+      </div>
       </div>
         <input type="submit" value="Enviar" className='border-2 p-2 mb-6 rounded-xl bg-pink-600 text-gray-200 text-xl font-bold cursor-pointer'/>
       </form>

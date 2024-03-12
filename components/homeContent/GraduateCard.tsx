@@ -12,11 +12,11 @@ interface InsightCardProps {
 }
 
 const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) => (
-  <Link href="/graduate">
+<Link href="/graduate">
   <motion.div
     variants={fadeIn('up', 'spring', index * 0.5, 1)}
     initial="animate"
-    className="flex md:flex-col flex-col gap-4 px-2 py-2 mb-10 mx-auto rounded-3xl shadow-xl shadow-violet-600 bg-violet-500/50 hover:cursor-pointer"
+    className="flex md:flex-col flex-col gap-4 px-2 py-2 mb-8 mx-auto rounded-3xl bg-violet-500/50 hover:cursor-pointer"
     whileHover={{ scale: 1.1, backgroundColor: 'purple' }}
     whileTap={{ scale: 1 }}
   >
@@ -52,7 +52,7 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
       </div> */}
     </div>
   </motion.div>
-  </Link>
+</Link>
 );
 
 export default GraduateCard;
