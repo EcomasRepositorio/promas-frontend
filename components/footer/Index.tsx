@@ -57,7 +57,7 @@ const Footer = () => {
               <p>
                 Proporcionamos cursos y diplomados con aval de la EPG-UNP
               </p>
-              <Link href="/" className='inline-flex items-center mt-4 text-xl font-semibold hover:underline'>
+              <Link href="/book" className='inline-flex items-center mt-4 text-xl font-semibold hover:underline'>
                 <VscBook className='mr-2 text-2xl'/>
                 <p>Libro de Reclamaciones</p>
               </Link>

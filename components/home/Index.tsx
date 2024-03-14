@@ -48,9 +48,12 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 15000);
+      if (!document.hidden) {
+        setIndex((prevIndex) =>
+          prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+      };
+    }, 10000);
     return () => clearInterval(interval);
   }, []);
 
