@@ -8,32 +8,32 @@ const Footer = () => {
   return (
     <div className=''>
     <footer
-      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
-      <div className="border-b-2 border-violet-500 p-4 dark:border-neutral-500">
+      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 lg:text-left">
+      <div className="border-b-2 border-violet-500 p-4">
         <div className="container mx-auto px-10">
           <div className="flex items-center justify-center lg:justify-between">
             <div className="mr-12 hidden lg:block">
-              <span>Get connected with us on social networks:</span>
+              <span>Siguenos en nuestras redes sociales:</span>
             </div>
             <div className="flex justify-center">
               <Link href="https://www.facebook.com/people/Corporaci%C3%B3n-Prom%C3%A1s/61552473052389/" target="_blank"
-                className="mr-5 text-gray-100 dark:text-gray-200 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaFacebookF className='text-2xl' />
               </Link>
               <Link href="https://www.instagram.com/corporacion.promas/" target="_blank"
-                className="mr-5 text-gray-100 dark:text-gray-200 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaInstagram className='text-2xl' />
               </Link>
               <Link href="https://www.tiktok.com/@promas.corp" target="_blank"
-                className="mr-5 text-gray-100 dark:text-gray-200 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaTiktok className='text-2xl' />
               </Link>
               <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20los%20diplomados" target="_blank"
-                className="mr-5 text-gray-100 dark:text-gray-200 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaWhatsapp className='text-2xl' />
               </Link>
               <Link href="#!" target="_blank"
-                className="mr-5 text-gray-100 dark:text-gray-200 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaYoutube className='text-2xl' />
               </Link>
             </div>
@@ -58,66 +58,66 @@ const Footer = () => {
               <p>
                 Proporcionamos cursos y diplomados con aval de la EPG-UNP
               </p>
-              <Link href="/book" className='inline-flex items-center mt-4 text-xl font-semibold hover:underline'>
+              <Link href="/book" className='inline-flex items-center mt-4 text-xl text-gray-100 font-semibold hover:underline'>
                 <VscBook className='mr-2 text-2xl'/>
                 <p>Libro de Reclamaciones</p>
               </Link>
             </div>
             <div className="">
               <h6
-                className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                Products
+                className="font-extrabold mb-4 flex justify-center uppercase md:justify-start">
+                Nuestra empresa:
               </h6>
-              <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+              <h1 className="mb-4">
+                <a href="/" className="font-semibold text-gray-100 hover:underline"
                   >Inicio</a>
-              </p>
+              </h1>
               <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="/certificate" className="font-semibold text-gray-100 hover:underline"
                   >Certificado </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200">
+                <a href="/graduate" className="font-semibold text-gray-100 hover:underline">
                   Diplomados</a>
               </p>
               <p className='mb-4'>
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="/about" className="font-semibold text-gray-100 hover:underline"
                   >Nosotros</a>
               </p>
               <p>
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="/" className="font-semibold text-gray-100 hover:underline"
                   >¡Inscribete!</a>
               </p>
             </div>
             <div className="">
               <h6
-                className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                Nuestros diplomados en
+                className="mb-4 flex justify-center font-extrabold uppercase md:justify-start">
+                Nuestros diplomados en:
               </h6>
               <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Vial</a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
-                  >Ingenieria Agricola</a>
+                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                  >Ingenieria Agronoma</a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Civil</a>
               </p>
               <p className='mb-4'>
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Ambiental</a>
               </p>
               <p>
-                <a href="#!" className="text-gray-100 dark:text-neutral-200"
+                <a href="graduate" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria de industrias Alimentarias</a>
               </p>
             </div>
             <div>
               <h6
-                className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                className="mb-4 flex justify-center font-extrabold uppercase md:justify-start">
                 Contacto
               </h6>
               <p className="mb-4 flex items-center justify-center md:justify-start">
@@ -131,7 +131,7 @@ const Footer = () => {
                   <path
                     d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
                 </svg>
-                {/* New York, NY 10012, US */}
+                Perú
               </p>
               <p className="mb-4 flex items-center justify-center md:justify-start">
                 <svg
@@ -180,7 +180,7 @@ const Footer = () => {
       <div className="p-6 text-center">
         <span>© 2023 Copyright:</span>
         <a
-          className="font-semibold text-neutral-100 dark:text-neutral-400"
+          className="font-semibold text-neutral-300"
           href="/"
           > Corporacion Promas</a>
       </div>

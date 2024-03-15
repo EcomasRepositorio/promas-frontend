@@ -9,6 +9,7 @@ import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { TitleText, TypingText } from '../share/CustomText'
+import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 //import ContactImg from '../public/assets/contact.jpg';
 
 const variants = staggerContainer("0.1s", "0.1s");
@@ -26,7 +27,7 @@ const [isSubmit, setIsSubmit] = useState(false);
   const rowsValue: string = '5';
   const rowsNumber: number = parseInt(rowsValue);
   return (
-    <div id='contact' className='w-full lg:h-screen text-white bg-[#030014]'>
+    <div id='contact' className='w-full text-white bg-[#030014]'>
       <div className='max-w-[1240px] m-auto px-2 py-10 w-full'>
         <motion.div
           variants={variants}
@@ -37,7 +38,7 @@ const [isSubmit, setIsSubmit] = useState(false);
         </motion.div>
         <div className='grid lg:grid-cols-5 gap-8 mt-10'>
           {/* left */}
-          <div className='col-span-3 lg:col-span-2 w-full h-full bg-gray-400 shadow-xl rounded-xl p-4'>
+          <div className='col-span-3 lg:col-span-2 w-full h-full bg-customPurple/70 shadow-xl rounded-xl p-4'>
             <div className='lg:p-4 h-full '>
               <div>
                 <Image
@@ -50,42 +51,47 @@ const [isSubmit, setIsSubmit] = useState(false);
                 />
               </div>
               <div>
-                <h2 className='py-2'>Clint Briley</h2>
-                <p>Front-End Developer</p>
-                <p className='py-4'>
-                  I am available for freelance or full-time positions. Contact
-                  me and let&apos;s talk.
+                <h2 className='py-1 text-xl font-extrabold text-gray-200'>Corporaci&oacute;n Prom&aacute;s</h2>
+                <p className='py-2 font-semibold text-gray-300'>
+                  Somos un Centro de capacitaci&oacute;n profesional de amplia experiencia que desarrollamos cursos y diplomados
+                  para el sector p&uacute;blico y privado para el fortaleciemiento de sus capacidades
                 </p>
               </div>
               <div>
-                <p className='uppercase pt-8'>Connect With Me</p>
+                <p className='uppercase font-bold pt-2'>Contacto</p>
                 <div className='flex items-center justify-between py-4'>
                   <a
-                    href='https://www.linkedin.com/in/clint-briley-50056920a/'
+                    href='https://www.facebook.com/people/Corporaci%C3%B3n-Prom%C3%A1s/61552473052389/'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaLinkedinIn />
+                    <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
+                      <FaFacebookF className='text-xl'/>
                     </div>
                   </a>
                   <a
-                    href='https://github.com/fireclint'
+                    href='https://www.tiktok.com/@promas.corp'
                     target='_blank'
                     rel='noreferrer'
                   >
-                    <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                      <FaGithub />
+                    <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
+                      <FaTiktok className='text-xl'/>
                     </div>
                   </a>
 
-                  <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                    <AiOutlineMail />
+                  <a
+                    href='https://www.instagram.com/corporacion.promas/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                  <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
+                    <FaInstagram className='text-xl'/>
                   </div>
-                  <Link href='/resume'>
+                  </a>
 
-                      <div className='rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300'>
-                        <BsFillPersonLinesFill />
+                  <Link href='/resume'>
+                      <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
+                        <FaWhatsapp className='text-xl'/>
                       </div>
                   </Link>
                 </div>
@@ -94,7 +100,7 @@ const [isSubmit, setIsSubmit] = useState(false);
           </div>
 
           {/* right */}
-          <div className='col-span-3 w-full h-auto bg-gray-400 shadow-xl rounded-xl lg:p-4'>
+          <div className='col-span-3 w-full h-auto bg-customPurple/70 shadow-xl rounded-xl lg:p-4'>
             <div className='p-4'>
               {!isSubmit ? (
               <form
@@ -170,7 +176,7 @@ const [isSubmit, setIsSubmit] = useState(false);
         <div className='flex justify-center py-6'>
           <Link href='/'>
 
-              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
+              <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-125 ease-in duration-300'>
                 <HiOutlineChevronDoubleUp
                   className='text-[#5651e5]'
                   size={30}
