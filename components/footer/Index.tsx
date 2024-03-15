@@ -50,8 +50,9 @@ const Footer = () => {
                  <Image
                  src="/logoPromas.png"
                  alt="logo_promas"
-                 width={250}
-                 height={250}/>
+                 width={800}
+                 height={800}
+                 priority={true}/>
 
               </h6>
               <p>

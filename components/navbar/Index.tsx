@@ -23,11 +23,11 @@ function Navbar() {
               <Link href="/">
                 <Image
                   src="/logo_promas.png"
-                  width={150}
-                  height={80}
+                  width={800}
+                  height={800}
                   alt="promas-logo"
-                  className=''
-                  priority={false}
+                  className='w-36 h-10'
+                  priority={true}
                 />
               </Link>
               {/* HAMBURGER BUTTON FOR MOBILE */}
@@ -37,7 +37,7 @@ function Navbar() {
                   onClick={() => setNavbar(!navbar)}
                 >
                   {navbar ? (
-                    <Image src="/close.svg" width={40} height={40} alt="logo" className="text-white" />
+                    <Image src="/close.svg" width={40} height={40} alt="logo" className="text-white" priority={true}/>
                   ) : (
                     <Image
                       src="/hamburger-menu.svg"
@@ -45,6 +45,7 @@ function Navbar() {
                       height={30}
                       alt="logo"
                       className="focus:border-none active:border-none"
+                      priority={true}
                     />
                   )}
                 </button>

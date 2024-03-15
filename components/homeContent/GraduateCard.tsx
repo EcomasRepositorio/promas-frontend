@@ -27,6 +27,7 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
       width={800}
       height={200}
       className="w-auto rounded-3xl p-2 object-cover"
+      priority={true}
     />
     </div>
     <div className="w-full flex items-center justify-center text-center ">

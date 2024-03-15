@@ -29,7 +29,8 @@ const Course = () => {
               src="/course/fertiirrigacion.png"
               width={800}
               height={600}
-              className="w-full h-full" />
+              className="w-full h-full"
+              priority={true}/>
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="flex flex-col h-full px-">
@@ -101,7 +102,8 @@ const Course = () => {
               src="/course/monitoreo_calidad_agua.png"
               width={800}
               height={600}
-              className="w-full h-full" />
+              className="w-full h-full"
+              priority={true}/>
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="flex flex-col h-full px-">
@@ -173,7 +175,8 @@ const Course = () => {
               src="/course/costos_presupuestos.png"
               width={800}
               height={600}
-              className="w-full h-full" />
+              className="w-full h-full"
+              priority={true}/>
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="flex flex-col h-full px-">
@@ -249,7 +252,8 @@ const Course = () => {
               src="/course/residuos_solidos.png"
               width={800}
               height={600}
-              className="w-full h-full" />
+              className="w-full h-full"
+              priority={true}/>
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="flex flex-col h-full">
@@ -325,7 +329,8 @@ const Course = () => {
               src="/course/esquema_FSSC.png"
               width={800}
               height={600}
-              className="w-full h-full" />
+              className="w-full h-full"
+              priority={true}/>
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="flex flex-col h-full px-">
@@ -393,7 +398,8 @@ const Course = () => {
               src="/course/impacto_ambiental.png"
               width={800}
               height={600}
-              className="w-full h-full" />
+              className="w-full h-full"
+              priority={true}/>
           </div>
         <div className="absolute my-rotate-y-180 backface-hidden w-full h-full bg-gray-100 overflow-hidden">
           <div className="flex flex-col h-full px-">

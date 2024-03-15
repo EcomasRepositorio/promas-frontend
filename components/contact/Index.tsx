@@ -41,11 +41,12 @@ const [isSubmit, setIsSubmit] = useState(false);
             <div className='lg:p-4 h-full '>
               <div>
                 <Image
-                  className='rounded-xl hover:scale-105 ease-in duration-300'
+                  className='rounded-xl hover:scale-105 ease-in duration-300 h-80'
                   src="/IMAGEN.png"
-                  width={300}
-                  height={200}
+                  width={800}
+                  height={800}
                   alt='promas'
+                  priority={true}
                 />
               </div>
               <div>

@@ -202,6 +202,7 @@ const Home = () => {
           alt="icons"
           height={800}
           width={800}
+          priority={true}
         />
       </motion.div>
     </motion.div>

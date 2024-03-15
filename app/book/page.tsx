@@ -61,9 +61,11 @@ const Book = () => {
         <Image
           src="/logos/logo_book.png"
           alt='logo_promas'
-          width={300}
-          height={300}
-          className='flex justify-center mx-auto mb-10 mt-32'/>
+          width={800}
+          height={800}
+          className='flex justify-center mx-auto mb-10 mt-32 p-2'
+          priority={true}/>
+
       <div className='p-2'>
         <h1 className='uppercase text-violet-700 text-center md:text-3xl text-2xl font-extrabold'>Hoja de Reclamación</h1>
         <p className='text-center mb-2 text-pink-600 font-semibold'>Corporación Promás</p>

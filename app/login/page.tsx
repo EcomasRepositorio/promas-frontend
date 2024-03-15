@@ -82,20 +82,21 @@ const Login: React.FC = () => {
 
   return (
     <section className="bg-gradient-to-r from-[#c50f9e] from-10% via-[#9D6CD2] via-30% to-[#481EDC] to-90% flex items-center justify-center">
-    <div className="max-w-screen-lg bg-white/50 grid lg:grid-cols-2 items-center gap-20 p-5 lg:rounded-2xl mt-10 mb-10">
+    <div className="max-w-screen-lg bg-white/50 grid lg:grid-cols-2 items-center gap-20 p-5 lg:rounded-2xl mt-32 mb-10">
         <div className="order-2 lg:order-none">
-            <Image src="/signup-background.svg" alt="" width={400} height={200}/>
+            <Image src="/signup-background.svg" alt="" width={800} height={800} className='h-auto w-auto'  priority={true}/>
             {/* <img src="/teamwork.svg" alt="" className="absolute top-36"/> */}
         </div>
 
         <div className="grid gap-5">
-          <div className='flex justify-center lg:mr-20'>
+          <div className='flex justify-center lg:mr-36'>
           <Image
             src="/logo_login.png"
             alt='logo_promas'
-            width={150}
-            height={150}
-            className=''/>
+            width={800}
+            height={800}
+            className='h-40 w-40'
+            priority={true}/>
           </div>
             <form action="" className="space-y-6 text-white">
             {resErrors?.message && (

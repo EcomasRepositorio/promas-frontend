@@ -46,6 +46,7 @@ const [imageUrl, setImageUrl] = useState('');
               alt="icon"
               width={800}
               height={800}
+              priority={true}
             />
           </div>
           <div className="sm:w-1/2 md:px-20 sm:px-5 lg:mt-6">
@@ -66,7 +67,8 @@ const [imageUrl, setImageUrl] = useState('');
                 src="/INICIO.png"
                 alt="icono_promas"
                 width={20}
-                height={20}/>
+                height={20}
+                priority={true}/>
                 <p className="font-bold ml-1">Inicio 07 de Marzo</p>
               </div>
 
@@ -75,7 +77,8 @@ const [imageUrl, setImageUrl] = useState('');
                 src="/MODALIDAD.png"
                 alt="icono_promas"
                 width={20}
-                height={20}/>
+                height={20}
+                priority={true}/>
                 <p className="font-bold ml-1">Modalidad Online via Zoom</p>
               </div>
 
@@ -84,7 +87,8 @@ const [imageUrl, setImageUrl] = useState('');
                 src="/DURACION.png"
                 alt="icono_promas"
                 width={20}
-                height={20}/>
+                height={20}
+                priority={true}/>
                 <p className="font-bold ml-1">4 meses</p>
               </div>
 
@@ -93,7 +97,8 @@ const [imageUrl, setImageUrl] = useState('');
                 src="/DURACION.png"
                 alt="icono_promas"
                 width={20}
-                height={20}/>
+                height={20}
+                priority={true}/>
                 <p className="font-bold ml-1">420 horas académicas (<span className="credits">26 créditos</span>)</p>
               </div>
             </div>
@@ -129,14 +134,16 @@ const [imageUrl, setImageUrl] = useState('');
                       <Image
                         src="/CERTIFICADO.png"
                         alt="icono_promas"
-                        width={17}
-                        height={20}/>
+                        width={800}
+                        height={800}
+                        className="h-4 w-4"
+                        priority={true}/>
                         <h1 className="ml-1">Certificación</h1>
                       </div>
                   </button>
                   {showModal && (
                     <Modal open={showModal} onClose={() => setShowModal(false)}>
-                      <Image src={imageUrl} width={400} height={420} alt="certificate_promas" />
+                      <Image src={imageUrl} width={400} height={420} alt="certificate_promas" priority={true}/>
                     </Modal>
                   )}
                   </div>

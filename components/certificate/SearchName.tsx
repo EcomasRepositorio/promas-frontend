@@ -3,6 +3,7 @@ import { URL } from '@/components/utils/format/tokenConfig';
 import axios from 'axios'
 import { SearchNameProps, Student } from '@/interface/interface';
 import Modal from '../share/Modal';
+import Image from 'next/image';
 
 interface StudentCode extends Student {
   hour: string;
@@ -171,8 +172,8 @@ const SearchName:React.FC<SearchNameProps> = ({ onSearchName }) => {
                 {selectedStudentData && (
                   <Modal open={openModals[index]} onClose={() => closeStudentModal(index)}>
                     <div className='flex justify-center mb-4'>
-                      <img src={'/logos/logo_unp.png'} className="lg:w-32 lg:h-32 w-28 h-28 object-contain"/>
-                      <img src={'/logos/logo_promas.png'} className="lg:w-32 lg:h-32 w-28 h-28 object-contain"/>
+                      <Image src={'/logos/logo_unp.png'} alt='promas' className="lg:w-32 lg:h-32 w-28 h-28 object-contain" width={800} height={800}  priority={true}/>
+                      <Image src={'/logos/logo_promas.png'} alt='promas' className="lg:w-32 lg:h-32 w-28 h-28 object-contain" width={800} height={800}  priority={true}/>
                     </div>
                     <div className="max-w-md mx-auto p-6 bg-white rounded-md">
                       {tableRows.map((row, index) => (
