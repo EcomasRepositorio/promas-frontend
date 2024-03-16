@@ -35,8 +35,8 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-"@react-three/drei": "^9.99.0",
 "react-countup": "^6.5.0",
 "react-intersection-observer": "^9.8.1",
 "@react-three/fiber": "^8.15.16",
+"@react-three/drei": "^9.99.0",
 "three": "^0.161.0"

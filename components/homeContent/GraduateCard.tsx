@@ -16,7 +16,7 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
   <motion.div
     variants={fadeIn('up', 'spring', index * 0.5, 1)}
     initial="animate"
-    className="flex md:flex-col flex-col gap-4 px-2 py-2 mb-8 mx-auto rounded-3xl bg-violet-500/50 hover:cursor-pointer"
+    className="flex md:flex-col flex-col gap-4 px-2 py-2 mb-8 mx-auto rounded-2xl bg-violet-500/50 hover:cursor-pointer"
     whileHover={{ scale: 1.1, backgroundColor: 'purple' }}
     whileTap={{ scale: 1 }}
   >
@@ -30,27 +30,21 @@ const GraduateCard: FC<InsightCardProps> = ({ imgUrl, title, subtitle, index }) 
       priority={true}
     />
     </div>
-    <div className="w-full flex items-center justify-center text-center ">
+    <div className="w-full flex items-center justify-center px-2">
       <div className="flex-1 flex flex-col max-w-[650px]">
-        <h4 className="uppercase font-semibold lg:text-[26px] text-[20px] text-white">
+        <h1 className='uppercase text-white text-xs font-extrabold text-left'>
+          Diplomados
+        </h1>
+        <h2 className="font-extrabold lg:text-[26px] text-[20px] text-white">
           {title}
-        </h4>
-        <h5 className="mt-[16px] lg:mb-6 font-semibold lg:text-[17px] text-[14px] text-white">
+        </h2>
+        <h3 className="mt-[16px] lg:mb-6 font-semibold lg:text-[15px] text-[13px] text-gray-200">
           {subtitle}
-        </h5>
+        </h3>
+        <Link href="/graduate" className='uppercase text-xs font-extrabold text-white border p-2 mb-4 w-32 rounded-lg hover:scale-110 duration-200 hover:bg-customPurple'>
+          Ver diplomado
+        </Link>
       </div>
-
-      {/* <div
-        className="lg:flex hidden items-center justify-center w-[100px] h-[100px] rounded-full bg-transparent border-[1px] border-white"
-      >
-        <Image
-          src="/arrow.svg"
-          alt="arrow"
-          width={200}
-          height={200}
-          className="w-[40%] h-[40%] object-contain"
-        />
-      </div> */}
     </div>
   </motion.div>
 </Link>

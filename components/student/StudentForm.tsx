@@ -87,7 +87,7 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
       };
       if (id) {
       await axios.put(`${URL()}/student/${id}`, data, tokenConfig(validToken));
-      setModalOpen(true);
+      //setModalOpen(true);
       onUpdateSuccess();
     };
     } catch (error) {
@@ -101,7 +101,7 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
   const closeModal = () => {
     setError('documentNumber', {});
     setErrorModalOpen(false);
-    setModalOpen(false);
+    //setModalOpen(false);
     onCloseModal();
   };
 

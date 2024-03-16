@@ -21,7 +21,7 @@ const Course = () => {
     <div className="grid lg:grid-cols-3 md:grid-cols-2 max-w-screen-xl mx-auto justify-center items-center gap-10 text-white">
 
     <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Fertirrigación" target='_blank'>
-      <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective mt-20">
+      <div className="lg:w-[400px] w-[350px] h-[420px] bg-transparent cursor-pointer group perspective mt-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
@@ -94,7 +94,7 @@ const Course = () => {
 
 
   <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Monitoreo%20de%20la%20calidad%20de%20agua" target='_blank'>
-      <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective md:mt-20">
+      <div className="lg:w-[400px] w-[350px] h-[420px] bg-transparent cursor-pointer group perspective md:mt-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
@@ -167,7 +167,7 @@ const Course = () => {
 
 
   <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Costos%20y%20Presupuestos%20con%20S10" target='_blank'>
-      <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective lg:mt-20">
+      <div className="lg:w-[400px] w-[350px] h-[420px] bg-transparent cursor-pointer group perspective lg:mt-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
@@ -244,7 +244,7 @@ const Course = () => {
 
 
   <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Formulación%20de%20proyectos%20de%20inversión%20pública%20de%20residuos%20sólidos" target='_blank'>
-      <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective lg:mb-20">
+      <div className="lg:w-[400px] w-[350px] h-[420px] bg-transparent cursor-pointer group perspective lg:mb-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
@@ -321,7 +321,7 @@ const Course = () => {
 
 
     <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Esquema%20FSSC%2022000" target='_blank'>
-      <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective md:mb-20">
+      <div className="lg:w-[400px] w-[350px] h-[420px] bg-transparent cursor-pointer group perspective md:mb-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
@@ -390,7 +390,7 @@ const Course = () => {
 
 
     <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20el%20curso%20de%20Identificación%20y%20evaluación%20de%20Impacto%20Ambiental" target='_blank'>
-      <div className="lg:w-[400px] w-[300px] h-[420px] bg-transparent cursor-pointer group perspective mb-20">
+      <div className="lg:w-[400px] w-[350px] h-[420px] bg-transparent cursor-pointer group perspective mb-20">
         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000">
           <div className="absolute backface-hidden border-2 w-full h-full">
             <Image
