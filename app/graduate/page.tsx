@@ -10,6 +10,8 @@ import GraduateWorksSupervision from '@/components/graduate/IngCivil/GraduateWor
 import GraduateFoodQuality from '@/components/graduate/IngAlimentary/GraduateFoodQuality';
 import GraduateSsoma from '@/components/graduate/ssoma/GraduateSsoma';
 import Whatsapp from '@/components/whatsapp/Index';
+import GraduateQualityMonitoringAmbientaly from '@/components/graduate/IngAmbientaly/GraduateQualityMonitoringAmbientaly';
+import GraduateManagementAmbientaly from '@/components/graduate/IngAmbientaly/GraduateManagementAmbientaly';
 
 const Graduate = () => {
   return (
@@ -43,6 +45,12 @@ const Graduate = () => {
           </div>
           <div className='mb-20 lg:mb-10'>
             <GraduateSolidWaste />
+          </div>
+          <div className='mb-20 lg:mb-10'>
+            <GraduateQualityMonitoringAmbientaly />
+          </div>
+          <div className='mb-20 lg:mb-10'>
+            <GraduateManagementAmbientaly />
           </div>
         <div className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-6 lg:mt-6 font-extrabold border-b-4 p-2">
             DIPLOMADOS EN INGENIERÍA AGRÓNOMA

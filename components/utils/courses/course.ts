@@ -27,6 +27,30 @@ export const modulesSolidWaste = [
     {name: "Estudio de caracterización de residuos sólidos", text:"Hola, deseo más información sobre el curso de Plan de Estudio de caracterización de residuos sólidos"},
     {name: "Valorización de residuos sólidos", text:"Hola, deseo más información sobre el curso de Valorización de residuos sólidos"},
 ];
+export const modulesQualityMonitoringAmbientaly = [
+    {name: "Monitoreo y evaluación de la calidad de suelo", text:"Hola, deseo más información sobre el curso de Monitoreo y evaluación de la calidad de suelo"},
+    {name: "Monitoreo y evaluación de radiaciones no ionizantes", text:"Hola, deseo más información sobre el curso de Monitoreo y evaluación de radiaciones no ionizantes"},
+    {name: "Monitoreo de agentes ocupacionales", text:"Hola, deseo más información sobre el curso de Monitoreo de agentes ocupacionales"},
+    {name: "Monitoreo biológico", text:"Hola, deseo más información sobre el curso de Monitoreo biológico"},
+    {name: "Calibración de equipos de monitoreo ambiental ", text:"Hola, deseo más información sobre el curso de Calibración de equipos de monitoreo ambiental"},
+    {name: "Interpretación de informes de laboratorios", text:"Hola, deseo más información sobre el Interpretación de informes de laboratorios"},
+    {name: "Monitoreo y evaluación de la calidad de agua", text:"Hola, deseo más información sobre el curso de Monitoreo y evaluación de la calidad de agua"},
+    {name: "Monitoreo y evaluación de la calidad de aire", text:"Hola, deseo más información sobre el curso de Monitoreo y evaluación de la calidad de aire"},
+    {name: "Monitoreo y evaluación de ruido ambiental", text:"Hola, deseo más información sobre el curso de Monitoreo y evaluación de ruido ambiental"}
+];
+export const modulesManagementAmbientaly = [
+    {name: "Gestión y manejo de residuos sólidos municipales", text:"Hola, deseo más información sobre el curso de Gestión y manejo de residuos sólidos municipales"},
+    {name: "Estudio de caracterización de residuos sólidos municipales", text:"Hola, deseo más información sobre el curso de Estudio de caracterización de residuos sólidos municipales"},
+    {name: "Gestión de área técnica municipal (ATM)", text:"Hola, deseo más información sobre el curso de Gestión de área técnica municipal (ATM)"},
+    {name: "Saneamiento ambiental, JASS y Diseño de UBS", text:"Hola, deseo más información sobre el curso de Saneamiento ambiental, JASS y Diseño de UBS"},
+    {name: "Tratamiento de aguas residuales", text:"Hola, deseo más información sobre el curso de Tratamiento de aguas residuales"},
+    {name: "Certificación ambiental para proyectos", text:"Hola, deseo más información sobre el curso Certificación ambiental para proyectos"},
+    {name: "Fiscalización ambiental", text:"Hola, deseo más información sobre el curso de Fiscalización ambiental"},
+    {name: "Diseño, construcción, operación y cierre de rellenos sanitarios", text:"Hola, deseo más información sobre el curso de Diseño, construcción, operación y cierre de rellenos sanitarios"},
+    {name: "Ecoeficiencia municipal y regional", text:"Hola, deseo más información sobre el curso de Ecoeficiencia municipal y regional"},
+    {name: "Gestión ambiental municipal, gobernanza ambiental y participación ciudadana", text:"Hola, deseo más información sobre el curso de Gestión ambiental municipal, gobernanza ambiental y participación ciudadana"},
+    {name: "Gestión del cambio climático", text:"Hola, deseo más información sobre el curso de Gestión del cambio climático"},
+];
 
 //Ingenieria Agronoma
 export const modulesIrrigation = [

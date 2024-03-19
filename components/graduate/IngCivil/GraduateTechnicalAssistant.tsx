@@ -26,13 +26,13 @@ const [imageUrl, setImageUrl] = useState('');
   };
 
   const handleClick = () => {
-    const newWindow = window.open('/BROCHURE/A_T_O.pdf');
+    const newWindow = window.open('/BROCHURE/ASISTENTE_TECNICO_OBRAS.pdf');
     setOpenWindow(newWindow);
 
     // Descargar el archivo PDF
     const link = document.createElement('a');
-    link.href = '/BROCHURE/A_T_O.pdf';
-    link.download = 'A_T_O.pdf';
+    link.href = '/BROCHURE/ASISTENTE_TECNICO_OBRAS.pdf';
+    link.download = 'ASISTENTE_TECNICO_OBRAS.pdf';
     link.click();
   };
 
@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
               ASISTENTE TÉCNICO EN OBRAS
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
               Diplomado dirigido a bachilleres, titulados y profesionales de las carreras de ingeniería civil, 
               industriales, sanitarios, arquitectos y ramas afines.
 
@@ -68,7 +68,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 24 de Enero</p>
+                <p className="font-bold ml-1">Inicio 17 de Marzo</p>
               </div>
 
               <div className="flex items-center mb-2">

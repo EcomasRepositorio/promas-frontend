@@ -59,7 +59,7 @@ export function slideInFromLeft(delay: number) {
       transition: { staggerChildren: 0.1, delayChildren: i * 0.1 },
     }),
   };
-  
+
   export const textVariant2 = {
     hidden: {
       opacity: 0,

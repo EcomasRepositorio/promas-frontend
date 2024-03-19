@@ -4,9 +4,6 @@ import { staggerContainer } from '../utils/motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FormEvent, useState } from 'react';
-import { AiOutlineMail } from 'react-icons/ai';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import { TitleText, TypingText } from '../share/CustomText'
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
@@ -60,7 +57,7 @@ const [isSubmit, setIsSubmit] = useState(false);
               <div>
                 <p className='uppercase font-bold pt-2'>Contacto</p>
                 <div className='flex items-center justify-between py-4'>
-                  <a
+                  <Link
                     href='https://www.facebook.com/people/Corporaci%C3%B3n-Prom%C3%A1s/61552473052389/'
                     target='_blank'
                     rel='noreferrer'
@@ -68,8 +65,8 @@ const [isSubmit, setIsSubmit] = useState(false);
                     <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
                       <FaFacebookF className='text-xl'/>
                     </div>
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href='https://www.tiktok.com/@promas.corp'
                     target='_blank'
                     rel='noreferrer'
@@ -77,9 +74,9 @@ const [isSubmit, setIsSubmit] = useState(false);
                     <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
                       <FaTiktok className='text-xl'/>
                     </div>
-                  </a>
+                  </Link>
 
-                  <a
+                  <Link
                     href='https://www.instagram.com/corporacion.promas/'
                     target='_blank'
                     rel='noreferrer'
@@ -87,7 +84,7 @@ const [isSubmit, setIsSubmit] = useState(false);
                   <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
                     <FaInstagram className='text-xl'/>
                   </div>
-                  </a>
+                  </Link>
 
                   <Link href='/resume'>
                       <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>

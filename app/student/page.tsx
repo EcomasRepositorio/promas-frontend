@@ -215,7 +215,7 @@ const Student = () => {
 
   const memoryData = useMemo(() => studentData, [studentData]);
   //Pagination
-  const itemsPerPage = 20;
+  const itemsPerPage = 50;
   const handlePageChange = (newPage: number) => {
     setLimit(20);
     setOffset(10);
@@ -229,7 +229,6 @@ const Student = () => {
     () => (memoryData ? memoryData.slice(startIndex, endIndex) : []),
     [memoryData, startIndex, endIndex]
   );
-  //const pageCount = Math.ceil((memoryData?.length || 0) / itemsPerPage) || 1;
 
   const pageCount = Math.ceil((memoryData?.length || 0) / 5) || 1;
 
@@ -251,8 +250,7 @@ const Student = () => {
         <li>
           <button
             className={`block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-white`}
-            onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-          >
+            onClick={() => handlePageChange(Math.max(1, currentPage - 1))}>
             {"<"}
           </button>
         </li>
@@ -262,8 +260,7 @@ const Student = () => {
               className={`block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-white ${
                 currentPage === index ? "font-semibold" : ""
               }`}
-              onClick={() => handlePageChange(index)}
-            >
+              onClick={() => handlePageChange(index)}>
               {index}
             </button>
           </li>
@@ -273,8 +270,7 @@ const Student = () => {
             className={`block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-white`}
             onClick={() =>
               handlePageChange(Math.min(pageCount, currentPage + 1))
-            }
-          >
+            }>
             {">"}
           </button>
         </li>
@@ -286,25 +282,23 @@ const Student = () => {
     <section className="p-2">
       {/* <div className="text-center text-gray-500 lg:p-6 text-2xl font-semibold mb-10 mt-8"> */}
 
-      <div className="text-center text-gray-600 lg:p-6 p-0 mt-8 mb-10 lg:text-2xl text-xl font-extrabold">
-        <a className="border shadow-2xl p-4 rounded-xl">
+      <div className="text-center text-gray-600 lg:p-6 p-0 mt-28 lg:text-2xl text-xl font-extrabold">
+        <p className="border shadow-2xl p-4 rounded-xl">
           ADMINISTRAR ESTUDIANTES
-        </a>
+        </p>
       </div>
-      <div className="flex flex-col sm:flex-row border-2 mt-6 mb-6 shadow-xl rounded-xl lg:ml-10 lg:mr-10 justify-between p-2 bg-white">
+      <div className="flex flex-col sm:flex-row border-2 mb-6 shadow-xl rounded-xl lg:ml-10 lg:mr-10 justify-between p-2 bg-white">
         <div className="flex flex-col items-center md:flex-row justify-center">
           <div className="flex-grow mb-2 md:mb-0 md:mr-2">
             <SearchStudent
               onSearchDNI={(query: string, queryValue: string) =>
                 handleSearchStudent(query, queryValue)
-              }
-            />
+              }/>
           </div>
           <button
             type="button"
             className="text-[#006eb0] uppercase hover:text-white border-2 border-[#006eb0] hover:bg-[#006eb0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-3 text-center md:w-auto dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center"
-            onClick={handleOpenDuplicatedCode}
-          >
+            onClick={handleOpenDuplicatedCode}>
             <GrDocumentVerified className="mr-1 text-lg" />
             Verificar
           </button>
@@ -312,8 +306,7 @@ const Student = () => {
             <DuplicatedCode
               studentData={studentData}
               isOpen={isDuplicatedCodesModalOpen}
-              onClose={handleCloseDuplicatedCode}
-            />
+              onClose={handleCloseDuplicatedCode}/>
           )}
         </div>
 
@@ -321,53 +314,49 @@ const Student = () => {
           <button
             type="button"
             className="text-[#006eb0] uppercase hover:text-white border-2 border-[#006eb0] hover:bg-[#006eb0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center"
-            onClick={handleOpenCreateForm}
-          >
+            onClick={handleOpenCreateForm}>
             <FaRegAddressBook className="mr-1 text-lg" />
             Agregar
           </button>
           {isCreateFormOpen && (
             <CreateStudentForm
               onCreateSuccess={handleCreateSuccess}
-              onCloseModal={handleCloseCreateForm}
-            />
+              onCloseModal={handleCloseCreateForm}/>
           )}
 
           <button
             type="button"
             className="text-green-600 uppercase hover:text-white border-2 border-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-lg text-xs px-3 py-2 text-center me-2 mb-1  dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-200 inline-flex items-center"
-            onClick={handleCreateStudentExcel}
-          >
+            onClick={handleCreateStudentExcel}>
             <RiFileExcel2Line className="mr-1 text-lg" />
             Importar
           </button>
           {createStudentExcel && (
             <CreateStudentExcel
               onCreateSuccess={handleCreateExcelSuccess}
-              onCloseModal={handleCloseCreateExcel}
-            />
+              onCloseModal={handleCloseCreateExcel}/>
           )}
           {/* <ProtectedRoute path='/user' allowedRoles={['ADMIN']} element={<User/>} /> */}
           <Link
             href="/user"
-            className="text-yellow-500 hover:text-white border-2 border-yellow-400 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-lg text-xs px-2 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-yellow-200"
-          >
+            className="text-yellow-500 hover:text-white border-2 border-yellow-400 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-lg text-xs px-2 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-yellow-200">
             <FiUserPlus className="text-lg" />
           </Link>
 
           <button
             type="button"
             onClick={handleLogout}
-            className="text-red-500 hover:text-white border-2 border-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-xs px-2 py-2 text-center mb-1 dark:hover:text-white dark:focus:ring-red-200"
-          >
+            className="text-red-500 hover:text-white border-2 border-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-xs px-2 py-2 text-center mb-1 dark:hover:text-white dark:focus:ring-red-200">
             <FiLogOut className="text-lg" />
           </button>
         </div>
       </div>
       {loading && (
+        <div>
         <a href="https://tenor.com/es/view/bar-penguin-waiting-loading-pudgy-gif-7185161825979534095">
           Cargando...
         </a>
+        </div>
       )}
       {dataLoading && memoryData && (
         <div className="overflow-x-auto bg-white p-2 mt-4">
@@ -469,7 +458,7 @@ const Student = () => {
                     </span>
                   </td>
                   <td className="px-6 py-4">
-                    <a
+                    <Link
                       href="#"
                       className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                     >
@@ -477,7 +466,7 @@ const Student = () => {
                       <span style={{ whiteSpace: "nowrap", display: "block" }}>
                         {student.certificate}
                       </span>
-                    </a>
+                    </Link>
                   </td>
                   <td className="flex justify-center px-6 py-3 ">
                     <div className="flex items-center gap-6">

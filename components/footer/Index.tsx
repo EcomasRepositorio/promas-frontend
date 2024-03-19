@@ -69,24 +69,24 @@ const Footer = () => {
                 Nuestra empresa:
               </h6>
               <h1 className="mb-4">
-                <a href="/" className="font-semibold text-gray-100 hover:underline"
-                  >Inicio</a>
+                <Link href="/" className="font-semibold text-gray-100 hover:underline"
+                  >Inicio</Link>
               </h1>
               <p className="mb-4">
-                <a href="/certificate" className="font-semibold text-gray-100 hover:underline"
-                  >Certificado </a>
+                <Link href="/certificate" className="font-semibold text-gray-100 hover:underline"
+                  >Certificado </Link>
               </p>
               <p className="mb-4">
-                <a href="/graduate" className="font-semibold text-gray-100 hover:underline">
-                  Diplomados</a>
+                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline">
+                  Diplomados</Link>
               </p>
               <p className='mb-4'>
-                <a href="/about" className="font-semibold text-gray-100 hover:underline"
-                  >Nosotros</a>
+                <Link href="/about" className="font-semibold text-gray-100 hover:underline"
+                  >Nosotros</Link>
               </p>
               <p>
-                <a href="/" className="font-semibold text-gray-100 hover:underline"
-                  >¡Inscribete!</a>
+                <Link href="/" className="font-semibold text-gray-100 hover:underline"
+                  >¡Inscribete!</Link>
               </p>
             </div>
             <div className="">
@@ -95,24 +95,24 @@ const Footer = () => {
                 Nuestros diplomados en:
               </h6>
               <p className="mb-4">
-                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
-                  >Ingenieria Vial</a>
+                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                  >Ingenieria Vial</Link>
               </p>
               <p className="mb-4">
-                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
-                  >Ingenieria Agronoma</a>
+                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                  >Ingenieria Agronoma</Link>
               </p>
               <p className="mb-4">
-                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
-                  >Ingenieria Civil</a>
+                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                  >Ingenieria Civil</Link>
               </p>
               <p className='mb-4'>
-                <a href="/graduate" className="font-semibold text-gray-100 hover:underline"
-                  >Ingenieria Ambiental</a>
+                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                  >Ingenieria Ambiental</Link>
               </p>
               <p>
-                <a href="graduate" className="font-semibold text-gray-100 hover:underline"
-                  >Ingenieria de industrias Alimentarias</a>
+                <Link href="graduate" className="font-semibold text-gray-100 hover:underline"
+                  >Ingenieria de industrias Alimentarias</Link>
               </p>
             </div>
             <div>
@@ -179,10 +179,10 @@ const Footer = () => {
 
       <div className="p-6 text-center">
         <span>© 2023 Copyright:</span>
-        <a
+        <Link
           className="font-semibold text-neutral-300"
           href="/"
-          > Corporacion Promas</a>
+          > Corporacion Promas</Link>
       </div>
 
     </footer>

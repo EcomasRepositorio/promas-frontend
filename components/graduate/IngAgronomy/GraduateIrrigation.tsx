@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
               RIEGO Y FERTIRRIEGO
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
               Dirigido a gerentes de proyectos, residentes y supervisores de obras. Ingenieros agrícolas,
               agrónomos, civiles, hidráulicos y todos los profesionales que manejen 
               proyectos y ejecución de obras con riego tecnificado.
@@ -68,7 +68,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 14 de Enero</p>
+                <p className="font-bold ml-1">Inicio 24 de Marzo</p>
               </div>
 
               <div className="flex items-center mb-2">

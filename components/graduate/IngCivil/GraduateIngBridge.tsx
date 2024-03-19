@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
               INGENIERÍA DE PUENTES
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 Diplomado dirigido a bachilleres, Gerentes y administradores de proyectos y jefes de área. 
                 Ingenieros civiles, ingenieros estructurales, arquitectos residentes y 
                 supervisores de obras. Profesionales del sector público y privado 
@@ -69,7 +69,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 07 de Marzo</p>
+                <p className="font-bold ml-1">Inicio 04 de Mayo</p>
               </div>
 
               <div className="flex items-center mb-2">

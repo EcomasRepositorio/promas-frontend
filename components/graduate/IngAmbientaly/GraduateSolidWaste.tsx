@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
                 GESTIÓN Y MANEJO INTEGRAL DE RESIDUOS SÓLIDOS
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 Diplomado dirigido a bachilleres, titulados y profesionales de las carreras de ingeniería ambiental, 
                 industrial, civil, biología, química, agronómica y ramas afines. 
               </p>
@@ -67,7 +67,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 17 de febrero</p>
+                <p className="font-bold ml-1">Inicio 20 de Abril</p>
               </div>
 
               <div className="flex items-center mb-2">

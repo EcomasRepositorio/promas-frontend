@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
               ESTUDIO DE IMPACTO AMBIENTAL
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 Diplomado dirigido a
                 profesionales del medio ambiente, gestores de proyectos, consultores
                 ambientales, autoridades reguladoras, estudiantes y académicos, profesionales de derecho ambiental, planificadores urbanos, ONGs, empresarios
@@ -69,7 +69,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 07 de Enero</p>
+                <p className="font-bold ml-1">Inicio 18 de Mayo</p>
               </div>
 
               <div className="flex items-center mb-2">

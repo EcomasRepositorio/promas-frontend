@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
               SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 El diplomado especializado está dirigido a ingenieros y supervisores de 
                 seguridad, prevencionistas, capataces y jefes, miembros del comité de 
                 seguridad, profesionales en general, estudiantes universitarios, bachilleres, 
@@ -70,7 +70,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 03 de Enero</p>
+                <p className="font-bold ml-1">Inicio 06 de Abril</p>
               </div>
 
               <div className="flex items-center mb-2">

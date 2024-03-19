@@ -171,9 +171,9 @@ const SearchName:React.FC<SearchNameProps> = ({ onSearchName }) => {
                 </td>
                 {selectedStudentData && (
                   <Modal open={openModals[index]} onClose={() => closeStudentModal(index)}>
-                    <div className='flex justify-center mb-4'>
+                    <div className='flex justify-center mb-4 gap-4'>
                       <Image src={'/logos/logo_unp.png'} alt='promas' className="lg:w-32 lg:h-32 w-28 h-28 object-contain" width={800} height={800}  priority={true}/>
-                      <Image src={'/logos/logo_promas.png'} alt='promas' className="lg:w-32 lg:h-32 w-28 h-28 object-contain" width={800} height={800}  priority={true}/>
+                      <Image src={'/logos/logo_login.png'} alt='promas' className="lg:w-[110px] lg:h-[101px] w-28 h-28 mt-[18px] object-contain" width={800} height={800}  priority={true}/>
                     </div>
                     <div className="max-w-md mx-auto p-6 bg-white rounded-md">
                       {tableRows.map((row, index) => (

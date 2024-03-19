@@ -51,10 +51,10 @@ const [imageUrl, setImageUrl] = useState('');
           </div>
           <div className="sm:w-1/2 md:px-20 sm:px-5 lg:mt-6">
             <div className="text-pink-600 font-extrabold font-poppins lg:text-3xl text-2xl mb-2">
-              RESIDENCIA Y SUPERVICIÓN DE OBRAS
+              RESIDENCIA Y SUPERVISIÓN DE OBRAS
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 Diplomado dirigido a gerente de proyectos relacionados a construcción, supervisor de obras, 
                 consultores en servicios de ingeniería, ingenieros, arquitectos, topógrafos, 
                 bachilleres de la especialidad de ingeniería civil, y/o especialistas afines.

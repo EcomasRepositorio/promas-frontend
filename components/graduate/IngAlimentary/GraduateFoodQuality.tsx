@@ -53,7 +53,7 @@ const [imageUrl, setImageUrl] = useState('');
               GESTIÓN DE LA CALIDAD E INOCUIDAD ALIMENTARIA
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 Diplomado dirigido a bachilleres, titulados y profesionales de las carreras de ingeniería de industria
                 alimentarias, agroindustriales, agrónomos, biólogos y carreras afines a 
                 la calidad e inocuidad, jefes, supervisores y personal técnico involucrado 
@@ -69,7 +69,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 27 de Enero</p>
+                <p className="font-bold ml-1">Inicio 31 de Marzo</p>
               </div>
 
               <div className="flex items-center mb-2">

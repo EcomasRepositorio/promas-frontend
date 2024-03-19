@@ -53,7 +53,7 @@ const [imageUrl, setImageUrl] = useState('');
               SISTEMA DE RIEGO TECNIFICADO
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
               Dirigido a gerentes de proyectos, residentes y supervisores de obras. Ingenieros agrícolas,
               agrónomos, civiles, hidráulicos y todos los profesionales que manejen
               proyectos y ejecución de obras con riego tecnificado.
@@ -67,7 +67,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 17 de Febrero</p>
+                <p className="font-bold ml-1">Inicio 27 de Abril</p>
               </div>
 
               <div className="flex items-center mb-2">

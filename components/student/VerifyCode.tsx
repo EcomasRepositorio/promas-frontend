@@ -5,6 +5,7 @@ import StudentForm from './StudentForm';
 import { FaRegEdit } from 'react-icons/fa';
 import { StudentData } from '@/interface/interface';
 import Modal from '../share/Modal';
+import Link from 'next/link';
 
 interface DuplicatedCodesDetectorProps {
   studentData: StudentData[];
@@ -124,10 +125,10 @@ const DuplicatedCode: React.FC<DuplicatedCodesDetectorProps> = ({ studentData, i
                       <span style={{ whiteSpace: 'nowrap', display: 'block' }}>{student.date}</span>
                     </td>
                     <td className="px-6 py-4">
-                      <a href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                      <Link href="#" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                         Ver
                         <span style={{ whiteSpace: 'nowrap', display: 'block' }}>{student.certificate}</span>
-                      </a>
+                      </Link>
                     </td>
                     <td className="flex justify-center px-6 py-3 ">
                       <div className="flex items-center gap-6">

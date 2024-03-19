@@ -54,7 +54,7 @@ const [imageUrl, setImageUrl] = useState('');
               INGENIERÍA VIAL
             </div>
             <div className="mb-4">
-              <p className="text-sm font-semibold text-gray-600">
+              <p className="text-sm font-semibold text-gray-600 italic">
                 Diplomado dirigido a ingenieros civiles, topógrafos, arquitectos residentes y supervisores de 
                 obras, bachilleres, Gerentes, administradores de proyectos de la construcción, 
                 jefes de área y profesionales del sector público y privado relacionados con proyectos 
@@ -70,7 +70,7 @@ const [imageUrl, setImageUrl] = useState('');
                 width={20}
                 height={20}
                 priority={true}/>
-                <p className="font-bold ml-1">Inicio 11 de Febrero</p>
+                <p className="font-bold ml-1">Inicio 20 de abril</p>
               </div>
 
               <div className="flex items-center mb-2">

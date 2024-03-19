@@ -41,7 +41,7 @@ export const insights = [
   export const images = [
     { src: "/IMAGEN.png" },
     { src: "/IMAGEN.png" },
-    { src: "/IMAGEN.png" } 
+    { src: "/IMAGEN.png" }
   ];
 
   export const texts = [
