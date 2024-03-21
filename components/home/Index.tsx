@@ -86,7 +86,7 @@ const Home = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          //variants={slideInFromTop}
+          variants={slideInFromTop}
           className="py-1 lg:text-left text-center px-1 opacity-[0.9]"
         >
           <h1 className="text-gray-100 lg:text-2xl text-2xl text-center inline-flex lg:gap-6 gap-3">
@@ -122,7 +122,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              //variants={slideInFromLeft(1)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[63px] text-[36px] font-extrabold text-transparent bg-clip-text bg-gradient-to-r ${tittle.color1}`}>
@@ -135,7 +135,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              //variants={slideInFromLeft(1)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`mt-6 lg:text-[60px] text-[32px] font-extrabold bg-clip-text text-customPurple ${tittle.color2}`}>
@@ -148,7 +148,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              //variants={slideInFromLeft(1)}
+              variants={slideInFromLeft(1)}
               className="lg:leading-[3.8em] leading-[2.3em]">
               <h1>
                 <p className={`lg:text-[55px] text-[35px] font-extrabold bg-clip-text ${tittle.color3}`}>
@@ -167,7 +167,7 @@ const Home = () => {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              //variants={slideInFromLeft(1.5)}
+              variants={slideInFromLeft(1.5)}
               className="lg:text-3xl text-gray-200 mb-10"
             >
               {text}
@@ -181,7 +181,7 @@ const Home = () => {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          //variants={slideInFromLeft(2)}
+          variants={slideInFromLeft(2)}
           className="py-2 lg:text-2xl px-10 font-mono text-center button-primary text-white cursor-pointer rounded-lg"
         >
           {button}
@@ -193,7 +193,7 @@ const Home = () => {
         key={index}
         initial="hidden"
         animate="visible"
-        //variants={slideInFromRight(1)}
+        variants={slideInFromRight(1)}
         className="w-full h-full flex justify-center items-center text-center mt-32"
       >
         <Image
