@@ -28,10 +28,10 @@ const Graduate = () => {
       <h1 className="font-extrabold text-4xl lg:text-6xl mt-10">
         Nuestros diplomados
       </h1>
-      <p>
-        Hola promas
+      <p className='font-semibold text-lg mt-2'>
+        ¡Te ofrecemos un servicio de calidad para segurar el exito de tu profesión!
       </p>
-      <button className='border px-4 py-1 mt-4 rounded-xl'>
+      <button className='border px-4 py-1 mt-4 rounded-xl font-semibold'>
         Contacto
       </button>
     </div>

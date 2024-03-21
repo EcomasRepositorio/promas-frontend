@@ -18,8 +18,8 @@ const About = () => {
       <h1 className="font-extrabold text-4xl lg:text-6xl mt-10">
         Acerca de nosotros
       </h1>
-      <p>
-        Hola promas
+      <p className='font-semibold mt-2 text-lg'>
+        Somos un centro de capacitación profesional de amplia experiencia que desarrollamos cursos y diplomados
       </p>
       <button className='border px-4 py-1 mt-4 rounded-xl'>
         Contacto
