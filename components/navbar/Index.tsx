@@ -11,8 +11,8 @@ function Navbar() {
       <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0 fixed z-50">
       <div className='max-w-screen-xl flex flex-wrap  items-center justify-center mx-auto p-0.5 backdrop-blur-md'>
         <div className='md:text-right text-center font-semibold w-full border-b border-violet-500 py-1'>
-          <Link href='/certificate' className='hover:underline mr-4 text-white hover:text-white'>Verificar certificado</Link>
-          <Link href="https://site2.q10.com/login?ReturnUrl=%2F&aplentId=0959465f-37c3-4032-803b-bbfc499af7a3"
+          <Link href='/certs' className='hover:underline mr-4 text-white hover:text-white'>Verificar certificado</Link>
+          <Link href="https://site2.q10.com/login?ReturnUrl=%2F&aplentId=0959465f-37c3-4032-803b-bbfc499af7a3" target='_blank'
             className='hover:underline mr-3 text-white hover:text-white'>Aula Virtual</Link>
         </div>
       </div>
@@ -65,7 +65,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
-                  <Link href="/certificate" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/certs" onClick={() => setNavbar(!navbar)}>
                     Certificado
                   </Link>
                 </li>

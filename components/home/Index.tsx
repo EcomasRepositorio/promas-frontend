@@ -37,8 +37,8 @@ const icons = [
 ]
 
 const buttons = [
-  "Contacto",
-  "Informes",
+  {text: "Contacto", link: "#contact"},
+  {text:"Informes", link: "#contact"},
   /* "¡Inscribete!" */
 ]
 
@@ -181,8 +181,9 @@ const Home = () => {
           animate="visible"
           exit="hidden"
           variants={slideInFromLeft(2)}
+          href={button.link}
           className="py-2 lg:text-2xl px-10 font-mono text-center button-primary text-white cursor-pointer rounded-lg">
-          {button}
+          {button.text}
         </motion.a>
         )))}
       </div>

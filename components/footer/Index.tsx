@@ -178,11 +178,11 @@ const Footer = () => {
       </div>
 
       <div className="p-6 text-center">
-        <span>© 2023 Copyright:</span>
+        <span>© 2024 Copyright:</span>
         <Link
           className="font-semibold text-neutral-300"
           href="/"
-          > Corporacion Promas</Link>
+          > Corporacion Promás</Link>
       </div>
 
     </footer>

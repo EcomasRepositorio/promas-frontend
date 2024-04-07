@@ -40,7 +40,7 @@ const Graduate = () => {
         <div className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-6 lg:mt-6 font-extrabold border-b-4 p-2">
             DIPLOMADOS EN INGENIERÍA AMBIENTAL
         </div>
-          <div className='mb-20 lg:mb-10'>
+          <div id='graduateAmbientaly' className='mb-20 lg:mb-10'>
             <GraduateAmbientaly />
           </div>
           <div className='mb-20 lg:mb-10'>
