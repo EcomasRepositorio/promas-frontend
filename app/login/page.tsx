@@ -99,9 +99,9 @@ const Login: React.FC = () => {
             priority={true}/>
           </div>
             <form action="" className="space-y-6 text-white">
-            {resErrors?.message && (
-                        <span className="text-gray-100 bg-red-600/50 w-full p-2 rounded-xl font-semibold text-sm">{resErrors.message}</span>
-                      )}
+              {resErrors?.message && (
+                <span className="text-gray-100 bg-red-600/50 w-full p-2 rounded-xl font-semibold text-sm">{resErrors.message}</span>
+                  )}
                 <div className="relative">
                     <div className="absolute top-1 left-1 bg-[#FFFFFF40] rounded-full p-2 flex items-center justify-center text-pink-500">
                       <MdOutlineMailLock />

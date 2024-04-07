@@ -25,7 +25,7 @@ const Certificate: React.FC = () => {
   };
 
   return (
-  <section id='/certificate'  className='relative pt-48 pb-20 p-2 items-center justify-center'>
+  <section id='/certs'  className='relative pt-48 pb-20 p-2 items-center justify-center'>
     <div className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80 bg-gray-800" style={{ backgroundImage: "url('/fondo_certificate.jpg')" }}></div>
     <div className="max-w-screen-lg mx-auto border border-transparent  bg-gray-800/30 rounded-3xl shadow-2xl shadow-gray-100 text-center lg:mb-20 p-4 relative blur-background">
       <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">

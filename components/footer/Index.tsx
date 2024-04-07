@@ -32,7 +32,7 @@ const Footer = () => {
                 className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaWhatsapp className='text-2xl' />
               </Link>
-              <Link href="#!" target="_blank"
+              <Link href="https://www.youtube.com/@Corporacion.Promas" target="_blank"
                 className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
                 <FaYoutube className='text-2xl' />
               </Link>
@@ -73,7 +73,7 @@ const Footer = () => {
                   >Inicio</Link>
               </h1>
               <p className="mb-4">
-                <Link href="/certificate" className="font-semibold text-gray-100 hover:underline"
+                <Link href="/certs" className="font-semibold text-gray-100 hover:underline"
                   >Certificado </Link>
               </p>
               <p className="mb-4">
@@ -159,7 +159,7 @@ const Footer = () => {
                 </svg>
                 +51 984 040 264
               </p>
-              <p className="flex items-center justify-center md:justify-start">
+              {/* <p className="flex items-center justify-center md:justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -171,7 +171,7 @@ const Footer = () => {
                     clipRule="evenodd" />
                 </svg>
                 + 01 234 567 89
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

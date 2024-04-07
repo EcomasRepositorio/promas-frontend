@@ -62,8 +62,8 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
   };
 
   const onSubmit: SubmitHandler<StudentFormData> = async (data) => {
+    setIsLoading(true);
     try {
-      setIsLoading(true);
       if (!isNum(data.documentNumber) || data.documentNumber.length !== 8) {
         setError('documentNumber', {
           type: 'manual',
@@ -71,10 +71,10 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
         });
         return;
       };
-      if (!isNum(data.code) || data.code. length !== 9) {
+      if (!isNum(data.code) || data.code.length !== 8 && data.code.length !==9) {
         setError('code', {
           type: 'manual',
-          message: 'El codigo debe contener solo números y exactamente 9 digitos',
+          message: 'El codigo debe contener solo números y exactamente 8 o 9 digitos',
         });
         return;
       };
@@ -98,6 +98,22 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
       setIsLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (isLoading && !errorModalOpen) {
+      setModalOpen(true);
+    }
+  }, [isLoading, errorModalOpen]);
+
+  useEffect(() => {
+    if (modalOpen) {
+      setTimeout(() => {
+        setModalOpen(false);
+        onCloseModal();
+      }, 2000); // Cerrar el modal después de 2 segundos
+    }
+  }, [modalOpen, onCloseModal]);
+
   const closeModal = () => {
     setError('documentNumber', {});
     setErrorModalOpen(false);

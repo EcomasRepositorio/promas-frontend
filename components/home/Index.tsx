@@ -106,7 +106,7 @@ const Home = () => {
               className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img4}
             </Link>
-            <Link key={`link-${i+4}`} href='' target="_blank" className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
+            <Link key={`link-${i+4}`} href='https://www.youtube.com/@Corporacion.Promas' target="_blank" className="border border-[#7042f88b] p-2 rounded-full transition-transform transform hover:scale-150 shadow-xl shadow-[#7042f88b]">
               {icon.img5}
             </Link>
           </h1>
@@ -168,8 +168,7 @@ const Home = () => {
               animate="visible"
               exit="hidden"
               variants={slideInFromLeft(1.5)}
-              className="lg:text-3xl text-gray-200 mb-10"
-            >
+              className="lg:text-3xl text-gray-200 mb-10">
               {text}
             </motion.p>
           )
@@ -182,8 +181,7 @@ const Home = () => {
           animate="visible"
           exit="hidden"
           variants={slideInFromLeft(2)}
-          className="py-2 lg:text-2xl px-10 font-mono text-center button-primary text-white cursor-pointer rounded-lg"
-        >
+          className="py-2 lg:text-2xl px-10 font-mono text-center button-primary text-white cursor-pointer rounded-lg">
           {button}
         </motion.a>
         )))}

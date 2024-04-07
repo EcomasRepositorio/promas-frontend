@@ -86,7 +86,7 @@ const [isSubmit, setIsSubmit] = useState(false);
                   </div>
                   </Link>
 
-                  <Link href='/resume'>
+                  <Link href='https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20los%20diplomados' target='_blank'>
                       <div className='rounded-full shadow-lg shadow-customPink p-6 cursor-pointer hover:scale-125 ease-in duration-300'>
                         <FaWhatsapp className='text-xl'/>
                       </div>
