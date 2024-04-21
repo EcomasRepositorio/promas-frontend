@@ -5,9 +5,9 @@ import { useRouteData } from "@/hooks/hooks";
 import tokenConfig, { URL } from "@/components/utils/format/tokenConfig";
 import { FaRegEdit } from "react-icons/fa";
 import { StudentData } from "@/interface/interface";
-import { CustomLogout, CustomRegister } from "@/components/share/button";
-import Modal from "@/components/share/Modal";
+import * as XLSX from 'xlsx';
 import StudentForm from "@/components/student/StudentForm";
+import { BsFiletypeXls } from "react-icons/bs";
 import { RiFileExcel2Line } from "react-icons/ri";
 import { FaRegAddressBook } from "react-icons/fa6";
 import { FiUserPlus } from "react-icons/fi";
@@ -20,6 +20,7 @@ import SearchStudent from "@/components/student/SearchStudent";
 import { logout } from "@/components/utils/auth.server";
 import DuplicatedCode from "@/components/student/VerifyCode";
 import Link from "next/link";
+import DeleteAllStudent from "@/components/student/DeleteAllStudent";
 
 const Student = () => {
   const [isActive, setIsActive] = useState(false);
@@ -51,7 +52,6 @@ const Student = () => {
     try {
       const url = `${URL()}/students?limit=${limit}&offset=${offset}`;
       const response = await axios.get(url, tokenConfig(validToken));
-      console.log(response);
       setStudentData(response.data);
       setDataLoading(true);
     } catch (error: any) {
@@ -158,8 +158,7 @@ const Student = () => {
       console.log("Valor de query:", query);
       setQueryValue(queryValue);
       if (queryValue === "documentNumber") {
-        const url = `${URL()}/student/dni/${queryValue}/type/${query}`; // Reemplaza 'someType' con el tipo adecuado
-        console.log("Hola url: ", url);
+        const url = `${URL()}/student/dni/${queryValue}/type/${query}`;
         const response = await axios.get(url);
         setStudentData(response.data);
         setIsSearchActive(true);
@@ -175,7 +174,6 @@ const Student = () => {
     }
   };
   const openErrorModal = () => {
-    // Agregado
     setErrorModalOpen(true);
   };
 
@@ -187,11 +185,31 @@ const Student = () => {
     setIsDuplicatedCodesModalOpen(false);
   };
 
+  //exportarEnExcel
+  const handleExportToExcel = async () => {
+    try {
+      if (!memoryData) {
+        console.error('No hay datos disponibles para exportar.');
+        return;
+      }
+      const dataWithoutId = memoryData.map(student => {
+        const { id, ...rest } = student;
+        return rest;
+      });
+      const wb = XLSX.utils.book_new();
+      const ws = XLSX.utils.json_to_sheet(dataWithoutId);
+      XLSX.utils.book_append_sheet(wb, ws, 'participantesPromas');
+      XLSX.writeFile(wb, 'participantesPromas.xlsx');
+      console.log('Datos exportados exitosamente a Excel.');
+    } catch (error) {
+      console.error('Error al exportar datos a Excel:', error);
+    }
+  };
+
   //Logout
   const handleLogout = async () => {
     await logout();
   };
-
   useEffect(() => {
     onSubmit();
     const fetchData = async () => {
@@ -209,7 +227,6 @@ const Student = () => {
         setLoading(false);
       }
     };
-
     fetchData();
   }, [currentPage, limit, offset, onSubmit, validToken]);
 
@@ -282,7 +299,7 @@ const Student = () => {
     <section className="p-2">
       {/* <div className="text-center text-gray-500 lg:p-6 text-2xl font-semibold mb-10 mt-8"> */}
 
-      <div className="text-center text-gray-600 lg:p-6 p-0 mt-28 lg:text-2xl text-xl font-extrabold">
+      <div className="text-center text-gray-600 lg:p-6 p-0 lg:text-2xl text-xl font-extrabold">
         <p className="border shadow-2xl p-4 rounded-xl">
           ADMINISTRAR ESTUDIANTES
         </p>
@@ -295,9 +312,10 @@ const Student = () => {
                 handleSearchStudent(query, queryValue)
               }/>
           </div>
+          <div className="inline-flex gap-1">
           <button
             type="button"
-            className="text-[#006eb0] uppercase hover:text-white border-2 border-[#006eb0] hover:bg-[#006eb0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-3 text-center md:w-auto dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center"
+            className="text-[#006eb0] uppercase hover:text-white border-2 border-[#006eb0] hover:bg-[#006eb0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-3 text-center md:w-auto dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center hover:scale-110 duration-300"
             onClick={handleOpenDuplicatedCode}>
             <GrDocumentVerified className="mr-1 text-lg" />
             Verificar
@@ -308,12 +326,20 @@ const Student = () => {
               isOpen={isDuplicatedCodesModalOpen}
               onClose={handleCloseDuplicatedCode}/>
           )}
+          <button
+            type="button"
+            className="text-green-600 uppercase hover:text-white border-2 border-green-600 hover:bg-green-600 focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-3 text-center md:w-auto dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center hover:scale-110 duration-300"
+            onClick={handleExportToExcel}>
+            <BsFiletypeXls className="mr-1 text-lg" />
+            Descargar
+          </button>
+          </div>
         </div>
 
         <div className="flex justify-center mt-2 lg:mt-2 mb-1">
           <button
             type="button"
-            className="text-[#006eb0] uppercase hover:text-white border-2 border-[#006eb0] hover:bg-[#006eb0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center"
+            className="text-[#006eb0] uppercase hover:text-white border-2 border-[#006eb0] hover:bg-[#006eb0] focus:ring-4 focus:outline-none font-semibold rounded-lg text-xs px-3 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-[#BFE9FB] inline-flex items-center hover:scale-110 duration-300"
             onClick={handleOpenCreateForm}>
             <FaRegAddressBook className="mr-1 text-lg" />
             Agregar
@@ -326,7 +352,7 @@ const Student = () => {
 
           <button
             type="button"
-            className="text-green-600 uppercase hover:text-white border-2 border-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-lg text-xs px-3 py-2 text-center me-2 mb-1  dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-200 inline-flex items-center"
+            className="text-green-600 uppercase hover:text-white border-2 border-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-semibold rounded-lg text-xs px-3 py-2 text-center me-2 mb-1  dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-200 inline-flex items-center hover:scale-110 duration-300"
             onClick={handleCreateStudentExcel}>
             <RiFileExcel2Line className="mr-1 text-lg" />
             Importar
@@ -339,20 +365,20 @@ const Student = () => {
           {/* <ProtectedRoute path='/user' allowedRoles={['ADMIN']} element={<User/>} /> */}
           <Link
             href="/user"
-            className="text-yellow-500 hover:text-white border-2 border-yellow-400 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-lg text-xs px-2 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-yellow-200">
+            className="text-yellow-500 hover:text-white border-2 border-yellow-400 hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 rounded-lg text-xs px-2 py-2 text-center me-2 mb-1 dark:hover:text-white dark:focus:ring-yellow-200 hover:scale-110 duration-300">
             <FiUserPlus className="text-lg" />
           </Link>
 
           <button
             type="button"
             onClick={handleLogout}
-            className="text-red-500 hover:text-white border-2 border-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-xs px-2 py-2 text-center mb-1 dark:hover:text-white dark:focus:ring-red-200">
+            className="text-red-500 hover:text-white border-2 border-red-500 hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 rounded-lg text-xs px-2 py-2 text-center mb-1 dark:hover:text-white dark:focus:ring-red-200 hover:scale-110 duration-300">
             <FiLogOut className="text-lg" />
           </button>
         </div>
       </div>
       {loading && (
-        <div>
+        <div className="text-center text-3xl font-bold text-[#006eb0]">
         <a href="https://tenor.com/es/view/bar-penguin-waiting-loading-pudgy-gif-7185161825979534095">
           Cargando...
         </a>
@@ -442,8 +468,14 @@ const Student = () => {
                       {student.participation}
                     </span>
                   </td>
-                  <td className="px-6 py-4">
-                    <span style={{ whiteSpace: "nowrap", display: "block" }}>
+                  <td className="px- py-">
+                    <span style={{
+                      whiteSpace: "normal",
+                      display: "block",
+                      maxWidth: "1200px",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis"
+                      }}>
                       {student.institute}
                     </span>
                   </td>
@@ -460,8 +492,7 @@ const Student = () => {
                   <td className="px-6 py-4">
                     <Link
                       href="#"
-                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    >
+                      className="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                       Ver
                       <span style={{ whiteSpace: "nowrap", display: "block" }}>
                         {student.certificate}
@@ -473,8 +504,7 @@ const Student = () => {
                       <div>
                         <button
                           onClick={() => handleUpdateOpenModal(student.id)}
-                          className="border-2 border-green-500 p-0.5 rounded-md text-green-500 transition ease-in-out delay-300 hover:scale-125"
-                        >
+                          className="border-2 border-green-500 p-0.5 rounded-md text-green-500 transition ease-in-out delay-300 hover:scale-125">
                           <div className="text-xl text-default-400 cursor-pointer active:opacity-50">
                             <FaRegEdit />
                           </div>
@@ -485,14 +515,12 @@ const Student = () => {
                             onUpdateSuccess={() =>
                               handleUpdateSuccess(student.id)
                             }
-                            onCloseModal={handleUpdateCloseModal}
-                          />
+                            onCloseModal={handleUpdateCloseModal}/>
                         )}
                       </div>
                       <StudentDelete
                         id={student.id}
-                        onDeleteSuccess={handleDeleteSuccess}
-                      />
+                        onDeleteSuccess={handleDeleteSuccess}/>
                     </div>
                   </td>
                 </tr>
@@ -502,8 +530,7 @@ const Student = () => {
 
           <nav
             className="mt-5 flex items-center flex-col sm:flex-row justify-between text-sm"
-            aria-label="Page navigation example"
-          >
+            aria-label="Page navigation example">
             <p>
               Página{" "}
               <strong>
@@ -515,8 +542,7 @@ const Student = () => {
               <li>
                 <button
                   className="block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-white"
-                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
-                >
+                  onClick={() => handlePageChange(Math.max(1, currentPage - 1))}>
                   Anterior
                 </button>
               </li>
@@ -526,15 +552,16 @@ const Student = () => {
                   className=" block rounded bg-transparent px-3 py-1.5 text-sm text-neutral-600 transition-all duration-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 dark:hover:text-white"
                   onClick={() =>
                     handlePageChange(Math.min(pageCount, currentPage + 1))
-                  }
-                >
+                  }>
                   Siguiente
                 </button>
               </li>
             </ul>
           </nav>
+
         </div>
       )}
+      <DeleteAllStudent />
     </section>
   );
 };

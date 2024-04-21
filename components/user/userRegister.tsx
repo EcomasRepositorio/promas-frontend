@@ -53,11 +53,9 @@ const UserRegister: React.FC<CreateUserModal> = ({ onCloseModal, onCreateSuccess
   const onSubmit: SubmitHandler<UserData> = async (data) => {
     try {
       setIsLoading(true);
-      console.log(data);
       if (data && data.role) {
       const url = `${URL()}/user/register`;
       const response = await axios.post(url, data, tokenConfig(validToken));
-      console.log(response)
       const createdUserId = response.data.id;
       onCreateSuccess(createdUserId);
       setDataLoaded(true);

@@ -63,7 +63,6 @@ const UserUpdate: React.FC<UpdateUserModal> = ({ onCloseModal, onUpdateSuccess, 
   const onSubmit: SubmitHandler<UserUpdateData> = async (data) => {
     try {
       setIsLoading(true);
-      console.log(data);
       if (!data || !data.role === undefined || userId === null || userId === undefined) {
         console.error('El objeto data no contiene la propiedad "role" o es undefined.');
         return;

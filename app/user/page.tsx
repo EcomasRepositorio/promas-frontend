@@ -28,13 +28,10 @@ const User = () => {
     try {
       const url = `${URL()}/users`;
       const response = await axios.get(url, tokenConfig(validToken));
-      console.log(response);
-
       setUserData(response.data);
       setDataLoading(true);
     } catch (error: any) {
       if (error && typeof error === 'object' && 'response' in error) {
-        console.log(error.response.data);
       } else if (error instanceof Error) {
         console.log("Error desconocido", error.message);
       } else {

@@ -21,7 +21,6 @@ const Certificate: React.FC = () => {
   };
 
   const handleSearch = (data: string) => {
-    console.log(data);
   };
 
   return (

@@ -5,7 +5,7 @@ import { SearchCodeProps, StudentCode } from '../../interface/interface';
 import Modal from '../share/Modal';
 import Image from 'next/image';
 
-const SearchName:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
+const SearchCode:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
 
   const [isActive, setIsActive] = useState(false);
   const [queryValue, setQueryValue] = useState<string>('');
@@ -19,7 +19,6 @@ const SearchName:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     setIsActive(!isActive);
   };
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value, 'onChange ejecutado');
     setQueryValue(event.target.value);
     setSearchType(event.target.value);
     };
@@ -40,11 +39,9 @@ const SearchName:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
     try {
       const value = queryValue.trim();
       const apiUrl = `${URL()}/student/code/${value}/type/${searchType}`
-      console.log(apiUrl)
       const res = await axios
       .get(`${URL()}/student/code/${value.trim()}/type/${searchType}`,
       );
-      console.log(res)
         setStudentData(res.data);
         onSearchCode(res.data);
         if (queryValue.trim() !== '') {
@@ -78,7 +75,7 @@ const SearchName:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
         <input
           type="search"
           id="default-search"
-          className="block w-full font-semibold p-4 ps-10 text-sm text-gray-900 border-2 border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400 dark:text-black"
+          className="block w-full font-semibold p-4 ps-10 text-sm text-gray-900 border-2 border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
           placeholder={`Buscar por código ${searchType === 'code' ? 'código' : ''}`}
           required
           onClick={toggleIsActive}
@@ -96,20 +93,39 @@ const SearchName:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   {loading && <p>Cargando...</p>}
       {studentData && (
         <Modal open={open} onClose={() => setOpen(false)}>
-          <div className='flex justify-center mb-4 gap-4'>
-            <Image src={'/logos/logo_unp.png'} alt='promas' className="lg:w-32 lg:h-32 w-28 h-28 object-contain" width={800} height={800}  priority={true}/>
-            <Image src={'/logos/logo_login.png'} alt='promas' className="lg:w-[110px] lg:h-[101px] w-28 h-28 mt-[18px] object-contain" width={800} height={800}  priority={true}/>
+          <div className='flex justify-center items-center mb-4 gap-10'>
+            <Image src={'/logos/logo_unp.png'} alt='promas' className="md:w-32 md:h-32 w-28 h-28 object-contain" width={800} height={800}  priority={true}/>
+            <Image src={'/logos/logo_login.png'} alt='promas' className="md:w-[110px] md:h-[101px] w-24 h-[88px] mt-[8px] object-contain" width={800} height={800}  priority={true}/>
           </div>
-          <div className="max-w-md mx-auto p-6 bg-white rounded-md">
+          <div className="max-w-md text-center bg-white rounded-md mx-auto">
             {tableRows.map((row, index) => (
               <div key={index} className="mb-4">
-               <div className="flex items-center text-gray-100 text-sm p-1 lg:ml-5 ml-0 lg:w-80 w-full rounded-lg bg-slate-600 font-semibold">
-                {row.imgSrc && <img src={row.imgSrc} alt={row.label} className="flex lg:w-5 lg:h-5 w-5 h-5 object-contain ml-1" />}
-                <div className='flex-1 text-center'>
-                {row.label}
+                <div className="inline-flex items-center text-gray-100 text-sm p-1 md:w-80 w-72 rounded-lg bg-slate-600 font-semibold">
+                  {row.imgSrc && <Image src={row.imgSrc} alt={row.label} className="flex lg:w-5 lg:h-5 w-5 h-5 object-contain ml-1" width={800} height={800} />}
+                  <div className='flex-1 text-center'>
+                  {row.label}
+                  </div>
                 </div>
-              </div>
-                <div className="text-gray-600 mt-3 mb-5 text-sm font-semibold">{row.value}</div>
+
+                <div className="flex justify-center text-gray-600 mt-3 mb-5 md:text-sm text-xs md:w-[410px] px-[2px] font-semibold">
+                  {row.label === 'Organizado por:' ? (
+                    <span>
+                      {row.value && (
+                        <span>
+                          {row.value.split(' ').map((word, i, arr) => (
+                            <React.Fragment key={i}>
+                              {i !== arr.length - 2 ? word + ' ' : word + ' '}
+                              {i === arr.length - 3 && <br />}
+                            </React.Fragment>
+                          ))}
+                        </span>
+                      )}
+                    </span>
+                  ) : (
+                    <span>{row.value}</span>
+                  )}
+                </div>
+
               </div>
             ))}
           </div>
@@ -125,4 +141,4 @@ const SearchName:React.FC<SearchCodeProps> = ({ onSearchCode }) => {
   )
 }
 
-export default SearchName;
+export default SearchCode;

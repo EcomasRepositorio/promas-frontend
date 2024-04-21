@@ -31,7 +31,6 @@ const Book = () => {
   const refForm = useRef<HTMLFormElement>(null);
   const onSubmit: SubmitHandler<any> = async (data, event) => {
     event?.preventDefault();
-    console.log(data);
     setSending(true);
     const serviceID = "service_klldzcg";
     const templateID = "template_07p7s1q";

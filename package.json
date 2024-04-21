@@ -25,7 +25,8 @@
     "react-countup": "^6.5.0",
     "react-intersection-observer": "^9.8.1",
     "three": "^0.161.0",
-    "sharp": "^0.33.2"
+    "sharp": "^0.33.2",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^20.11.5",

@@ -48,7 +48,6 @@ const SearchName:React.FC<SearchStudentDNIProps> = ({ onSearchDNI }) => {
       const res = await axios
         .get(`${URL()}/student/dni/${value.trim()}/type/${searchType}`,
         );
-        console.log(res)
         setStudentData(res.data);
         setCloseModalTable(false);
         //setCloseTable(true);
