@@ -156,7 +156,7 @@ const [isSubmit, setIsSubmit] = useState(false);
                   ></textarea>
                 </div>
                 <button type='submit' className='w-full p-4 text-gray-100 border rounded-xl mt-4'>
-                  Enivar mensaje
+                  Enviar mensaje
                 </button>
                   <input type="hidden" name="_next" value="http://localhost:3000" />
                   <input type="hidden" name="_captcha" value="false" />
