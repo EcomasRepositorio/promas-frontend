@@ -20,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+    <link rel="icon" href="/loyoutlog.png" />  
       <body className={`${inter.className} overflow-y-scroll overflow-x-hidden`}>
         <Navbar />
           {children}
