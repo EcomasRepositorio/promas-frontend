@@ -78,13 +78,13 @@ const StudentForm: React.FC<StudentFormProps> = ({ id, onCloseModal, onUpdateSuc
         });
         return;
       };
-      if (!isNum(data.hour)) {
-        setError('hour', {
-          type: 'manual',
-          message: 'La hora debe contener solo números',
-        });
-        return;
-      };
+      // if (!isNum(data.hour)) {
+      //   setError('hour', {
+      //     type: 'manual',
+      //     message: 'La hora debe contener solo números',
+      //   });
+      //   return;
+      // };
       if (id) {
       await axios.put(`${URL()}/student/${id}`, data, tokenConfig(validToken));
       //setModalOpen(true);
