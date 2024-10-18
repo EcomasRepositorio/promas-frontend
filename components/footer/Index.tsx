@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <div className=''>
     <footer
-      className="bg-transparent bg-clip bg-gradient-to-b from-purple-700 to-pink-600 text-center text-gray-100 lg:text-left">
-      <div className="border-b-2 border-violet-500 p-4">
+      className="bg-transparent bg-clip bg-gradient-to-b from-[#BC00D1] to-customPurple text-center text-gray-100 lg:text-left">
+      <div className="border-b-2 border-white p-4">
         <div className="container mx-auto px-10">
           <div className="flex items-center justify-center lg:justify-between">
             <div className="mr-12 hidden lg:block">
@@ -17,23 +17,23 @@ const Footer = () => {
             </div>
             <div className="flex justify-center">
               <Link href="https://www.facebook.com/people/Corporaci%C3%B3n-Prom%C3%A1s/61552473052389/" target="_blank"
-                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-white rounded-full p-2">
                 <FaFacebookF className='text-2xl' />
               </Link>
               <Link href="https://www.instagram.com/corporacion.promas/" target="_blank"
-                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-white rounded-full p-2">
                 <FaInstagram className='text-2xl' />
               </Link>
               <Link href="https://www.tiktok.com/@promas.corp" target="_blank"
-                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-white rounded-full p-2">
                 <FaTiktok className='text-2xl' />
               </Link>
               <Link href="https://wa.me/51984040264?text=Hola,%20deseo%20más%20información%20sobre%20los%20diplomados" target="_blank"
-                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-white rounded-full p-2">
                 <FaWhatsapp className='text-2xl' />
               </Link>
               <Link href="https://www.youtube.com/@Corporacion.Promas" target="_blank"
-                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-pink-500 rounded-full p-2">
+                className="mr-5 text-gray-100 hover:scale-150 ease-in duration-300 border border-white rounded-full p-2">
                 <FaYoutube className='text-2xl' />
               </Link>
             </div>

@@ -8,7 +8,7 @@ function Navbar() {
   const [navbar, setNavbar] = useState(false);
   return (
     <div className=''>
-      <nav className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0 fixed z-50">
+      <div className="w-full lg:bg-purple-700/50 md:bg-purple-700/50 bg-purple-700/95 top-0 left-0 right-0 z-50 absolute">
       <div className='max-w-screen-xl flex flex-wrap  items-center justify-center mx-auto p-0.5 backdrop-blur-md'>
         <div className='md:text-right text-center font-semibold w-full border-b border-violet-500 py-1'>
           <Link href='/certs' className='hover:underline mr-4 text-white hover:text-white'>Verificar certificado</Link>
@@ -93,7 +93,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-      </nav>
+      </div>
     </div>
   );
 }

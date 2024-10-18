@@ -1,81 +1,133 @@
 "use client";
-import React, { useState } from 'react';
-import SearchCode from '@/components/certificate/SearchCode';
-import SearchDNI from '@/components/certificate/SearchDNI';
-import SearchName from '@/components/certificate/SearchName';
-import { BsQrCodeScan } from "react-icons/bs";
-import { BsPersonVcard, BsPersonSquare } from "react-icons/bs";
-import Image from 'next/image';
-//import Whatsapp from '@/components/whatsapp/Index'
-import './Styles.css'
-import Whatsapp from '@/components/whatsapp/Index';
+import React from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import "./Styles.css";
+const SearchCode = dynamic(() => import("@/components/certificate/SearchCode"));
+const SearchDNI = dynamic(() => import("@/components/certificate/SearchDNI"));
+const SearchName = dynamic(() => import("@/components/certificate/SearchName"));
 
-const Certificate: React.FC = () => {
+interface Props {
+  // Define any props if needed
+}
 
-  const [isActive, setIsActive] = useState(false);
-  const [searchType, setSearchType] = useState<string | null>(null);
-
-  const handleButton = (type: string) => {
-    setSearchType(type);
-    setIsActive(true);
-  };
-
-  const handleSearch = (data: string) => {
+const TestingPage: React.FC<Props> = () => {
+  const handleSearch = (data: any) => {
+    console.log(data);
   };
 
   return (
-  <section id='/certs'  className='relative pt-48 pb-20 p-2 items-center justify-center'>
-    <div className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80 bg-gray-800" style={{ backgroundImage: "url('/fondo_certificate.jpg')" }}></div>
-    <div className="max-w-screen-lg mx-auto border border-transparent  bg-gray-800/30 rounded-3xl shadow-2xl shadow-gray-100 text-center lg:mb-20 p-4 relative blur-background">
-      <div className="mb-4 lg:mt-0 justify-center text-5xl font-extrabold tracking-tight text-gray-500">
-      <div className='flex justify-center mb-4 lg:gap-32 gap-8'>
-        <Image src={'/logo_promas_3.png'} className="lg:w-44 lg:h-48 w-32 h-32 object-contain lg:mt-8 mt-7" width={800} height={700} alt='logo_promas'  priority={true}/>
-        <Image src={'/logos/UNP.png'} className="lg:w-44 lg:h-48 w-32 h-32 object-contain mt-6" width={800} height={800} alt='logo_promas'  priority={true}/>
-      </div>
-      </div>
-        <div className="">
-          <h2 className="mb-4 mt-20 text-4xl font-extrabold text-white uppercase">
-            Certificados
-          </h2>
-          <p className="font-semibold text-white sm:text-xl lg:px-36">
-            En este módulo podrá realizar la búsqueda de certificados de los diferentes eventos ofrecidos por PROMAS.
-          </p>
-          <p className="mb-6 mt-6 lg:mt-10 text-xl tracking-tight font-semibold text-white">
-            Buscar por:
-          </p>
-          <div className='lg:flex flex-wrap justify-center items-center text-center lg:ml-40 lg:mr-40'>
-            <button
-            onClick={() => handleButton('documentNumber')}
-            className={`lg:mb-20 mb-4 font-bold border rounded-lg text-md px-7 py-3 text-white text-center inline-block hover:text-violet-700 hover:bg-gray-200 hover:scale-110 duration-300
-              ${searchType === 'documentNumber' && ''}`}>
-              <BsPersonVcard className='text-xl inline-block align-text-top mr-2 hover:text-violet-700' />Buscar por DNI
-            </button>
-            <button
-            onClick={() => handleButton('name')}
-            className={`lg:mb-20 mb-4 ml-6 mr-6 border font-bold rounded-lg text-md px-3 py-3 text-white text-center hover:text-violet-700 hover:bg-gray-200 hover:scale-110 duration-300
-              ${searchType === 'name' && ''}`}>
-              <BsPersonSquare className='text-lg inline-block align-text-top mr-2' />Buscar por nombre
-            </button>
-            <button
-            onClick={() => handleButton('code')}
-            className={`lg:mb-20 mb-5 font-bold border rounded-lg text-white text-md px-4 py-3 text-center inline-block hover:text-violet-700 hover:bg-gray-200 hover:scale-110 duration-300
-            ${searchType === 'code' && ''}`}>
-              <BsQrCodeScan className='text-lg inline-block align-text-top mr-2' /> Buscar por código
-            </button>
+    <section className=" bg-fixed  " style={{}}>
+      <div
+        className=""
+        style={{
+          
+          backgroundAttachment: "fixed",
+          backgroundImage: "url(/bg_cert3.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className=" py-8  mx-auto max-w-screen-xl lg:py-10">
+          <div className="" style={{ position: "relative", width: "100%" }}>
+            <div
+              className="bg-gradient-to-t from-[#B401CF]/75 to-[#5800B7]/75 border border-white/55  rounded-lg p-8 md:p-12 mb-50 mt-28 mx-2"
+              style={{
+                marginBottom: "20px",
+              }}
+            >
+              <div className="flex flex-col md:flex-row mx-auto max-w-screen-xl  md:mr-0 md:p-4  ">
+                <div className="md:mr-12">
+                  <div className="flex flex-col">
+                    <h2 className=" mb-4 text-2xl font-extrabold text-center text-white md:mb-6 lg:text-4xl">
+                      VERIFICA TU CERTIFICADO
+                    </h2>
+                    <p className="text-white  font-light text-center md:text-xl mb-8  ">
+                      Verifica la autenticidad de tu certificado ingresando tu
+                      DNI, nombres o código de certificación proporcionado al
+                      obtenerlo. Nos aseguramos de proteger tu privacidad y la
+                      confidencialidad de tus datos.
+                    </p>
+
+                    <Tabs
+                      aria-label="Options"
+                      color="primary"
+                      classNames={{
+                        tabList:
+                          "w-full flex flex-col md:flex-row bg-transparent rounded-md border border-gray-300/40",
+                        cursor: "bg-transparent rounded-md border border-gray-50/50 text-gray-100",
+                        tab: "py-2 px-4 rounded-t-lg text-gray-100",
+                        tabContent:
+                          "group-data-[selected=true]:text-gray-100 text-g-100 ",
+                      }}
+                    >
+                      <Tab key="dni" title="Buscar por DNI" className="">
+                        <Card>
+                          <CardBody className="bg-transparent roun">
+                            <div className="">
+                              <SearchDNI onSearchDNI={handleSearch} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Tab>
+                      <Tab key="name" title="Buscar por Código">
+                        <Card>
+                          <CardBody className="bg-transparent dark:bg-blackblue2">
+                            <div>
+                              <SearchCode onSearchCode={handleSearch} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Tab>
+                      <Tab key="code" title="Buscar por nombres">
+                        <Card>
+                          <CardBody className="bg-transparent dark:bg-blackblue2">
+                            <div>
+                              <SearchName onSearchName={handleSearch} />
+                            </div>
+                          </CardBody>
+                        </Card>
+                      </Tab>
+                    </Tabs>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2 mt-4 md:mt-0 md:w-full md:grid-rows-2 md:gap-y-8 justify-items-center md:items-center">
+                  <div className="row-span-2">
+                    <Image
+                      src="/certs/logo_promas_3.png"
+                      alt="promas"
+                      width={130}
+                      height={130}
+                      className=""
+                    />
+                  </div>
+
+                  <div className="self-center">
+                    <Image
+                      src="/certs/unp.png"
+                      alt="promas"
+                      width={140}
+                      height={140}
+                    />
+                  </div>
+                  <div className="row-span-2">
+                    <Image
+                      src="/certs/funde.png"
+                      alt="promas"
+                      width={120}
+                      height={120}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-          {isActive && (
-        <div>
-          {searchType === 'documentNumber' && (<SearchDNI onSearchDNI={handleSearch} />)}
-          {searchType === 'name' && (<SearchName onSearchName={handleSearch} />)}
-          {searchType === 'code' && (<SearchCode onSearchCode={handleSearch} />)}
         </div>
-      )}
-        </div>
-    </div>
-    <Whatsapp />
-  </section>
-  )
-}
+      </div>
+    </section>
+  );
+};
 
-export default Certificate;
+export default TestingPage;
