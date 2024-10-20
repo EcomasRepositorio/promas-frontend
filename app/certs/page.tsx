@@ -93,7 +93,7 @@ const TestingPage: React.FC<Props> = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 mt-4 md:mt-0 md:w-full md:grid-rows-2 md:gap-y-8 justify-items-center md:items-center">
+                <div className=" grid grid-cols-2 gap-2 mt-4 md:mt-0 md:w-full md:grid-rows-2 md:gap-y-8 justify-items-center md:items-center">
                   <div className="row-span-2">
                     <Image
                       src="/certs/logo_promas_3.png"
@@ -121,6 +121,7 @@ const TestingPage: React.FC<Props> = () => {
                     />
                   </div>
                 </div>
+                
               </div>
             </div>
           </div>

@@ -75,13 +75,13 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
   const splitText = (text: string): string[] => {
     // Elimina espacios innecesarios
     const cleanText = text.trim();
-  
+
     // Identificamos las posiciones de las palabras clave dentro del texto
     const indexCorporacion = cleanText.indexOf("Corporación PROMÁS");
     const indexFundenorp = cleanText.indexOf("FUNDENORP");
     const indexEscuela = cleanText.indexOf("Escuela de Posgrado");
     const indexUniversidad = cleanText.indexOf("Universidad Nacional de Piura");
-  
+
     // Si contiene "Escuela de Posgrado"
     if (
       indexCorporacion !== -1 &&
@@ -91,14 +91,12 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
       const corporacion = cleanText
         .substring(indexCorporacion, indexEscuela)
         .trim(); // Desde "Corporación SAYAN" hasta "Escuela de Posgrado"
-      const escuela = cleanText
-        .substring(indexEscuela, indexFundenorp)
-        .trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
+      const escuela = cleanText.substring(indexEscuela, indexFundenorp).trim(); // Desde "Escuela de Posgrado" hasta "FUNDENORP"
       const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
-  
+
       return [corporacion, escuela, fundenorp];
     }
-  
+
     // Si contiene "Universidad Nacional de Piura" (y no "Escuela de Posgrado")
     if (
       indexCorporacion !== -1 &&
@@ -112,10 +110,10 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
         .substring(indexUniversidad, indexFundenorp)
         .trim(); // Desde "Universidad Nacional de Piura" hasta "FUNDENORP"
       const fundenorp = cleanText.substring(indexFundenorp).trim(); // Desde "FUNDENORP" hasta el final
-  
+
       return [corporacion, universidad, fundenorp];
     }
-  
+
     // Si no encuentra las palabras clave, devuelve el texto dividido en palabras
     const words = cleanText.split(" ");
     const firstLine = words.slice(0, 9).join(" "); // Primeras 9 palabras
@@ -183,7 +181,7 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
 
       {loading && <Spinner />}
       {closeTable && studentData && (
-        <div className="relative overflow-x-auto shadow-xl sm:rounded-xl mt-8">
+        <div className="relative overflow-x-auto shadow-xl rounded-xl mt-8">
           <table className="w-full text-sm text-left rtl:text-right text-gray-500 font-semibold">
             <thead className="text-xm text-center text-gray-600 uppercase bg-gray-300">
               <tr>
@@ -223,8 +221,10 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
                       {student.name}
                     </span>
                   </td>
-                  <td className="px-6 py-4">
-                    <span style={{ whiteSpace: "nowrap", display: "block" }}>
+
+                  <td className="px-6 py-4 truncate max-w-lg">
+                    {/* Truncate long text */}
+                    <span title={student.activityAcademy}>
                       {student.activityAcademy}
                     </span>
                   </td>
@@ -256,7 +256,7 @@ const SearchName: React.FC<SearchDNIProps> = ({ onSearchDNI }) => {
           open={openModals.findIndex(Boolean) !== -1}
           onClose={() => closeStudentModal(openModals.findIndex(Boolean))}
         >
-         <div className=" flex justify-center mb-4 gap-2">
+          <div className=" flex justify-center mb-4 gap-2">
             <Image
               src={"/certs/unp-piura.png"}
               alt="rizo"
