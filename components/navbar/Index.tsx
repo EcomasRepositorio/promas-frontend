@@ -70,7 +70,7 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className="font-bold text-gray-100 hover:text-white lg:mb-0 md:mb-0 mb-6 py-1 px-6 text-center md:border-b-0 hover:bg-violet-800 rounded transition-transform transform hover:scale-125">
-                  <Link href="/graduate" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/diplomados" onClick={() => setNavbar(!navbar)}>
                     Diplomados
                   </Link>
                 </li>

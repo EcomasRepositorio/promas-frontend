@@ -77,7 +77,7 @@ const Footer = () => {
                   >Certificado </Link>
               </p>
               <p className="mb-4">
-                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline">
+                <Link href="/" className="font-semibold text-gray-100 hover:underline">
                   Diplomados</Link>
               </p>
               <p className='mb-4'>
@@ -95,23 +95,23 @@ const Footer = () => {
                 Nuestros diplomados en:
               </h6>
               <p className="mb-4">
-                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                <Link href="/diplomados" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Vial</Link>
               </p>
               <p className="mb-4">
-                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                <Link href="/diplomados" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Agronoma</Link>
               </p>
               <p className="mb-4">
-                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                <Link href="/diplomados" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Civil</Link>
               </p>
               <p className='mb-4'>
-                <Link href="/graduate" className="font-semibold text-gray-100 hover:underline"
+                <Link href="/diplomados" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria Ambiental</Link>
               </p>
               <p>
-                <Link href="graduate" className="font-semibold text-gray-100 hover:underline"
+                <Link href="diplomados" className="font-semibold text-gray-100 hover:underline"
                   >Ingenieria de industrias Alimentarias</Link>
               </p>
             </div>

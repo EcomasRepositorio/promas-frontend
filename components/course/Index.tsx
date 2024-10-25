@@ -24,7 +24,7 @@ interface CourseCardProps {
 const courses = [
   {
     title: "Fertirrigación",
-    imageSrc: "/course/fertiirrigacion.png",
+    imageSrc: "/CURSOS/fertirriego.webp",
     description: [
       "Situación mundial del recurso hídrico",
       "Calidad de Agua de Riego",
@@ -35,7 +35,7 @@ const courses = [
   },
   {
     title: "Monitoreo de la calidad de agua",
-    imageSrc: "/course/monitoreo_calidad_agua.png",
+    imageSrc: "/CURSOS/monitoreo.webp",
     description: [
       "Monitoreo de la calidad del agua",
       "Revisión de ECAs, LMP y VMA para la calidad del agua",
@@ -46,7 +46,7 @@ const courses = [
   },
   {
     title: "Costos y Presupuestos con S10",
-    imageSrc: "/course/costos_presupuestos.png",
+    imageSrc: "/CURSOS/costos.webp",
     description: [
       "Partes de un Presupuesto, creación de presupuesto",
       "Análisis de precios unitarios",
@@ -58,7 +58,7 @@ const courses = [
   },
   {
     title: "Formulación de proyectos de inversión pública de residuos sólidos",
-    imageSrc: "/course/residuos_solidos.png",
+    imageSrc: "/CURSOS/inersion-publica.webp",
     description: [
      // "Formulación de proyectos en gestión integral de residuos sólidos",
       "Definiciones y conceptos del invierte.pe",
@@ -69,7 +69,7 @@ const courses = [
   },
   {
     title: "Esquema FSSC 22000",
-    imageSrc: "/course/esquema_FSSC.png",
+    imageSrc: "/CURSOS/esquema.webp",
     description: [
       "Diseño y propósitos del esquema",
       "Implementación de la FSSC 22000",
@@ -79,7 +79,7 @@ const courses = [
   },
   {
     title: "Identificación y evaluación de Impacto Ambiental",
-    imageSrc: "/course/impacto_ambiental.png",
+    imageSrc: "/CURSOS/impacto.webp",
     description: [
       //"Objetivos de la evaluación de impactos y principales conceptos",
       "Proceso de identificación de impactos",
