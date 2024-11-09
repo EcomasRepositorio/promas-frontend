@@ -48,10 +48,10 @@ const [isSubmit, setIsSubmit] = useState(false);
                 />
               </div>
               <div>
-                <h2 className='py-1 text-xl font-extrabold text-gray-200'>Corporaci&oacute;n Prom&aacute;s</h2>
+                <h2 className='py-1 text-xl font-extrabold text-gray-200'>Corporación PROMÁS</h2>
                 <p className='py-2 font-semibold text-gray-300'>
-                  Somos un Centro de capacitaci&oacute;n profesional de amplia experiencia que desarrollamos cursos y diplomados
-                  para el sector p&uacute;blico y privado para el fortaleciemiento de sus capacidades
+                  Somos un Centro de capacitación profesional de amplia experiencia que desarrollamos cursos y diplomados
+                  para el sector publico y privado para el fortaleciemiento de sus capacidades
                 </p>
               </div>
               <div>
@@ -97,8 +97,8 @@ const [isSubmit, setIsSubmit] = useState(false);
           </div>
 
           {/* right */}
-          <div className='col-span-3 w-full h-auto bg-customPurple/70 shadow-xl rounded-xl lg:p-4'>
-            <div className='p-4'>
+          <div className='col-span-3 w-full h-auto bg-customPurple/70 shadow-xl rounded-xl p-4 sm:max-w-[90%] sm:p-2 lg:p-4'>
+          <div className='p-4'>
               {!isSubmit ? (
               <form
                 action='https://formsubmit.co/ronevanz01@gmail.com'

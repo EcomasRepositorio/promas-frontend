@@ -19,7 +19,7 @@ const Counter = () => {
       <div className="absolute inset-0 bg-cover bg-no-repeat bg-center opacity-80 bg-gray-800" style={{ backgroundImage: "url('/fondo_certificate.jpg')" }}></div>
       <div className='relative z-10 p-10 max-w-screen-xl mx-auto'>
         <h1 className='text-5xl font-extrabold text-white text-center mt-10 '>
-          ¿Por que Promás?
+          ¿Por que PROMÁS?
         </h1>
         <h3 className='text-white mt-10 mb-10 font-semibold lg:text-xl text-sm text-center lg:px-60'>
           Porque impulsamos el desarrollo creativo de todo profesional a través de nuestros cursos y

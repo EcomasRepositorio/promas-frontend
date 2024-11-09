@@ -222,10 +222,9 @@ const Comment = () => {
         <div className='flex justify-center '>
           <MdPersonPin className='text-7xl mb-2'/>
         </div>
-        <h1 className='flex justify-center text-lg font-bold mb-5'>Slider 7</h1>
+        <h1 className='flex justify-center text-lg font-bold mb-5'>Valeria Mendoza Pacheco</h1>
         <p className='italic text-[14px]'>
-          Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos
-        </p>
+        Quisiera expresar mi profunda gratitud a la Corporación Promás y a la Escuela de Postgrado de la Universidad Nacional de Piura por su apoyo invaluable. Gracias a la oportunidad de recibir una beca completa, he podido seguir avanzando en mi formación académica y profesional. Su compromiso y dedicación a la educación han sido pilares esenciales en mi desarrollo y motivación para seguir adelante en mis objetivos.</p>
         <div className='inline-flex text-3xl mt-12 gap-4 text-customPurple'>
           <FaStar />
           <FaStar />

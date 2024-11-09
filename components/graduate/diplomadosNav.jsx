@@ -52,7 +52,7 @@ export default function App() {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <Card className="border-none shadow-none ">
-                <CardBody className="bg-white border-none rounded-3xl">
+                <CardBody className="bg-violet-50 border-none rounded-3xl">
                   <DiploAmbiental />
                 </CardBody>
               </Card>
@@ -67,7 +67,7 @@ export default function App() {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <Card className="border-none shadow-none">
-                <CardBody className="dark:bg-blackblue2 bg-white border-none">
+                <CardBody className="dark:bg-blackblue2 bg-violet-50 border-none rounded-3xl">
                   <DiploAgronoma />
                 </CardBody>
               </Card>
@@ -82,7 +82,7 @@ export default function App() {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <Card className="border-none shadow-none">
-                <CardBody className="dark:bg-blackblue2 bg-white border-none">
+                <CardBody className="dark:bg-blackblue2 bg-violet-50 border-none rounded-3xl">
                   <DiploCivil />
                 </CardBody>
               </Card>
@@ -97,7 +97,7 @@ export default function App() {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <Card className="border-none shadow-none">
-                <CardBody className="dark:bg-blackblue2 bg-white border-none">
+                <CardBody className="dark:bg-blackblue2 bg-violet-50 border-none rounded-3xl">
                   <DiploAlimentarias />
                 </CardBody>
               </Card>
@@ -121,28 +121,28 @@ export default function App() {
         >
           <Tab key="ambient" title="INGENIERÍA AMBIENTAL" className="text-black">
             <Card className="border-none shadow-none">
-              <CardBody className="bg-white border-none">
+              <CardBody className="bg-violet-50 border-none rounded-3xl">
                 <DiploAmbiental />
               </CardBody>
             </Card>
           </Tab>
           <Tab key="agrono" title="INGENIERÍA AGRÓNOMA">
             <Card className="border-none shadow-none">
-              <CardBody className="dark:bg-blackblue2 bg-white border-none">
+              <CardBody className="dark:bg-blackblue2 bg-violet-50 border-none rounded-3xl">
                 <DiploAgronoma />
               </CardBody>
             </Card>
           </Tab>
           <Tab key="civil" title="INGENIERÍA CIVIL">
             <Card className="border-none shadow-none">
-              <CardBody className="dark:bg-blackblue2 bg-white border-none">
+              <CardBody className="dark:bg-blackblue2 bg-violet-50 border-none rounded-3xl">
                 <DiploCivil />
               </CardBody>
             </Card>
           </Tab>
           <Tab key="alimentaria" title="INGENIERÍA ALIMENTARIA">
             <Card className="border-none shadow-none">
-              <CardBody className="dark:bg-blackblue2 bg-white border-none">
+              <CardBody className="dark:bg-blackblue2 bg-violet-50 border-none rounded-3xl">
                 <DiploAlimentarias />
               </CardBody>
             </Card>
