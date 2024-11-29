@@ -5,24 +5,37 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { FormEvent, useState } from 'react';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
-import { TitleText, TypingText } from '../share/CustomText'
+import { TitleText, TypingText } from '../share/CustomText';
 import { FaFacebookF, FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
-//import ContactImg from '../public/assets/contact.jpg';
+import emailjs from 'emailjs-com'; // Importar EmailJS
 
 const variants = staggerContainer("0.1s", "0.1s");
 const Contact = () => {
-
-const [isSubmit, setIsSubmit] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const form = event.currentTarget;
-    form.submit();
-    setIsSubmit(true);
+
+    // Usar EmailJS para enviar los datos
+    emailjs.sendForm(
+      'service_ordhmhk', // Reemplaza con tu Service ID
+      'template_vx69x4r', // Reemplaza con tu Template ID
+      event.currentTarget,
+      'DGUA2PrvFHUW6ZV6m' // Reemplaza con tu Public Key
+    ).then(
+      (result) => {
+        console.log('Mensaje enviado con éxito:', result.text);
+        setIsSubmit(true); // Cambiar el estado para mostrar el mensaje de éxito
+      },
+      (error) => {
+        console.error('Error al enviar el mensaje:', error.text);
+      }
+    );
   };
 
   const rowsValue: string = '5';
   const rowsNumber: number = parseInt(rowsValue);
+
   return (
     <div id='contact' className='w-full text-white bg-[#030014]'>
       <div className='max-w-[1240px] m-auto px-2 py-10 w-full'>
@@ -101,10 +114,7 @@ const [isSubmit, setIsSubmit] = useState(false);
           <div className='p-4'>
               {!isSubmit ? (
               <form
-                action='https://formsubmit.co/ronevanz01@gmail.com'
-                method='POST'
                 onSubmit={handleSubmit}
-                //encType='multipart/form-data'
               >
                 <div className='grid md:grid-cols-2 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
@@ -142,7 +152,7 @@ const [isSubmit, setIsSubmit] = useState(false);
                   <input
                     className='border-2 rounded-lg p-3 flex border-gray-300 text-gray-800'
                     type='text'
-                    name='asunto'
+                    name='subject'
                     required
                   />
                 </div>
@@ -158,12 +168,10 @@ const [isSubmit, setIsSubmit] = useState(false);
                 <button type='submit' className='w-full p-4 text-gray-100 border rounded-xl mt-4'>
                   Enviar mensaje
                 </button>
-                  <input type="hidden" name="_next" value="http://localhost:3000" />
-                  <input type="hidden" name="_captcha" value="false" />
               </form>
               ) : (
                 <div className="text-center">
-                  <p className='text-2xl font-bold mb-4'>!GRACIAS!</p>
+                  <p className='text-2xl font-bold mb-4'>¡GRACIAS!</p>
                   <p className="text-2xl font-bold text-green-500 mb-4">Datos enviados con éxito</p>
                 </div>
               )}
@@ -172,7 +180,6 @@ const [isSubmit, setIsSubmit] = useState(false);
         </div>
         <div className='flex justify-center py-6'>
           <Link href='/'>
-
               <div className='rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-125 ease-in duration-300'>
                 <HiOutlineChevronDoubleUp
                   className='text-[#5651e5]'
