@@ -3,16 +3,19 @@ import CursoAmbientaly from "@/components/cursos/IngAmbientaly/CursoAmbientaly";
 import CursoIrrigation from "@/components/cursos/IngAgronomy/CursoIrrigation";
 import CursoSolidWaste from "@/components/cursos/IngAmbientaly/CursoSolidWaste";
 import CursoTechnicalIrrigation from "@/components/cursos/IngAgronomy/CursoTechnicalIrrigation";
-/* import GraduateTechnicalAssistant from "@/components/cursos/IngCivil/GraduateTechnicalAssistant";
-import GraduateIngVial from "@/components/cursos/IngCivil/GraduateIngVial";
-import GraduateIngBridge from "@/components/cursos/IngCivil/GraduateIngBridge";
-import GraduateWorksSupervision from "@/components/cursos/IngCivil/GraduateWorksSupervision";
-import GraduateFoodQuality from "@/components/cursos/IngAlimentary/GraduateFoodQuality";
-import GraduateSsoma from "@/components/cursos/ssoma/GraduateSsoma"; */
+
 import Whatsapp from "@/components/whatsapp/Index";
 import CursoQualityMonitoringAmbientaly from "@/components/cursos/IngAmbientaly/CursoQualityMonitoringAmbientaly";
 import CursoManagementAmbientaly from "@/components/cursos/IngAmbientaly/CursoManagementAmbientaly";
 
+
+
+import GraduateTechnicalAssistant from "@/components/cursos/IngCivil/GraduateTechnicalAssistant"; 
+import GraduateIngVial from "@/components/cursos/IngCivil/GraduateIngVial";
+import GraduateIngBridge from "@/components/cursos/IngCivil/GraduateIngBridge";
+import GraduateWorksSupervision from "@/components/cursos/IngCivil/GraduateWorksSupervision";
+import GraduateFoodQuality from "@/components/cursos/IngAlimentary/GraduateFoodQuality";
+import GraduateSsoma from "@/components/cursos/ssoma/GraduateSsoma"; 
 const Graduate = () => {
   return (
     <section id="/graduate">
@@ -32,16 +35,7 @@ const Graduate = () => {
             carrera profesional!
           </p>
         </div>
-        {/* <div className="relative mx-auto max-w-screen-xl p-2 text-white">
-          <h1 className="font-extrabold text-4xl lg:text-6xl mt-10">
-            Nuestros cursos
-          </h1>
-          <p className="font-semibold text-lg mt-2">
-            ¡aqui encontraras nuestros cursos disponibles!
-          </p>
-        </div> */}
       </div>
-
       <div className="p-1 flex flex-col">
         <div id="CursoAmbientaly" className="mb-10 lg:mb-[-50px] ">
           <h3 className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-1 lg:mt-1 font-extrabold border-b-4 p-2">
@@ -98,7 +92,12 @@ const Graduate = () => {
 
 
 
-        {/* <div className='mb-20 lg:mb-[-50px]'>
+
+
+
+        
+
+        <div className='mb-20 lg:mb-[-50px]'>
           <h3 className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-1 lg:mt-1 font-extrabold border-b-4 p-2">ASISTENTE TÉCNICO EN OBRAS </h3>
           <GraduateTechnicalAssistant />
         </div>
@@ -107,6 +106,9 @@ const Graduate = () => {
           <h3 className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-1 lg:mt-1 font-extrabold border-b-4 p-2"> Ingeniería Vial</h3>
           <GraduateIngVial />
         </div>
+        
+
+
         
         <div className='mb-20 lg:mb-[-50px]'>
           <h3 className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-1 lg:mt-1 font-extrabold border-b-4 p-2"> Ingeniería de Puentes </h3>
@@ -123,10 +125,10 @@ const Graduate = () => {
           <GraduateFoodQuality />
         </div>
         
-        <div className='mb-20 lg:mb-4 mt-10'> Ajuste de margen superior e inferior 
+        <div className='mb-20 lg:mb-4 mt-10'> {/* Ajuste de margen superior e inferior  */}
           <h3 className="text-violet-800 text-center text-3xl lg:text-4xl xl:text-4xl mb-1 lg:mt-1 font-extrabold border-b-4 p-2"> SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE (SSOMA) </h3>
           <GraduateSsoma />
-        </div> */}
+        </div> 
       </div>
       <Whatsapp />
     </section>
