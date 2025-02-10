@@ -33,7 +33,7 @@ const TestingPage: React.FC<Props> = () => {
           <div className="" style={{ position: "relative", width: "100%" }}>
             <div
               className="bg-gradient-to-t from-[#B401CF]/75 to-[#5800B7]/75 border border-white/55  rounded-lg p-8 md:p-12 mb-50 mt-28 mx-2"
-              style={{
+              style={{  
                 marginBottom: "20px",
               }}
             >
@@ -126,6 +126,7 @@ const TestingPage: React.FC<Props> = () => {
             </div>
           </div>
         </div>
+        
       </div>
     </section>
   );
