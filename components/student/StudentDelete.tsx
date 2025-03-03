@@ -74,7 +74,7 @@ const StudentDelete: React.FC<DeleteStudentProps> = ({ id, onDeleteSuccess }) =>
       )}
       {successModalOpen && (
         <Modal open={successModalOpen} onClose={closeModal}>
-        <div className='border p-6 rounded-lg'>
+        <div className='text-gray-100 border p-6 rounded-lg'>
           Estudiante eliminado.
         </div>
         </Modal>

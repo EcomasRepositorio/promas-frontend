@@ -434,6 +434,7 @@ const Student = () => {
                     <span style={{ whiteSpace: "nowrap", display: "block" }}>
                       {memoryData.length - (startIndex + index)}
                     </span>
+                   
                   </th>
                   <td className="px-6 py-4">
                     <span style={{ whiteSpace: "nowrap", display: "block" }}>
